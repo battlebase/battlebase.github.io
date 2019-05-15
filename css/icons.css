@@ -1,0 +1,1184 @@
+/* Flags */
+.en {
+  background: url(https://battlebase.github.io/img/flags/en.png);
+}
+.fr {
+  background: url(https://battlebase.github.io/img/flags/fr.png);
+}
+.it {
+  background: url(https://battlebase.github.io/img/flags/it.png);
+}
+.de {
+  background: url(https://battlebase.github.io/img/flags/de.png);
+}
+.es {
+  background: url(https://battlebase.github.io/img/flags/es.png);
+}
+.ru {
+  background: url(https://battlebase.github.io/img/flags/ru.png);
+}
+.pl {
+  background: url(https://battlebase.github.io/img/flags/pl.png);
+}
+.nl {
+  background: url(https://battlebase.github.io/img/flags/nl.png);
+}
+.br {
+  background: url(https://battlebase.github.io/img/flags/br.png);
+}
+.cn {
+  background: url(https://battlebase.github.io/img/flags/cn.png);
+}
+.ko {
+  background: url(https://battlebase.github.io/img/flags/ko.png);
+}
+.ja {
+  background: url(https://battlebase.github.io/img/flags/ja.png);
+}
+
+/* ICONS */
+.reddit {
+background-image: url(https://battlebase.github.io/img/icons/reddit-icon.png);
+}
+.putw {
+  background-image: url(https://battlebase.github.io/img/icons/putw.jpg);
+}
+.pbtw {
+  background-image: url(https://battlebase.github.io/img/icons/pbtw.jpg);
+}
+.battlepoints {
+  background-image: url(https://battlebase.github.io/img/icons/battlepoints.png);
+}
+.carepackage {
+background-image: url(https://battlebase.github.io/img/items/CarePackage.png);
+}
+.carepackagecrate {
+background-image: url(https://battlebase.github.io/img/items/CarePackage.png);
+}
+.stats {
+  background-image: url(https://battlebase.github.io/img/icons/graph.png);
+}
+.trn {
+  background-image: url(https://pubgtracker.com/Images/General/logo.png);
+}
+.home {
+background-image: url(https://battlebase.github.io/img/icons/guyicon.png);
+}
+.link-icon {
+background-image: url(https://battlebase.github.io/img/icons/link-icon.png);
+}
+.info-icon {
+background-image: url(https://battlebase.github.io/img/icons/info-icon.png);
+}
+.map {
+background-image: url(https://battlebase.github.io/img/icons/map.png);
+}
+.map_erangel {
+background-image: url(https://battlebase.github.io/img/maps/erangel.png);  
+}
+.map_miramar {
+background-image: url(https://battlebase.github.io/img/maps/miramar.png);  
+}
+.map_sanhok {
+background-image: url(https://battlebase.github.io/img/maps/sanhok.png);  
+}
+.playzone {
+background-image: url(https://battlebase.github.io/img/icons/playzone-icon.png);
+}
+.playzoneimg {
+background-image: url(https://battlebase.github.io/img/playzone.png);
+}
+.redzone {
+background-image: url(https://battlebase.github.io/img/icons/redzone-icon.png);
+}
+.redzoneimg {
+background-image: url(https://battlebase.github.io/img/redzone.png);
+}
+.gamemodes {
+background-image: url(https://battlebase.github.io/img/icons/gamemode.png);
+}
+.settings {
+background-image: url(https://battlebase.github.io/img/icons/settings.png);
+}
+.reviving {
+background-image: url(https://battlebase.github.io/img/reviving.jpg);
+}
+.steamicon {
+  background-image: url(https://battlebase.github.io/img/icons/steamicon.png);
+}
+.backpack1a {
+background-image: url(https://battlebase.github.io/img/items/Backpack1a.png);
+}
+.backpack1b {
+background-image: url(https://battlebase.github.io/img/items/Backpack1b.png);
+}
+.backpack2a {
+background-image: url(https://battlebase.github.io/img/items/Backpack2a.png);
+}
+.backpack2b {
+background-image: url(https://battlebase.github.io/img/items/Backpack2b.png);
+}
+.backpack3, .backpack3a {
+background-image: url(https://battlebase.github.io/img/items/Backpack3a.png);
+}
+.backpack3b {
+background-image: url(https://battlebase.github.io/img/items/Backpack3b.png);
+}
+.belt {
+background-image: url(https://battlebase.github.io/img/items/Belt.png);
+}
+.helmet1a {
+background-image: url(https://battlebase.github.io/img/items/HelmetLv1a.png);
+}
+.helmet1b {
+background-image: url(https://battlebase.github.io/img/items/HelmetLv1b.png);
+}
+.helmet2a {
+background-image: url(https://battlebase.github.io/img/items/HelmetLv2a.png);
+}
+.helmet2b {
+background-image: url(https://battlebase.github.io/img/items/HelmetLv2b.png);
+}
+.helmet3, .helmet3a {
+background-image: url(https://battlebase.github.io/img/items/HelmetLv3.png);
+}
+.medkit {
+background-image: url(https://battlebase.github.io/img/items/MedKit.png);
+}
+.firstaidkit {
+background-image: url(https://battlebase.github.io/img/items/FirstAid.png);
+}
+.bandage {
+background-image: url(https://battlebase.github.io/img/items/Bandage.png);
+}
+.painkiller {
+background-image: url(https://battlebase.github.io/img/items/Painkiller.png);
+}
+.energydrink {
+background-image: url(https://battlebase.github.io/img/items/EnergyDrink.png);
+}
+.adrenaline {
+background-image: url(https://battlebase.github.io/img/items/AdrenalineSyringe.png);
+}
+.gascan {
+background-image: url(https://battlebase.github.io/img/items/GasCan.png);
+}
+.vest1 {
+background-image: url(https://battlebase.github.io/img/items/VestLv1.png);
+}
+.vest2 {
+background-image: url(https://battlebase.github.io/img/items/VestLv2.png);
+}
+.vest3 {
+background-image: url(https://battlebase.github.io/img/items/VestLv3.png);
+}
+.ammo12Gauge {
+background-image: url(https://battlebase.github.io/img/weapons/12gauge.png);
+}
+.ammo300magnum {
+background-image: url(https://battlebase.github.io/img/weapons/300magnum.png);
+}
+.ammo45acp {
+background-image: url(https://battlebase.github.io/img/weapons/45acp.png);
+}
+.ammo556mm {
+background-image: url(https://battlebase.github.io/img/weapons/556mm.png);
+}
+.ammo762mm {
+background-image: url(https://battlebase.github.io/img/weapons/762mm.png);
+}
+.ammo9mm {
+background-image: url(https://battlebase.github.io/img/weapons/9mm.png);
+}
+.ammobolt, .bolt {
+background-image: url(https://battlebase.github.io/img/weapons/bolt.png);
+}
+.ammo9mm {
+background-image: url(https://battlebase.github.io/img/weapons/9mm.png);
+}
+.ammoflare {
+background-image: url(https://battlebase.github.io/img/weapons/flare.png);
+}
+/* Weapons */
+.flaregun {
+background-image: url(https://battlebase.github.io/img/weapons/FlareGun.png);
+}
+.p18c {
+background-image: url(https://battlebase.github.io/img/weapons/P18C.png);
+}
+.p92 {
+background-image: url(https://battlebase.github.io/img/weapons/P92.png);
+}
+.p1911 {
+background-image: url(https://battlebase.github.io/img/weapons/P1911.png);
+}
+.r1895 {
+background-image: url(https://battlebase.github.io/img/weapons/R1895.png);
+}
+.s1897 {
+background-image: url(https://battlebase.github.io/img/weapons/S1897.png);
+}
+.s686 {
+background-image: url(https://battlebase.github.io/img/weapons/S686.png);
+}
+.s12k {
+background-image: url(https://battlebase.github.io/img/weapons/S12K.png);
+}
+.m249 {
+background-image: url(https://battlebase.github.io/img/weapons/M249.png);
+}
+.microuzi {
+background-image: url(https://battlebase.github.io/img/weapons/MicroUzi.png);
+}
+.ump9 {
+background-image: url(https://battlebase.github.io/img/weapons/UMP9.png);
+}
+.vector {
+background-image: url(https://battlebase.github.io/img/weapons/Vector.png);
+}
+.tommygun {
+background-image: url(https://battlebase.github.io/img/weapons/TommyGun.png);
+}
+.akm {
+background-image: url(https://battlebase.github.io/img/weapons/AKM.png);
+}
+.m416 {
+background-image: url(https://battlebase.github.io/img/weapons/M416.png);
+}
+.m16a4 {
+background-image: url(https://battlebase.github.io/img/weapons/M16A4.png);
+}
+.qbz {
+background-image: url(https://battlebase.github.io/img/weapons/QBZ.png);
+}
+.scarl {
+background-image: url(https://battlebase.github.io/img/weapons/SCAR-L.png);
+}
+.groza {
+background-image: url(https://battlebase.github.io/img/weapons/Groza.png);
+}
+.awm {
+background-image: url(https://battlebase.github.io/img/weapons/AWM.png);
+}
+.kar98 {
+background-image: url(https://battlebase.github.io/img/weapons/Kar98.png);
+}
+.m24 {
+background-image: url(https://battlebase.github.io/img/weapons/M24.png);
+}
+.sks {
+background-image: url(https://battlebase.github.io/img/weapons/SKS.png);
+}
+.slr {
+background-image: url(https://battlebase.github.io/img/weapons/SLR.png);
+}
+.vss {
+background-image: url(https://battlebase.github.io/img/weapons/VSS.png);
+}
+.mini14 {
+background-image: url(https://battlebase.github.io/img/weapons/Mini14.png);
+}
+.mk14 {
+background-image: url(https://battlebase.github.io/img/weapons/Mk14.png);
+}
+.qbu {
+background-image: url(https://battlebase.github.io/img/weapons/QBU.png);
+}
+.crossbow {
+background-image: url(https://battlebase.github.io/img/weapons/Crossbow.png);
+}
+.aug {
+background-image: url(https://battlebase.github.io/img/weapons/AUG.png);
+}
+.dp28 {
+background-image: url(https://battlebase.github.io/img/weapons/DP28.png);
+}
+.r45  {
+background-image: url(https://battlebase.github.io/img/weapons/R45.png);
+}
+.win94  {
+background-image: url(https://battlebase.github.io/img/weapons/Win94.png);
+}
+.sawedoff  {
+background-image: url(https://battlebase.github.io/img/weapons/SawedOff.png);
+}
+.frag {
+background-image: url(https://battlebase.github.io/img/weapons/Grenade.png);
+}
+.molotov {
+background-image: url(https://battlebase.github.io/img/weapons/Molotov.png);
+}
+.smoke {
+background-image: url(https://battlebase.github.io/img/weapons/SmokeBomb.png);
+}
+.stun {
+background-image: url(https://battlebase.github.io/img/weapons/FlashBang.png);
+}
+.flash {
+background-image: url(https://battlebase.github.io/img/weapons/FlashBang.png);
+}
+.crowbar {
+background-image: url(https://battlebase.github.io/img/weapons/Crowbar.png);
+}
+.machete {
+background-image: url(https://battlebase.github.io/img/weapons/Machete.png);
+}
+.pan {
+background-image: url(https://battlebase.github.io/img/weapons/Pan.png);
+}
+.sickle {
+background-image: url(https://battlebase.github.io/img/weapons/Sickle.png);
+}
+.trenchcoat {
+background-image: url(https://battlebase.github.io/img/clothes/trenchcoat.png);
+}
+/* CRATES */
+.randomcrate {
+background-image: url(https://battlebase.github.io/img/items/randomcrate.png);
+}
+.crateunlock {
+background-image: url(https://battlebase.github.io/img/items/crate-unlock.png);
+}
+.pioneercrate {
+background-image: url(https://battlebase.github.io/img/items/crate.png);
+}
+.wanderercrate {
+background-image: url(https://battlebase.github.io/img/items/wanderercrate.png);
+}
+.survivorcrate {
+background-image: url(https://battlebase.github.io/img/items/survivorcrate.png);
+}
+.gamescomcrate {
+background-image: url(https://battlebase.github.io/img/items/gamesconcrate.png);
+}
+.bikercrate {
+background-image: url(https://battlebase.github.io/img/items/bikercrate.png); 
+}
+.desperadocrate {
+background-image: url(https://battlebase.github.io/img/items/desperadocrate.png); 
+}
+.militiacrate {
+background-image: url(https://battlebase.github.io/img/items/militiacrate.png); 
+}
+.fevercrate {
+background-image: url(https://battlebase.github.io/img/items/fevercrate.png); 
+}
+.raidercrate {
+background-image: url(https://battlebase.github.io/img/items/raidercrate.png); 
+}
+.triumphcrate {
+background-image: url(https://battlebase.github.io/img/items/triumphcrate.png); 
+}
+.equinoxcrate {
+background-image: url(https://battlebase.github.io/img/items/equinoxcrate.png); 
+}
+.aviatorcrate {
+background-image: url(https://battlebase.github.io/img/items/aviatorcrate.png); 
+}
+/* KEYS */
+.earlybirdkey {
+background-image: url(https://battlebase.github.io/img/items/earlybirdkey.png);
+}
+.weaponskinkey {
+background-image: url(https://battlebase.github.io/img/items/weaponskinkey.png);
+}
+.aviatorkey {
+background-image: url(https://battlebase.github.io/img/items/aviatorkey.png);
+}
+/* PARACHUTES */
+.bengaltiger {
+background-image: url(https://battlebase.github.io/img/items/bengaltiger.png);
+}
+
+/* WEAPONS LARGE */
+.p18c-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/P18C.png);
+}
+.p92-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/P92.png);
+}
+.p1911-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/P1911.png);
+}
+.r1895-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/R1895.png);
+}
+.s1897-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/S1897.png);
+}
+.s686-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/S686.png);
+}
+.s12k-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/S12K.png);
+}
+.m249-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/M249.png);
+}
+.microuzi-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/MicroUzi.png);
+}
+.ump9-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/UMP9.png);
+}
+.vector-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/Vector.png);
+}
+.tommygun-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/TommyGun.png);
+}
+.akm-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/AKM.png);
+}
+.m416-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/M416.png);
+}
+.m16a4-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/M16A4.png);
+}
+.qbz-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/QBZ.png);
+}
+.groza-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/Groza.png);
+}
+.scarl-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/SCAR-L.png);
+}
+.awm-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/AWM.png);
+}
+.kar98-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/Kar98.png);
+}
+.m24-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/M24.png);
+}
+.sks-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/SKS.png);
+}
+.slr-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/SLR.png);
+}
+.mk14-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/Mk14.png);
+}
+.vss-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/VSS.png);
+}
+.mini14-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/Mini14.png);
+}
+.qbu-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/QBU.png);
+}
+.dp28-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/DP28.png);
+}
+.crossbow-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/Crossbow.png);
+}
+.r45-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/R45.png);
+}
+.win94-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/Win94.png);
+}
+.aug-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/AUG.png);
+}
+.sawedoff-large  {
+background-image: url(https://battlebase.github.io/img/weapons-large/SawedOff.png);
+}
+.flaregun-large {
+background-image: url(https://battlebase.github.io/img/weapons-large/FlareGun.png);
+}
+/* SIGHTS CSS*/
+.reddot {
+background-image: url(https://battlebase.github.io/img/attachments/RedDot.png);
+}
+.holographic {
+background-image: url(https://battlebase.github.io/img/attachments/Holosight.png);
+}
+.scope2x {
+background-image: url(https://battlebase.github.io/img/attachments/2xScope.png);
+}
+.scope3x {
+background-image: url(https://battlebase.github.io/img/attachments/3xScope.png);
+}
+.scope4x {
+background-image: url(https://battlebase.github.io/img/attachments/4xScope.png);
+}
+.scope6x {
+background-image: url(https://battlebase.github.io/img/attachments/6xScope.png);
+}
+.scope8x {
+background-image: url(https://battlebase.github.io/img/attachments/8xScope.png);
+}
+.scope15x {
+background-image: url(https://battlebase.github.io/img/attachments/15xScope.png);
+}
+/* ATTACHMENTS CSS*/
+.supressorsniper {
+background-image: url(https://battlebase.github.io/img/attachments/SupressorSniper.png); 
+}
+.compensatorsniper {
+background-image: url(https://battlebase.github.io/img/attachments/CompensatorSniper.png);  
+}
+.flashhidersniper {
+background-image: url(https://battlebase.github.io/img/attachments/FlashHiderSniper.png); 
+}
+.quickdrawsniper {
+background-image: url(https://battlebase.github.io/img/attachments/QuickDrawSniper.png); 
+}
+.extendedmagsniper {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedMagSniper.png); 
+}
+.extendedquickdrawsniper {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedQuickDrawSniper.png); 
+}
+.cheekpadsniper {
+background-image: url(https://battlebase.github.io/img/attachments/CheekPadSniper.png); 
+}
+.bulletloopssniper {
+background-image: url(https://battlebase.github.io/img/attachments/BulletLoopsSniper.png); 
+}
+.supressorar {
+background-image: url(https://battlebase.github.io/img/attachments/SupressorAR.png); 
+}
+.compensatorar {
+background-image: url(https://battlebase.github.io/img/attachments/CompensatorAR.png);  
+}
+.flashhiderar {
+background-image: url(https://battlebase.github.io/img/attachments/FlashHiderAR.png); 
+}
+.quickdrawar {
+background-image: url(https://battlebase.github.io/img/attachments/QuickDrawAR.png); 
+}
+.extendedmagar {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedMagAR.png); 
+}
+.extendedquickdrawar {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedQuickDrawAR.png); 
+}
+.supressorsmg {
+background-image: url(https://battlebase.github.io/img/attachments/SupressorSmg.png);
+}
+.compensatorsmg {
+background-image: url(https://battlebase.github.io/img/attachments/CompensatorSmg.png);  
+}
+.flashhidersmg {
+background-image: url(https://battlebase.github.io/img/attachments/FlashHiderSmg.png); 
+}
+.quickdrawsmg {
+background-image: url(https://battlebase.github.io/img/attachments/QuickDrawSmg.png); 
+}
+.extendedmagsmg {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedMagSmg.png); 
+}
+.extendedquickdrawsmg {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedQuickDrawSmg.png); 
+}
+.tacticalstock {
+background-image: url(https://battlebase.github.io/img/attachments/TacticalStock.png); 
+}
+.stockmicrouzi {
+background-image: url(https://battlebase.github.io/img/attachments/StockMicroUzi.png); 
+}
+.angledforegrip {
+background-image: url(https://battlebase.github.io/img/attachments/AngledForeGrip.png); 
+}
+.verticalforegrip {
+background-image: url(https://battlebase.github.io/img/attachments/VerticalForegrip.png); 
+}
+.halfgrip {
+background-image: url(https://battlebase.github.io/img/attachments/Halfgrip.png); 
+}
+.lightweightGrip {
+background-image: url(https://battlebase.github.io/img/attachments/LightweightGrip.png); 
+}
+.thumbgrip {
+background-image: url(https://battlebase.github.io/img/attachments/Thumbgrip.png); 
+}
+.choke {
+background-image: url(https://battlebase.github.io/img/attachments/ChokeShotgun.png); 
+}
+.duckbill {
+background-image: url(https://battlebase.github.io/img/attachments/Duckbill.png); 
+}
+.bulletloops {
+background-image: url(https://battlebase.github.io/img/attachments/BulletLoopsShotgun.png); 
+}
+.supressorpistol {
+background-image: url(https://battlebase.github.io/img/attachments/SupressorPistol.png);
+}
+.quickdrawpistol{
+background-image: url(https://battlebase.github.io/img/attachments/QuickDrawPistol.png); 
+}
+.extendedmagpistol {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedMagPistol.png); 
+}
+.extendedquickdrawpistol {
+background-image: url(https://battlebase.github.io/img/attachments/ExtendedQuickDrawPistol.png); 
+}
+.quiver {
+background-image: url(https://battlebase.github.io/img/attachments/Quiver.png); 
+}
+/* Clothes CSS */
+.twitchprimeset {
+background-image: url(https://battlebase.github.io/img/items/twitchprimebox.png); 
+}
+.playerunknownset {
+background-image: url(https://battlebase.github.io/img/items/preordercrate.png); 
+}
+.ballisticmask {
+background-image: url(https://battlebase.github.io/img/clothes/ballisticmask.png); 
+}
+.baseballcap {
+background-image: url(https://battlebase.github.io/img/clothes/baseballcap.png); 
+}
+.beanie {
+background-image: url(https://battlebase.github.io/img/clothes/beanie.png); 
+}
+.boots-punk {
+background-image: url(https://battlebase.github.io/img/clothes/boots-punk.png); 
+}
+.blackschooluniformsetfemale {
+background-image: url(https://battlebase.github.io/img/clothes/blackschooluniformsetfemale.png); 
+}
+.blackschooluniformsetmale {
+background-image: url(https://battlebase.github.io/img/clothes/blackschooluniformsetmale.png); 
+}
+.bluehitoptrainers {
+background-image: url(https://battlebase.github.io/img/clothes/bluehitoptrainers.png); 
+}
+.bloodycombatpants {
+background-image: url(https://battlebase.github.io/img/clothes/bloodycombatpants.png); 
+}
+.bloodysneakers {
+background-image: url(https://battlebase.github.io/img/clothes/bloodysneakers.png); 
+}
+.bloodyshirt {
+background-image: url(https://battlebase.github.io/img/clothes/bloodyshirt.png); 
+}
+.bloodytanktop-white {
+background-image: url(https://battlebase.github.io/img/clothes/bloodytanktop-white.png); 
+}
+.blueschooluniformsetfemale {
+background-image: url(https://battlebase.github.io/img/clothes/blueschooluniformsetfemale.png); 
+}
+.blueschooluniformsetmale {
+background-image: url(https://battlebase.github.io/img/clothes/blueschooluniformsetmale.png); 
+}
+.brownhitoptrainers {
+background-image: url(https://battlebase.github.io/img/clothes/brownhitoptrainers.png); 
+}
+.camocap {
+background-image: url(https://battlebase.github.io/img/clothes/camocap.png); 
+}
+.camohotpants {
+background-image: url(https://battlebase.github.io/img/clothes/camohotpants.png); 
+}
+.cargopants-beige {
+background-image: url(https://battlebase.github.io/img/clothes/cargopants-beige.png); 
+}
+.cargopants-blue {
+background-image: url(https://battlebase.github.io/img/clothes/cargopants-blue.png); 
+}
+.cargopants-khaki {
+background-image: url(https://battlebase.github.io/img/clothes/cargopants-khaki.png); 
+}
+.coat {
+background-image: url(https://battlebase.github.io/img/clothes/coat.png); 
+}
+.coat-red {
+background-image: url(https://battlebase.github.io/img/clothes/coat-red.png); 
+}
+.coat-gray {
+background-image: url(https://battlebase.github.io/img/clothes/coat-gray.png); 
+}
+.coat-camel {
+background-image: url(https://battlebase.github.io/img/clothes/coat-camel.png); 
+}
+.checkedshirt-red {
+background-image: url(https://battlebase.github.io/img/clothes/checkedshirt-red.png); 
+}
+.checkedshirt-white {
+background-image: url(https://battlebase.github.io/img/clothes/checkedshirt-white.png); 
+}
+.combatpants-blue {
+background-image: url(https://battlebase.github.io/img/clothes/combatpants-blue.png); 
+}
+.combatpants-black {
+background-image: url(https://battlebase.github.io/img/clothes/combatpants-black.png); 
+}
+.combatpants-camo {
+background-image: url(https://battlebase.github.io/img/clothes/combatpants-camo.png); 
+}
+.combatpants-greycamo {
+background-image: url(https://battlebase.github.io/img/clothes/combatpants-greycamo.png); 
+}
+.combatpants-white {
+background-image: url(https://battlebase.github.io/img/clothes/combatpants-white.png); 
+}
+.dirtytanktop-grey {
+background-image: url(https://battlebase.github.io/img/clothes/dirtytanktop-grey.png); 
+}
+.dirtytanktop-white {
+background-image: url(https://battlebase.github.io/img/clothes/dirtytanktop-white.png); 
+}
+.dmm-shirt {
+background-image: url(https://battlebase.github.io/img/clothes/dmm-shirt.png); 
+}
+.fingerlessgloves-camo {
+background-image: url(https://battlebase.github.io/img/clothes/fingerlessgloves-camo.png); 
+}
+.fingerlessgloves-leather {
+background-image: url(https://battlebase.github.io/img/clothes/fingerlessgloves-leather.png); 
+}
+.fingerlessgloves-tan {
+background-image: url(https://battlebase.github.io/img/clothes/fingerlessgloves-tan.png); 
+}
+.floralshirt {
+background-image: url(https://battlebase.github.io/img/clothes/floralshirt.png); 
+}
+.gasmask {
+background-image: url(https://battlebase.github.io/img/clothes/gasmask.png); 
+}
+.ghilliesuit {
+background-image: url(https://battlebase.github.io/img/clothes/ghilliesuit.png); 
+}
+.ghilliesuitdesert {
+background-image: url(https://battlebase.github.io/img/clothes/ghilliesuitdesert.png); 
+}
+.glasses-punk {
+background-image: url(https://battlebase.github.io/img/clothes/glasses-punk.png); 
+}
+.greyboots {
+background-image: url(https://battlebase.github.io/img/clothes/greyboots.png); 
+}
+.grey-shirt {
+background-image: url(https://battlebase.github.io/img/clothes/grey-shirt.png); 
+}
+.hotpants-blue {
+  background-image: url(https://battlebase.github.io/img/clothes/hotpants-blue.png);
+}
+.instructorset {
+  background-image: url(https://battlebase.github.io/img/clothes/instructorset.png);
+}
+.ivoryschooluniformsetfemale {
+  background-image: url(https://battlebase.github.io/img/clothes/ivoryschooluniformsetfemale.png);
+}
+.ivoryschooluniformsetmale {
+  background-image: url(https://battlebase.github.io/img/clothes/ivoryschooluniformsetmale.png);
+}
+.jeans-tan {
+background-image: url(https://battlebase.github.io/img/clothes/jeans-tan.png); 
+}
+.longsleevedtshirt-black {
+background-image: url(https://battlebase.github.io/img/clothes/longsleevedtshirt-black.png); 
+}
+.longsleevedtshirt-lightblue {
+background-image: url(https://battlebase.github.io/img/clothes/longsleevedtshirt-lightblue.png); 
+}
+.longsleevedtshirt-striped {
+background-image: url(https://battlebase.github.io/img/clothes/longsleevedtshirt-striped.png); 
+}
+.mailru-shirt {
+background-image: url(https://battlebase.github.io/img/clothes/mail.ru-shirt.png); 
+}
+.mandarinjacket-black {
+background-image: url(https://battlebase.github.io/img/clothes/mandarinjacket-black.png); 
+}
+.mandarinjacket-blue {
+background-image: url(https://battlebase.github.io/img/clothes/mandarinjacket-blue.png); 
+}
+.mandarinjacket-yellow {
+background-image: url(https://battlebase.github.io/img/clothes/mandarinjacket-yellow.png); 
+}
+.matchedgreyshirt {
+background-image: url(https://battlebase.github.io/img/clothes/matchedgreyshirt.png); 
+}
+.miniskirt-purple {
+background-image: url(https://battlebase.github.io/img/clothes/miniskirt-purple.png); 
+}
+.orangeshirt {
+background-image: url(https://battlebase.github.io/img/clothes/orangeshirt.png); 
+}
+.paddedjacket-beige {
+background-image: url(https://battlebase.github.io/img/clothes/paddedjacket-beige.png); 
+}
+.paddedjacket-camo {
+background-image: url(https://battlebase.github.io/img/clothes/paddedjacket-camo.png); 
+}
+.paddedjacket-grey {
+background-image: url(https://battlebase.github.io/img/clothes/paddedjacket-grey.png); 
+}
+.paddedjacket-khaki {
+background-image: url(https://battlebase.github.io/img/clothes/paddedjacket-khaki.png); 
+}
+.paddedjacket-urban {
+background-image: url(https://battlebase.github.io/img/clothes/paddedjacket-urban.png); 
+}
+.pandatv-shirt {
+background-image: url(https://battlebase.github.io/img/clothes/pandatv-shirt.png); 
+}
+.pandatv-shirt2 {
+background-image: url(https://battlebase.github.io/img/clothes/pandatv-shirt2.png); 
+} 
+.pleatedminiskirt-black {
+background-image: url(https://battlebase.github.io/img/clothes/pleatedminiskirt-black.png); 
+}
+.pleatedminiskirt-blue {
+background-image: url(https://battlebase.github.io/img/clothes/pleatedminiskirt-blue.png); 
+}
+.protectiveglasses {
+background-image: url(https://battlebase.github.io/img/clothes/protectiveglasses.png); 
+} 
+.pu-bandana {
+background-image: url(https://battlebase.github.io/img/clothes/pu-bandana.png); 
+}
+.pu-set {
+background-image: url(https://battlebase.github.io/img/clothes/pu-set.png); 
+}
+.pu-trenchcoat {
+background-image: url(https://battlebase.github.io/img/clothes/pu-trenchcoat.png); 
+}
+.red-hitoptrainers {
+background-image: url(https://battlebase.github.io/img/clothes/red-hitoptrainers.png); 
+}
+.rimless-sunglasses {
+background-image: url(https://battlebase.github.io/img/clothes/rimless-sunglasses.png); 
+}
+.schooljacket {
+background-image: url(https://battlebase.github.io/img/clothes/schooljacket.png); 
+}
+.schoolpants {
+background-image: url(https://battlebase.github.io/img/clothes/schoolpants.png); 
+}
+.schoolshoes {
+background-image: url(https://battlebase.github.io/img/clothes/schoolshoes.png); 
+}
+.schoolshirt {
+background-image: url(https://battlebase.github.io/img/clothes/schoolshirt.png); 
+}
+.schoolshirt-open {
+background-image: url(https://battlebase.github.io/img/clothes/schoolshirt-open.png); 
+}
+.schoolshirtwithnecktie {
+background-image: url(https://battlebase.github.io/img/clothes/schoolshirtwithnecktie.png); 
+}
+.schoolskirt {
+background-image: url(https://battlebase.github.io/img/clothes/schoolskirt.png); 
+}
+.shirt-black {
+background-image: url(https://battlebase.github.io/img/clothes/shirt-black.png); 
+}
+.shirt-white {
+background-image: url(https://battlebase.github.io/img/clothes/shirt-white.png); 
+}
+.slacks-black {
+background-image: url(https://battlebase.github.io/img/clothes/slacks-black.png); 
+}
+.slacks-blue {
+background-image: url(https://battlebase.github.io/img/clothes/slacks-blue.png); 
+}
+.slacks-purple {
+background-image: url(https://battlebase.github.io/img/clothes/slacks-purple.png); 
+}
+.sneakers-white {
+background-image: url(https://battlebase.github.io/img/clothes/sneakers-white.png); 
+}
+.sunglasses {
+background-image: url(https://battlebase.github.io/img/clothes/sunglasses.png); 
+}
+.tanktop-charcoal {
+background-image: url(https://battlebase.github.io/img/clothes/tanktop-charcoal.png); 
+}
+.tracksuitpants {
+background-image: url(https://battlebase.github.io/img/clothes/tracksuitpants.png); 
+}
+.tracksuitpants-yellow {
+background-image: url(https://battlebase.github.io/img/clothes/tracksuitpants-yellow.png); 
+}
+.tracksuittop {
+background-image: url(https://battlebase.github.io/img/clothes/tracksuittop.png); 
+}
+.tracksuittop-yellow {
+background-image: url(https://battlebase.github.io/img/clothes/tracksuittop-yellow.png); 
+}
+.tracksuitset {
+background-image: url(https://battlebase.github.io/img/clothes/tracksuitset.png); 
+}
+.tracksuitsetyellow {
+background-image: url(https://battlebase.github.io/img/clothes/tracksuitsetyellow.png); 
+}
+.tshirt-red {
+background-image: url(https://battlebase.github.io/img/clothes/tshirt-red.png); 
+}
+.tshirt-striped {
+background-image: url(https://battlebase.github.io/img/clothes/tshirt-striped.png); 
+}
+.tuxedosetfemale {
+background-image: url(https://battlebase.github.io/img/clothes/tuxedosetfemale.png); 
+}
+.tuxedosetmale {
+background-image: url(https://battlebase.github.io/img/clothes/tuxedosetmale.png); 
+}
+.twitchprimebalaclava {
+background-image: url(https://battlebase.github.io/img/clothes/twitchprimebalaclava.png); 
+}
+.twitchprimeboots {
+background-image: url(https://battlebase.github.io/img/clothes/twitchprimeboots.png); 
+}
+.twitchprimecombatpants {
+background-image: url(https://battlebase.github.io/img/clothes/twitchprimecombatpants.png); 
+}
+.twitchprimeshirt {
+background-image: url(https://battlebase.github.io/img/clothes/twitchprimeshirt.png); 
+}
+.velcrotrainers {
+background-image: url(https://battlebase.github.io/img/clothes/velcrotrainers.png); 
+}
+.vintagebaseballhat-white {
+background-image: url(https://battlebase.github.io/img/clothes/vintagebaseballhat-white.png); 
+}
+.vintagebaseballhat-black {
+background-image: url(https://battlebase.github.io/img/clothes/vintagebaseballhat-black.png); 
+}
+.womanstuxedojacket-purple {
+background-image: url(https://battlebase.github.io/img/clothes/womanstuxedojacket-purple.png); 
+}
+.workingboots {
+background-image: url(https://battlebase.github.io/img/clothes/workingboots.png); 
+}
+/* Aviator Items */
+.fringedhotpants {background-image: url(https://battlebase.github.io/img/clothes/fringedhotpants.png);}
+.leatherskyrocketjacket {background-image: url(https://battlebase.github.io/img/clothes/leatherskyrocketjacket.png);}
+.violentvioletjacket {background-image: url(https://battlebase.github.io/img/clothes/violentvioletjacket.png);}
+.desertshemagh {background-image: url(https://battlebase.github.io/img/clothes/desertshemagh.png);}
+.pilotpants {background-image: url(https://battlebase.github.io/img/clothes/pilotpants.png);}
+.vintageaviatorgoggles {background-image: url(https://battlebase.github.io/img/clothes/vintageaviatorgoggles.png);}
+.lazysundaysweatpants {background-image: url(https://battlebase.github.io/img/clothes/lazysundaysweatpants.png);}
+.lightbringershirt {background-image: url(https://battlebase.github.io/img/clothes/lightbringershirt.png);}
+.featheredshirt {background-image: url(https://battlebase.github.io/img/clothes/featheredshirt.png);}
+.deninshirtwithnecktie {background-image: url(https://battlebase.github.io/img/clothes/deninshirtwithnecktie.png);}
+.countrysidesneakers {background-image: url(https://battlebase.github.io/img/clothes/countrysidesneakers.png);}
+.snakeskinsneakers {background-image: url(https://battlebase.github.io/img/clothes/snakeskinsneakers.png);}
+.tacticalgloves {background-image: url(https://battlebase.github.io/img/clothes/tacticalgloves.png);}
+.paddycap {background-image: url(https://battlebase.github.io/img/clothes/paddycap.png);}
+.suedeaviatorcap {background-image: url(https://battlebase.github.io/img/clothes/suedeaviatorcap.png);}
+.aviatorset {background-image: url(https://battlebase.github.io/img/clothes/aviatorset.png);}
+.fireintheholeset {background-image: url(https://battlebase.github.io/img/clothes/fireintheholeset.png);}
+/* FEVER CRATE SETS */
+.brownhatrangersset {background-image: url(https://battlebase.github.io/img/clothes/brownhatrangersset.png);}
+.whitehatrangersset {background-image: url(https://battlebase.github.io/img/clothes/whitehatrangersset.png);}
+.militaryuniformsetfemale {background-image: url(https://battlebase.github.io/img/clothes/militaryuniformsetfemale.png);}
+.militaryuniformsetmale {background-image: url(https://battlebase.github.io/img/clothes/militaryuniformsetmale.png);}
+.zestsetfemale {background-image: url(https://battlebase.github.io/img/clothes/zestsetfemale.png);}
+.zestsetmale {background-image: url(https://battlebase.github.io/img/clothes/zestsetmale.png);}
+/* TRIUMPH CRATE SETS */
+.goldrushset {background-image: url(https://battlebase.github.io/img/clothes/goldrushset.png);}
+.vanhelsingset {background-image: url(https://battlebase.github.io/img/clothes/vanhelsingset.png);}
+/* Vehicles */
+.vehicles {
+background-image: url(https://battlebase.github.io/img/vehicles/vehicles.png); 
+}
+.dacia {
+background-image: url(https://battlebase.github.io/img/vehicles/daciaorange.png); 
+}
+.buggy {
+background-image: url(https://battlebase.github.io/img/vehicles/buggy2.png); 
+}
+.dirtbike {
+background-image: url(https://battlebase.github.io/img/vehicles/dirtbike2.png); 
+}
+.motorbike {
+background-image: url(https://battlebase.github.io/img/vehicles/motorbike2.png); 
+}
+.uaz {
+background-image: url(https://battlebase.github.io/img/vehicles/uaz2.png); 
+}
+.boat {
+background-image: url(https://battlebase.github.io/img/vehicles/boat2.png); 
+}
+/* Desperado Crate Items */
+.clothmask-leopard {background-image: url(https://battlebase.github.io/img/clothes/clothmask-leopard.png);}
+.leatherhoodie-white {background-image: url(https://battlebase.github.io/img/clothes/leatherhoodie-white.png);}
+.leatherhoodie-black {background-image: url(https://battlebase.github.io/img/clothes/leatherhoodie-black.png);}
+.longsleevedleathershirt {background-image: url(https://battlebase.github.io/img/clothes/longsleevedleathershirt.png);}
+.aviatorsunglasses {background-image: url(https://battlebase.github.io/img/clothes/aviatorsunglasses.png);}
+.checkeredjaquet {background-image: url(https://battlebase.github.io/img/clothes/checkeredjaquet.png);}
+.hornrimmedglasses-black {background-image: url(https://battlebase.github.io/img/clothes/hornrimmedglasses-black.png);}
+.hornrimmedglasses-brown {background-image: url(https://battlebase.github.io/img/clothes/hornrimmedglasses-brown.png);}
+.tracksuitpants-lightblue {background-image: url(https://battlebase.github.io/img/clothes/tracksuitpants-lightblue.png);}
+.sleevelessturtleneck-gray {background-image: url(https://battlebase.github.io/img/clothes/sleevelessturtleneck-gray.png);}
+.longleatherboots-brown {background-image: url(https://battlebase.github.io/img/clothes/longleatherboots-brown.png);}
+.baggypants-black {background-image: url(https://battlebase.github.io/img/clothes/baggypants-black.png);}
+.baggypants-brown {background-image: url(https://battlebase.github.io/img/clothes/baggypants-brown.png);}
+.punkknucklegloves-black {background-image: url(https://battlebase.github.io/img/clothes/punkknucklegloves-black.png);}
+.punkknucklegloves-red {background-image: url(https://battlebase.github.io/img/clothes/punkknucklegloves-red.png);}
+.sleevelessturtleneck-black {background-image: url(https://battlebase.github.io/img/clothes/sleevelessturtleneck-black.png);}
+.leatherboots-black {background-image: url(https://battlebase.github.io/img/clothes/leatherboots-black.png);}
+.stripedshirt-gray {background-image: url(https://battlebase.github.io/img/clothes/stripedshirt-gray.png);}
+.widepants-red {background-image: url(https://battlebase.github.io/img/clothes/widepants-red.png);}
+.leatherboots-brown {background-image: url(https://battlebase.github.io/img/clothes/leatherboots-brown.png);}
+.beanie-brown {background-image: url(https://battlebase.github.io/img/clothes/beanie-brown.png);}
+.stripedtanktop {background-image: url(https://battlebase.github.io/img/clothes/stripedtanktop.png);}
+/* Biker Crate Items */
+.clothmask-checkered {background-image: url(https://battlebase.github.io/img/clothes/clothmask-checkered.png);}
+.sleevelessbikerjacket-black {background-image: url(https://battlebase.github.io/img/clothes/sleevelessbikerjacket-black.png);}
+.sleevelessbikerjacket-brown {background-image: url(https://battlebase.github.io/img/clothes/sleevelessbikerjacket-brown.png);}
+.floralshirt-black {background-image: url(https://battlebase.github.io/img/clothes/floralshirt-black.png);}
+.aviatorgoogles {background-image: url(https://battlebase.github.io/img/clothes/aviatorgoogles.png);}
+.bikerpants-gray {background-image: url(https://battlebase.github.io/img/clothes/bikerpants-gray.png);}
+.princesspower-tanktop {background-image: url(https://battlebase.github.io/img/clothes/princesspower-tanktop.png);}
+.sneakers-black {background-image: url(https://battlebase.github.io/img/clothes/sneakers-black.png);}
+.paddedjacket-purple {background-image: url(https://battlebase.github.io/img/clothes/paddedjacket-purple.png);}
+.floralshirt-white {background-image: url(https://battlebase.github.io/img/clothes/floralshirt-white.png);}
+.bikerpants-black {background-image: url(https://battlebase.github.io/img/clothes/bikerpants-black.png);}
+.patrolcap-gray {background-image: url(https://battlebase.github.io/img/clothes/patrolcap-gray.png);}
+.patrolcap-brown {background-image: url(https://battlebase.github.io/img/clothes/patrolcap-brown.png);}
+.sleevelessturtleneck-graystriped {background-image: url(https://battlebase.github.io/img/clothes/sleevelessturtleneck-graystriped.png);}
+.skinnyjeans-pink {background-image: url(https://battlebase.github.io/img/clothes/skinnyjeans-pink.png);}
+.gasmask-half {background-image: url(https://battlebase.github.io/img/clothes/gasmask-half.png);}
+.beanie-gray {background-image: url(https://battlebase.github.io/img/clothes/beanie-gray.png);}
+.sleevelessturtleneck-red {background-image: url(https://battlebase.github.io/img/clothes/sleevelessturtleneck-red.png);}
+.schoolshoes-black {background-image: url(https://battlebase.github.io/img/clothes/schoolshoes-black.png);}
+.skinnyjeans-khaki {background-image: url(https://battlebase.github.io/img/clothes/skinnyjeans-khaki.png);}
+.raglanshirt {background-image: url(https://battlebase.github.io/img/clothes/raglanshirt.png);}
+.stripedtshirt-pink {background-image: url(https://battlebase.github.io/img/clothes/stripedtshirt-pink.png);}
+.polkadottshirt {background-image: url(https://battlebase.github.io/img/clothes/polkadottshirt.png);}
+.dirtylongsleevedtshirt {background-image: url(https://battlebase.github.io/img/clothes/dirtylongsleevedtshirt.png);}
+.longsleevedtshirt-red {background-image: url(https://battlebase.github.io/img/clothes/longsleevedtshirt-red.png);}
+.schoolshoes-brown {background-image: url(https://battlebase.github.io/img/clothes/schoolshoes-brown.png);}
+/* Military Crate Items */
+.militaryskirt-black {background-image: url(https://battlebase.github.io/img/clothes/militaryskirt-black.png);}
+.fauxleatherjacket {background-image: url(https://battlebase.github.io/img/clothes/fauxleatherjacket.png);}
+.cowboyhat-white {background-image: url(https://battlebase.github.io/img/clothes/cowboyhat-white.png);}
+.militaryjacket-black {background-image: url(https://battlebase.github.io/img/clothes/militaryjacket-black.png);}
+.militarycap-black {background-image: url(https://battlebase.github.io/img/clothes/militarycap-black.png);}
+.cowboyhat-brown {background-image: url(https://battlebase.github.io/img/clothes/cowboyhat-brown.png);}
+.leatherbootcutpants {background-image: url(https://battlebase.github.io/img/clothes/leatherbootcutpants.png);}
+.vintagegasmask {background-image: url(https://battlebase.github.io/img/clothes/vintagegasmask.png);}
+.battlebelt {background-image: url(https://battlebase.github.io/img/clothes/battlebelt.png);}
+.militaryboots-black {background-image: url(https://battlebase.github.io/img/clothes/militaryboots-black.png);}
+.utilitybelt-brown {background-image: url(https://battlebase.github.io/img/clothes/utilitybelt-brown.png);}
+.camotanktop-red {background-image: url(https://battlebase.github.io/img/clothes/camotanktop-red.png);}
+.longsleevedturtleneck-black {background-image: url(https://battlebase.github.io/img/clothes/longsleevedturtleneck-black.png);}
+.militaryshirt-gray {background-image: url(https://battlebase.github.io/img/clothes/militaryshirt-gray.png);}
+.militarytrousers-black {background-image: url(https://battlebase.github.io/img/clothes/militarytrousers-black.png);}
+.vintagepoloshirt {background-image: url(https://battlebase.github.io/img/clothes/vintagepoloshirt.png);}
+.poloshirt-pink {background-image: url(https://battlebase.github.io/img/clothes/poloshirt-pink.png);}
+.tanktop-gray {background-image: url(https://battlebase.github.io/img/clothes/tanktop-gray.png);}
+.raglantshirt-redwhite {background-image: url(https://battlebase.github.io/img/clothes/raglantshirt-redwhite.png);}
+/* Fever Crate items */
+.zestcheckeredskirt {background-image: url(https://battlebase.github.io/img/clothes/zestcheckeredskirt.png);}
+.zestdenimjacket {background-image: url(https://battlebase.github.io/img/clothes/zestdenimjacket.png);}
+.croppedcorset {background-image: url(https://battlebase.github.io/img/clothes/croppedcorset.png);}
+.zestsilkscarf {background-image: url(https://battlebase.github.io/img/clothes/zestsilkscarf.png);}
+.zestretrojacket {background-image: url(https://battlebase.github.io/img/clothes/zestretrojacket.png);}
+.floralretrojacket {background-image: url(https://battlebase.github.io/img/clothes/floralretrojacket.png);}
+.denimbootcutpants {background-image: url(https://battlebase.github.io/img/clothes/denimbootcutpants.png);}
+.zestsunglasses {background-image: url(https://battlebase.github.io/img/clothes/zestsunglasses.png);}
+.zestbootcutpants {background-image: url(https://battlebase.github.io/img/clothes/zestbootcutpants.png);}
+.zestloaferswithsocks {background-image: url(https://battlebase.github.io/img/clothes/zestloaferswithsocks.png);}
+.hitopcanvassneakers-pink {background-image: url(https://battlebase.github.io/img/clothes/hitopcanvassneakers-pink.png);}
+.combatpants-coral {background-image: url(https://battlebase.github.io/img/clothes/combatpants-coral.png);}
+.combatgloves-khaki {background-image: url(https://battlebase.github.io/img/clothes/combatgloves-khaki.png);}
+.zestturtleneck-white {background-image: url(https://battlebase.github.io/img/clothes/zestturtleneck-white.png);}
+.checkeredshirt-coral {background-image: url(https://battlebase.github.io/img/clothes/checkeredshirt-coral.png);}
+.retropoloshirt {background-image: url(https://battlebase.github.io/img/clothes/retropoloshirt.png);}
+.meshpoloshirt {background-image: url(https://battlebase.github.io/img/clothes/meshpoloshirt.png);}
+.schoolshoes-beige {background-image: url(https://battlebase.github.io/img/clothes/schoolshoes-beige.png);}
+/* WEAPONS SKINS */
+.goldplate-s686 {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-s686.png);}
+.turquoisedelight-kar98 {background-image: url(https://battlebase.github.io/img/weaponskin/turquoisedelight-kar98.png);}
+.turquoisedelight-m16a4 {background-image: url(https://battlebase.github.io/img/weaponskin/turquoisedelight-m16a4.png);}
+.silverplate-scarl {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-scarl.png);}
+.turquoisedelight-tommygun {background-image: url(https://battlebase.github.io/img/weaponskin/turquoisedelight-tommygun.png);}
+.jungledigital-awm {background-image: url(https://battlebase.github.io/img/weaponskin/jungledigital-awm.png);}
+.jungledigital-sks {background-image: url(https://battlebase.github.io/img/weaponskin/jungledigital-sks.png);}
+.turquoisedelight-p1911 {background-image: url(https://battlebase.github.io/img/weaponskin/turquoisedelight-p1911.png);}
+.silverplate-vector {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-vector.png);}
+.silverplate-s1897 {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-s1897.png);}
+.silverplate-dp28 {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-dp28.png);}
+.jungledigital-p18c {background-image: url(https://battlebase.github.io/img/weaponskin/jungledigital-p18c.png);}
+.ruggedbeige-kar98 {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedbeige-kar98.png);}
+.silverplate-r1895 {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-r1895.png);}
+.ruggedbeige-s12k {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedbeige-s12k.png);}
+.ruggedbeige-m16a4 {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedbeige-m16a4.png);}
+.ruggedbeige-s686 {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedbeige-s686.png);}
+.ruggedbeige-crossbow {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedbeige-crossbow.png);}
+.ruggedbeige-sks {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedbeige-sks.png);}
+.glory-akm {background-image: url(https://battlebase.github.io/img/weaponskin/glory-akm.png);}
+.glory-ump9 {background-image: url(https://battlebase.github.io/img/weaponskin/glory-ump9.png);}
+.goldplate-s12k {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-s12k.png);}
+.desertdigital-m416 {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-m416.png);}
+.trifecta-scarl {background-image: url(https://battlebase.github.io/img/weaponskin/trifecta-scarl.png);}
+.goldplate-sks {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-sks.png);}
+.desertdigital-kar98 {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-kar98.png);}
+.trifecta-microuzi {background-image: url(https://battlebase.github.io/img/weaponskin/trifecta-microuzi.png);}
+.desertdigital-mini14 {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-mini14.png);}
+.goldplate-sawedoff {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-sawedoff.png);}
+.ruggedorange-m416 {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedorange-m416.png);}
+.ruggedorange-kar98 {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedorange-kar98.png);}
+.ruggedorange-akm {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedorange-akm.png);}
+.ruggedorange-scarl {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedorange-scarl.png);}
+.goldplate-win94 {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-win94.png);}
+.ruggedorange-ump9 {background-image: url(https://battlebase.github.io/img/weaponskin/ruggedorange-ump9.png);}
+.trifecta-p92 {background-image: url(https://battlebase.github.io/img/weaponskin/trifecta-p92.png);}
+.desertdigital-r45 {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-r45.png);}
+/* Equinox Crate */
+.sharkbite-kar98 {background-image: url(https://battlebase.github.io/img/weaponskin/sharkbite-kar98.png);}
+.sharkbite-m16a4 {background-image: url(https://battlebase.github.io/img/weaponskin/sharkbite-m16a4.png);}
+.goldplate-akm {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-akm.png);}
+.goldplate-awm {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-awm.png);}
+.silverplate-s12k {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-s12k.png);}
+.goldplate-groza {background-image: url(https://battlebase.github.io/img/weaponskin/goldplate-groza.png);}
+.silverplate-ump9 {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-ump9.png);}
+.silverplate-tommygun {background-image: url(https://battlebase.github.io/img/weaponskin/silverplate-tommygun.png);}
+.desertdigital-p92 {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-p92.png);}
+.desertdigital-win94 {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-win94.png);}
+.desertdigital-p18c {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-p18c.png);}
+.desertdigital-sawedoff {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-sawedoff.png);}
+.desertdigital-microuzi {background-image: url(https://battlebase.github.io/img/weaponskin/desertdigital-microuzi.png);}
+.theolivebranch-pan {background-image: url(https://battlebase.github.io/img/weaponskin/theolivebranch-pan.png);}
+.targetpracticecrate {background-image: url(https://battlebase.github.io/img/items/targetpractice.png);}
+.targetpractice-pan {background-image: url(https://battlebase.github.io/img/weaponskin/targetpractice-pan.png);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
