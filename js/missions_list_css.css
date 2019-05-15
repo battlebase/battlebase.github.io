@@ -1,0 +1,88 @@
+/*
+WildColor: #ff6d29;
+border-top #535353;
+border-bottom: #171717
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+body {
+  background-color: #080808;
+}
+
+.miBlock {
+  display: flex;
+  font-family: 'Roboto Condensed';
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.premiumBorder {
+  display: flex;
+  width: 6px;
+  background-color: #ff6d29;
+}
+.missionTierTitle {
+  display: flex;
+  font-family: 'Roboto Condensed';
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #121212;
+  border-top: solid #363636 1px;
+  margin-bottom: 2px;
+  padding: 8px 8px 8px; 
+}
+.missionTierTitle .premiumText {
+color: #ff6d29;
+}
+.missionTierTitle .freeText {
+color: #f3f3f3;
+}
+.miIcon {
+  display: block;
+  width: 76px;
+  margin-right: 2px;
+  background-color: #292929;
+  border-top: solid #535353 1px;
+  border-bottom: solid #080808 1px;
+  padding: 10px;
+}
+.miIcon img {
+  display: flex;
+  flex-shrink: 0;
+  max-width: 100%;
+  align-self: center;
+}
+
+.miDesc {
+  display: flex;
+  width: 100%;
+  color: #f3f3f3;
+  align-items: center;
+  padding: 0 15px;
+  background-color: #292929;
+  border-top: solid #535353 1px;
+  border-bottom: solid #080808 1px;
+}
+.miReward {
+  display: flex;
+  color: #f3f3f3;
+  align-items: center;
+  padding: 0 15px;
+  margin-left: 2px;
+  background-color: #292929;
+  border-top: solid #535353 1px;
+  border-bottom: solid #080808 1px;
+}
+.miReward i {
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+.miReward .xpValue {
+  padding-top: 2px;
+}
+.xp_small {
+  background-image: url('../assets/icons/xp_small.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
