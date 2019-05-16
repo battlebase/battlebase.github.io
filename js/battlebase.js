@@ -200,14 +200,14 @@ function renderLeftMenu(){
     var menuItemName = menuItem.name;
     var menuItemNamei18 = menuItemName.replace(/ /gi,"");
     var menuItemImg = assetslink + menuItem.image +'.png';
-    var menuItemlink = menuItem.link;
-		if(menuItemlink === "index"){
-			homelink = 'back link'
+    var menuItemLink = menuItem.link;
+		if(menuItemLink === "index"){
+			homelink = 'back link';
 		}
 		
 
     leftMenuBlock+= `
-    <a href="${menuItemlink}.html" data-view=".view-main" class="#{homelink} item-list">
+    <a href="${menuItemLink}.html" data-view=".view-main" class="#{homelink} item-list">
       <img src="${menuItemImg}"/>
       <span class="name" data-i18n="${menuItemNamei18}">${menuItemName}</span>
     </a>
