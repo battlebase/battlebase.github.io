@@ -25,11 +25,6 @@ getSettings();
 
 var leftMenu = [
   {
-    name: "Home",
-    image: "icons/guyicon",
-    link: "index"
-  },
-  {
     name: "Equipments",
     image: "equipments/Item_equipment_Back_C_01",
     link: "https://battlebase.github.io/pages/menu-equipments"
