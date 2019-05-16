@@ -33,7 +33,7 @@ position: absolute;
 width: 100%;
 height: 100%;
 z-index: 999999999;
-background-image: url(https://battlebase.github.io/assets/icons/BattleBasesplash.png);
+background-image: url(https://battlebase.github.io/assets/icons/BattleBaseSplash.png);
 background-repeat: no-repeat;
 background-position: center center;
 background-color: #333;
@@ -79,13 +79,13 @@ header div {
   height: 30px;
   color: #c3c3c3;
   align-items: center;
-  font-size: 12px;
+  font-size: 15px;
 }
 header .battle_base_icon {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url(https://battlebase.github.io/img/icons/battle_base.svg);
+  background: url('https://battlebase.github.io/img/icons/battle_base.svg');
   background-size: 26px;
   background-repeat: no-repeat;
   background-position: center;
@@ -380,22 +380,37 @@ opacity: 0.3;
 
 .updatenowblock .updatestats {
   display: flex;
-flex-direction: column;
-font-family: 'Teko';
-font-size: 25px;
-align-items: center;
-border: 1px solid #171717;
-background-color: #e3e3e3;
-color: #171717;
-padding: 0px 20px;
-transition: 0.3s;
-cursor: pointer;
-margin-right: 10px;
+  flex-direction: column;
+  font-family: 'Teko';
+  font-size: 25px;
+  align-items: center;
+  border: 1px solid #171717;
+  background-color: #e3e3e3;
+  color: #171717;
+  padding: 0px 20px;
+  margin-right: 10px;
+  transition: 0.3s;
+  cursor: pointer;
 }
-.updatenowblock .updatestats:hover {
+.updatenowblock .updatestats:hover,
+.updatenowblock .changeplayer:hover {
 background-color: #ffc60d;
 color: #000000;
 transition: 0.3s;
+}
+.updatenowblock .changeplayer {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Teko';
+  font-size: 25px;
+  align-items: center;
+  border: 1px solid #171717;
+  background-color: #e3e3e3;
+  color: #171717;
+  padding: 0px 20px;
+  margin-right: 10px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .playerStatsMain .playerstatgamemodes {
@@ -427,6 +442,11 @@ transition: 0.3s;
   text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
   border-bottom: 1px solid;
   border-bottom-color: #000;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .nostatsyet {
+  display: flex;
+  background: var(--pagebgcolor);
+  padding: 15px 15px;
 }
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock .gamemode span {
@@ -475,6 +495,11 @@ transition: 0.3s;
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock .rankPoints {
   display: flex;
+  font-size: 38px;
+  font-family: 'Teko';
+  line-height: 32px;
+  color: var(--listvalcolor);
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
 
 .playerStatsblock .rankpointsblock {
@@ -732,13 +757,48 @@ transition: 0.3s;
   background: #272627;
   padding: 5px 15px 5px 15px;
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   color: #fff;
   text-shadow: 0 1px 1px #0c0c0c, 0px -1px 1px #0c0c0c, 1px 0px 1px #0c0c0c, -1px 0px 1px #0c0c0c;
-  border-bottom: 1px solid #000;
-  border-top: 1px solid #333;
 }
+.textblock {
+  border-bottom: 1px solid;
+  border-bottom-color: var(--pagebgcolor);
+}
+.contenttext {
+  color: #fff;
+  padding: 2px 015px;
+  margin: 0;
+  font-size: 16px;
+  background-color: var(--listbgcolor);
+}
+.simplelink img {
+  width: 220px;
+}
+
+.themeSelection {
+  display: flex;
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
+}
+
+.themeSelect {
+  display: flex;
+  width: 100%;
+  margin: 8px 0 10px;
+}
+
+
+.themeSelect .themeName {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  font-size: 18px;
+  color: #fff;
+}
+
+
 .ml5px {margin-left: 5px;}
 .mr5px {margin-right: 5px;}
 .mbt10px {margin-bottom: 10px;margin-top: 10px;}
@@ -945,6 +1005,17 @@ background-image: url(https://battlebase.github.io/img/icon.png);
   border-top-color: var(--listbordertopcolor);
   margin-right: 1px;
   margin-bottom: 1px;
+}
+.left-menu .item-list img {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background-color: var(--listbgcolor);
+  margin-right: 1px;
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
+  margin-bottom: 1px;
+  flex-shrink: 0;
 }
 .left-menu .item-list .name {
   display: flex;
