@@ -194,16 +194,20 @@ function renderCarepackageammo(item,quantity){
 function renderLeftMenu(){
   var assetslink = 'https://battlebase.github.io/assets/';
   var leftMenuBlock = "";
-  console.log(leftMenu)
+  var homelink = "";
   for (i = 0; i < leftMenu.length; i++) {
     var menuItem = leftMenu[i];
     var menuItemName = menuItem.name;
     var menuItemNamei18 = menuItemName.replace(/ /gi,"");
     var menuItemImg = assetslink + menuItem.image +'.png';
     var menuItemlink = menuItem.link;
+		if(menuItemLink === "index"){
+			homelink = 'back link'
+		}
+		
 
     leftMenuBlock+= `
-    <a href="${menuItemlink}.html" data-view=".view-main" class="item-list">
+    <a href="${menuItemlink}.html" data-view=".view-main" class="#{homelink} item-list">
       <img src="${menuItemImg}"/>
       <span class="name" data-i18n="${menuItemNamei18}">${menuItemName}</span>
     </a>
