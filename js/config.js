@@ -32,57 +32,57 @@ var leftMenu = [
   {
     name: "Equipments",
     image: "equipments/Item_equipment_Back_C_01",
-    link: "menu-equipments"
+    link: "https://battlebase.github.io/pages/menu-equipments"
   },
   {
     name: "Customization",
     image: "skins/Item_Body_D_01_C",
-    link: "menu-customization"
+    link: "https://battlebase.github.io/pages/menu-customization"
   },
   {
     name: "Crates",
     image: "crates/randomcrate",
-    link: "menu-crates"
+    link: "https://battlebase.github.io/pages/menu-crates"
   },
   {
     name: "Consumables",
     image: "consumables/Item_Heal_FirstAid_C",
-    link: "menu-consumables"
+    link: "https://battlebase.github.io/pages/menu-consumables"
   },
   {
     name: "Attachments",
     image: "attachments/Item_Attach_Weapon_Stock_Shotgun_BulletLoops_C",
-    link: "menu-attachments"
+    link: "https://battlebase.github.io/pages/menu-attachments"
   },
   {
     name: "Sights",
     image: "sights/Item_Attach_Weapon_Upper_DotSight_01_C",
-    link: "menu-sights"
+    link: "https://battlebase.github.io/pages/menu-sights"
   },
   {
     name: "Weapons",
     image: "weapons/Item_Weapon_AK47_C",
-    link: "menu-weapons"
+    link: "https://battlebase.github.io/pages/menu-weapons"
   },
   {
     name: "Ammos",
     image: "ammo/Item_Ammo_556mm_C",
-    link: "menu-ammunition"
+    link: "https://battlebase.github.io/pages/menu-ammunition"
   },
   {
     name: "Care Package",
     image: "icons/carepackage_default240",
-    link: "menu-carepackage"
+    link: "https://battlebase.github.io/pages/menu-carepackage"
   },
   {
     name: "Vehicles",
     image: "vehicles/vehicles",
-    link: "menu-vehicles"
+    link: "https://battlebase.github.io/pages/menu-vehicles"
   },
   {
     name: "Backpack Manager",
     image: "equipments/Item_equipment_Back_C_01",
-    link: "backpack-manager"
+    link: "https://battlebase.github.io/pages/backpack-manager"
   }
 ]
 

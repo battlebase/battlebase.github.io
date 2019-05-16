@@ -203,7 +203,7 @@ function renderLeftMenu(){
     var menuItemlink = menuItem.link;
 
     leftMenuBlock+= `
-    <a href="https://battlebase.github.io/pages/${menuItemlink}.html" data-view=".view-main" class="item-list">
+    <a href="${menuItemlink}.html" data-view=".view-main" class="item-list">
       <img src="${menuItemImg}"/>
       <span class="name" data-i18n="${menuItemNamei18}">${menuItemName}</span>
     </a>
