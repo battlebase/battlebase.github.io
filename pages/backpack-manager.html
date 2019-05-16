@@ -1,0 +1,182 @@
+<div id="bpmanager" data-page="backpack-manager" class="page">
+  <div class="none">
+    <span data-i18n="Notenoughspaceonbackpack">Not enough space on backpack!</span>
+    <span data-i18n="InventoryisFull">Inventory is Full!</span>
+    <span data-i18n="Add">Add</span>
+    <span data-i18n="Cancel">Cancel</span>
+    </div>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">
+        <span class="pagetitle" data-i18n="BackpackManager" data-i18n="BackpackManager">Backpack Manager</span>
+      </div>
+      <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+    </div>
+  </div>
+  <!--/navbar-->
+  <div class="page-content">
+    <div class="inventory">
+      <div class="blocktitle" data-i18n="Inventory">Inventory</div>
+      <div class="invbar">
+        <div class="invbarinner" data-id="0"></div>
+      </div>
+      <div class="inv">
+        <div class="st slot1">
+          <div class="storagebg"></div>
+          <span class="storagename" data-i18n="Backpacks">Backpacks</span>
+          <i class="storage nothing" data-id="0"></i>
+          <div class="itemstorage">
+            <div class="chooser empty" data-id="0"></div>
+            <div class="chooser backpack1" data-id="150"></div>
+            <div class="chooser backpack2" data-id="200"></div>
+            <div class="chooser backpack3" data-id="250"></div>
+          </div>
+        </div>
+        <div class="st slot2">
+          <div class="storagebg"></div>
+          <span class="storagename" data-i18n="Vests">Vests</span>
+          <i class="storage nothing" data-id="0"></i>
+          <div class="itemstorage">
+            <div class="chooser empty" data-id="0"></div>
+            <div class="chooser vest1" data-id="50"></div>
+            <div class="chooser vest2" data-id="50"></div>
+            <div class="chooser vest3" data-id="50"></div>
+          </div>
+        </div>
+        <div class="st slot3">
+          <div class="storagebg"></div>
+          <span class="storagename" data-i18n="Belt">Belt</span>
+          <i class="storage nothing" data-id="0"></i>
+          <div class="itemstorage">
+            <div class="chooser empty" data-id="0"></div>
+            <div class="chooser utilitybelt" data-id="50"></div>
+          </div>
+        </div>
+      </div>
+      <div class="totalweightinfo">
+        <div class="totalweight">
+          <span class="capacitytext" data-i18n="Capacity">Capacity:</span>
+          <span class="weightvalue" data-id="20">20</span>
+        </div>
+        <div class="totalweight used">
+          <span class="capacitytext" data-i18n="UsedSpace">Used Space:</span>
+          <span class="weightvalueused">0</span>
+        </div>
+      </div>
+      <i class="additemstoinv"></i>
+      <i class="emptyinv"></i>
+      <div class="inventory-items"></div>
+    </div>
+    <div class="itemswindowbg">
+      <div class="itemswindow">
+        <div class="closeitemswindow"></div>
+        <div class="itemsheader">
+          <div class="blocktitle" data-i18n="SelectanItemtoAdd">Select an item to add</div>
+        </div>
+        <div class="items">
+          <ul class="tabs-menu">
+            <li class="current"><a href="#tab-1">
+              <i class="medkit"></i>
+              </a></li>
+            <li><a href="#tab-2">
+              <i class="ammo556mm"></i>
+              </a></li>
+            <li><a href="#tab-3">
+              <i class="frag"></i>
+              </a></li>
+            <li><a href="#tab-4">
+              <i class="scope4x"></i>
+              </a></li>
+            <li><a href="#tab-5">
+              <i class="compensatorsniper"></i>
+              </a></li>
+          </ul>
+        </div>
+        <div class="itemsinfo">
+          <span class="itemtext" data-i18n="Item">Item</span>
+          <span class="weighttext" data-i18n="Weight">Weight</span>
+          <span class="addtext" data-i18n="AddtoBackpack">Add to Backpack</span>
+        </div>
+        <div class="tab">
+          <div id="tab-1" class="tab-content items">
+            <div class="itemstoadd medkit"></div>
+            <div class="itemstoadd firstaidkit"></div>
+            <div class="itemstoadd bandage"></div>
+            <div class="itemstoadd adrenaline"></div>
+            <div class="itemstoadd painkiller"></div>
+            <div class="itemstoadd energydrink"></div>
+            <div class="itemstoadd gascan"></div>
+          </div>
+          <div id="tab-2" class="tab-content ammo">
+            <div class="itemstoadd bolt"></div>
+            <div class="itemstoadd flare"></div>
+            <div class="itemstoadd 45acp"></div>
+            <div class="itemstoadd 12Gauge"></div>
+            <div class="itemstoadd 9mm"></div>
+            <div class="itemstoadd 556mm"></div>
+            <div class="itemstoadd 762mm"></div>
+            <div class="itemstoadd 300magnum"></div>
+          </div>
+          <div id="tab-3" class="tab-content grenades">
+            <div class="itemstoadd stun"></div>
+            <div class="itemstoadd frag"></div>
+            <div class="itemstoadd molotov"></div>
+            <div class="itemstoadd smoke"></div>
+          </div>
+          <div id="tab-4" class="tab-content sights">
+            <div class="itemstoadd reddot"></div>
+            <div class="itemstoadd holographic"></div>
+            <div class="itemstoadd scope2x"></div>
+            <div class="itemstoadd scope3x"></div>
+            <div class="itemstoadd scope4x"></div>
+            <div class="itemstoadd scope6x"></div>
+            <div class="itemstoadd scope8x"></div>
+            <div class="itemstoadd scope15x"></div>
+          </div>
+          <div id="tab-5" class="tab-content attachments">
+            <div class="titleblock" data-i18n="Muzzle">Muzzle</div>
+            <div class="itemstoadd choke"></div>
+            <div class="itemstoadd duckbill"></div>
+            <div class="itemstoadd compensatorsniper"></div>
+            <div class="itemstoadd compensatorar"></div>
+            <div class="itemstoadd compensatorsmg"></div>
+            <div class="itemstoadd flashhidersniper"></div>
+            <div class="itemstoadd flashhiderar"></div>
+            <div class="itemstoadd flashhidersmg"></div>
+            <div class="itemstoadd supressorsniper"></div>
+            <div class="itemstoadd supressorar"></div>
+            <div class="itemstoadd supressorsmg"></div>
+            <div class="itemstoadd supressorpistol"></div>
+            <div class="titleblock" data-i18n="Grip">Grip</div>
+            <div class="itemstoadd angledforegrip"></div>
+            <div class="itemstoadd verticalforegrip"></div>
+            <div class="itemstoadd halfgrip"></div>
+            <div class="itemstoadd lightweightgrip"></div>
+            <div class="itemstoadd thumbgrip"></div>
+            <div class="titleblock" data-i18n="Mag">Mag</div>
+            <div class="itemstoadd quiver"></div>
+            <div class="itemstoadd quickdrawsniper"></div>
+            <div class="itemstoadd extendedmagsniper"></div>
+            <div class="itemstoadd extendedquickdrawsniper"></div>
+            <div class="itemstoadd quickdrawar"></div>
+            <div class="itemstoadd extendedmagar"></div>
+            <div class="itemstoadd extendedquickdrawar"></div>
+            <div class="itemstoadd quickdrawsmg"></div>
+            <div class="itemstoadd extendedmagsmg"></div>
+            <div class="itemstoadd extendedquickdrawsmg"></div>
+            <div class="itemstoadd quickdrawpistol"></div>
+            <div class="itemstoadd extendedmagpistol"></div>
+            <div class="itemstoadd extendedquickdrawpistol"></div>
+            <div class="titleblock" data-i18n="Stock">Stock</div>
+            <div class="itemstoadd bulletloops"></div>
+            <div class="itemstoadd bulletloopssniper"></div>
+            <div class="itemstoadd cheekpadsniper"></div>
+            <div class="itemstoadd stockmicrouzi"></div>
+            <div class="itemstoadd tacticalstock"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/page-content-->
+</div><!--/page-->
