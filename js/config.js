@@ -73,16 +73,6 @@ var leftMenu = [
     name: "Care Package",
     image: "icons/carepackage_default240",
     link: "https://battlebase.github.io/pages/menu-carepackage"
-  },
-  {
-    name: "Vehicles",
-    image: "vehicles/vehicles",
-    link: "https://battlebase.github.io/pages/menu-vehicles"
-  },
-  {
-    name: "Backpack Manager",
-    image: "equipments/Item_equipment_Back_C_01",
-    link: "https://battlebase.github.io/pages/backpack-manager"
   }
 ]
 
