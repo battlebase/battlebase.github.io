@@ -201,7 +201,7 @@ function renderLeftMenu(){
     var menuItemNamei18 = menuItemName.replace(/ /gi,"");
     var menuItemImg = assetslink + menuItem.image +'.png';
     var menuItemlink = menuItem.link;
-		if(menuItemLink === "index"){
+		if(menuItemlink === "index"){
 			homelink = 'back link'
 		}
 		
