@@ -580,6 +580,7 @@ function commaNumber(number){
   }
 
   var romanNum = {
+		0: "",
     1: "I",
     2: "II",
     3: "III",
