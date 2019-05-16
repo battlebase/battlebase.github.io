@@ -2216,6 +2216,8 @@ $$(document).on('pageInit', function (e) {
   var fromPage = e.detail.page.fromPage.name;
   var targetPage = e.detail.page.name;
   console.log("%c Going from: "+fromPage+"  to: "+targetPage+ "", 'background: #222; color: #bada55');
+	var url = window.location.href;
+	console.log(url);
   version();
   renderLeftMenu();
   renderMenulist();
