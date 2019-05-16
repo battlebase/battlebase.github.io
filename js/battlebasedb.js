@@ -7604,8 +7604,8 @@ var PUBGITEMS = {
       body: 100,
       armsandlegs: 125
     },
-    Machinegun: {
-      head: 235,
+    LightMachinegun: {
+      head: 230,
       body: 100,
       armsandlegs: 90
     },
