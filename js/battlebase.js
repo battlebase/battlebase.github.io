@@ -207,7 +207,7 @@ function renderLeftMenu(){
 		
 
     leftMenuBlock+= `
-    <a href="${menuItemLink}.html" data-view=".view-main" class="#{homelink} item-list">
+    <a href="${menuItemLink}.html" data-view=".view-main" class="${homelink} item-list">
       <img src="${menuItemImg}"/>
       <span class="name" data-i18n="${menuItemNamei18}">${menuItemName}</span>
     </a>
