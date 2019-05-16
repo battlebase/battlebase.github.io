@@ -191,7 +191,27 @@ function renderCarepackageammo(item,quantity){
 }
 
 
+function renderLeftMenu(){
+  var assetslink = 'https://battlebase.github.io/assets/';
+  var leftMenuBlock = "";
+  console.log(leftMenu)
+  for (i = 0; i < leftMenu.length; i++) {
+    var menuItem = leftMenu[i];
+    var menuItemName = menuItem.name;
+    var menuItemNamei18 = menuItemName.replace(/ /gi,"");
+    var menuItemImg = assetslink + menuItem.image +'.png';
+    var menuItemlink = menuItem.link;
 
+    leftMenuBlock+= `
+    <a href="${menuItemlink}.html" data-view=".view-main" class="item-list">
+      <img src="${menuItemImg}"/>
+      <span class="name" data-i18n="${menuItemNamei18}">${menuItemName}</span>
+    </a>
+    `
+    
+  }
+  $('.left-menu').html(leftMenuBlock)
+}
 
 
 function render(type, category, item) {
@@ -997,63 +1017,78 @@ ${ammoforBlock}
       </a>
       `
       //Attachments Muzzle
-    var attachmuzzle = PUBGITEMS[category][item].muzzle;
-    var attachmuzzleblock = '';
-    if(attachmuzzle.length > 0){
-      attachmuzzleblock += `<div class="titleblock" data-i18n="Muzzle">Muzzle</div>`
-      for(var a in attachmuzzle){
-        attachmuzzleblock += `<div class="list attachments ${attachmuzzle[a]}"></div>`
+      var attachmuzzle = PUBGITEMS[category][item].muzzle;
+      var attachmuzzleblock = '';
+      if (attachmuzzle) {
+        if (attachmuzzle.length > 0) {
+          attachmuzzleblock += `<div class="titleblock" data-i18n="Muzzle">Muzzle</div>`
+          for (var a in attachmuzzle) {
+            attachmuzzleblock += `<div class="list attachments ${attachmuzzle[a]}"></div>`
+          }
+        }
       }
-    }
-    //Attachments Grip
-    var attachgrip = PUBGITEMS[category][item].grip;
-    var attachgripblock = '';
-    if(attachgrip.length > 0){
-      attachmuzzleblock += `<div class="titleblock" data-i18n="Grip">Grip</div>`
-      for(var a in attachgrip){
-        attachgripblock += `<div class="list attachments ${attachgrip[a]}"></div>`
+      //Attachments Grip
+      var attachgrip = PUBGITEMS[category][item].grip;
+      var attachgripblock = '';
+      if (attachgrip) {
+        if (attachgrip.length > 0) {
+          attachmuzzleblock += `<div class="titleblock" data-i18n="Grip">Grip</div>`
+          for (var a in attachgrip) {
+            attachgripblock += `<div class="list attachments ${attachgrip[a]}"></div>`
+          }
+        }
       }
-    }
-    //Attachments Mag
-    var attachmag = PUBGITEMS[category][item].mag;
-    var attachmagblock = '';
-    if(attachmag.length > 0){
-      attachmagblock += `<div class="titleblock" data-i18n="Mag">Mag</div>`
-      for(var a in attachmag){
-        attachmagblock += `<div class="list attachments ${attachmag[a]}"></div>`
+      //Attachments Mag
+      var attachmag = PUBGITEMS[category][item].mag;
+      var attachmagblock = '';
+      if (attachmag) {
+        if (attachmag.length > 0) {
+          attachmagblock += `<div class="titleblock" data-i18n="Mag">Mag</div>`
+          for (var a in attachmag) {
+            attachmagblock += `<div class="list attachments ${attachmag[a]}"></div>`
+          }
+        }
       }
-    }
-    //Attachments Stock
-    var attachstock = PUBGITEMS[category][item].stock;
-    var attachstockblock = '';
-    if(attachstock.length > 0){
-      attachstockblock += `<div class="titleblock" data-i18n="Stock">Stock</div>`
-      for(var a in attachstock){
-        attachstockblock += `<div class="list attachments ${attachstock[a]}"></div>`
+      //Attachments Stock
+      var attachstock = PUBGITEMS[category][item].stock;
+      var attachstockblock = '';
+      if (attachstock) {
+        if (attachstock.length > 0) {
+          attachstockblock += `<div class="titleblock" data-i18n="Stock">Stock</div>`
+          for (var a in attachstock) {
+            attachstockblock += `<div class="list attachments ${attachstock[a]}"></div>`
+          }
+        }
       }
-    }
-
     //Attachments Sights
     var attsights = PUBGITEMS[category][item].attsights;
     var cantedsight = PUBGITEMS[category][item].cantedsight;
     var attsightsblock = '';
     var cantedsightblock = '';
-    if(cantedsight){cantedsightblock = `<div class="list sights cantedsight"></div>`}
-    if(attsights.length > 0){
-      attsightsblock += `<div class="titleblock" data-i18n="Sights">Sights</div>
-      ${cantedsightblock}`
-      for(var a in attsights){
-        attsightsblock += `<div class="list sights ${attsights[a]}"></div>`
+    if(cantedsight){cantedsightblock = `<div class="list sights cantedsight"></div>`};
+    if(attsights){
+      if(attsights.length > 0){
+        attsightsblock += `<div class="titleblock" data-i18n="Sights">Sights</div>
+        ${cantedsightblock}`
+        for(var a in attsights){
+          attsightsblock += `<div class="list sights ${attsights[a]}"></div>`
+        }
       }
     }
+    
 
     //Skins
     var skins = PUBGITEMS[category][item].skins;
     var skinsblock = '';
-    if(skins){
+    if(skins.length > 0){
+      skinsblock +=`
+      <div class=listblock">
+      <div class="titleblock" data-i18n="Skins">Skins:</div>
+      `
       for(var s in skins){
         skinsblock += `<div class="list skins ${skins[s]}"></div>`
       }
+      skinsblock +=`</div>`;
     }
       
       
@@ -1285,10 +1320,7 @@ ${ammoforBlock}
         <span class="desc" data-i18n="${i18desc}">${desc}</span>
       </div>
       ${stats_tab}
-      <div class=listblock">
-      <div class="titleblock" data-i18n="Skins">Skins:</div>
       ${skinsblock}
-      </div>
       `
   }
   // RENDER SINGLE ITEM WEAPONS COMPARE
@@ -1937,6 +1969,7 @@ function toggleContent(){
 
 function version(){
   $('.appversion').html(appversion);
+  $('.gameversion').html(gameversion);
 }
 
 function timeSurvived(matchTime,timeAlive){
@@ -2069,50 +2102,6 @@ function steamPlayersNow(){
   }
 }
 
-var appversion = '0.1.0';
-$("#splash").delay(1000).fadeOut(500);
-
-var BBDB = {
-  app: {
-    firstTime: true,
-  },
-  data: {
-    steamPlayers: "",
-    steamQueryCache: "",
-  }
-}
-
-function getSettings() {
-  if (localStorage.BBDB) {
-    BBDB = JSON.parse(localStorage.BBDB);
-    console.warn("== Loaded Settings ==");
-  } else {
-    localStorage.BBDB = JSON.stringify(BBDB);
-    console.warn("== Saved settings ==");
-  }
-}
-
-
-
-var config = {
-  steamQueryLimit: 60,
-  pubgapiQueryLimit: 2,
-}
-var error = {
-  steamrequest: {
-    message: "Couldn't get steam players, try again later.",
-    i18n: "error_steamrequest"
-  },
-  requestplayer:{
-    message: "Coudn't find a player with this nickname, try again.",
-    i18n: "error_requestplayer"
-  },
-  seasonstats:{
-    message: "Coudn't fetch stats, try again please.",
-    i18n: "error_seasonstats"
-  }
-}
-
 function firstLoad() {
   var BBDB = JP(localStorage.BBDB);
   var firstTime = BBDB.app.firstTime;
@@ -2142,6 +2131,22 @@ function firstLoad() {
     var BBapiSettings = JP(localStorage.BBapiSettings);
     var player_id = BBapiSettings.player_id;
     getSeasonStats(player_id);
+  });
+}
+
+function changeplayer(){
+  $(document).on('click', '.changeplayer', function() {
+    var BBDB = JP(localStorage.BBDB);
+    BBDB.app.firstTime = true;
+    localStorage.BBDB = JS(BBDB);
+    BBapiSettings = JP(localStorage.BBapiSettings);
+    BBapiSettings.playerName = "";
+    BBapiSettings.player_id = "";
+    localStorage.BBapiSettings = JS(BBapiSettings);
+    BBplayerdata = JP(localStorage.BBplayerdata);
+    BBplayerdata = [];
+    localStorage.BBplayerdata = JS(BBplayerdata);
+    firstLoad();
   });
 }
 
@@ -2177,6 +2182,12 @@ function requestPlayer(player) {
                 var playeridsplited = player_id.split(".")[1];
                 var player_id_split = playeridsplited.substring(0, 8) + "-" + playeridsplited.substring(8, 12) + "-" + playeridsplited.substring(12, 16) + "-" + playeridsplited.substring(16, 20) + "-" + playeridsplited.substring(20, 12);
                 console.log(player_id_split);
+                console.log("BBapiSettings")
+                console.log(BBapiSettings)
+                BBapiSettings.playerName = player;
+                localStorage.BBapiSettings = JS(BBapiSettings);
+                console.log("added player");
+                console.log(BBapiSettings)
                 BBapiSettings.player_id = player_id;
                 matches = data.data[0].relationships.matches.data;
                 var lastmatch = matches[0].id;
@@ -2201,7 +2212,8 @@ $$(document).on('pageInit', function (e) {
   var fromPage = e.detail.page.fromPage.name;
   var targetPage = e.detail.page.name;
   console.log("%c Going from: "+fromPage+"  to: "+targetPage+ "", 'background: #222; color: #bada55');
-  firstLoad()
+  version();
+  renderLeftMenu();
   renderMenulist();
   renderMenuSkins();
 	renderLists();
@@ -2216,7 +2228,7 @@ $$(document).on('pageInit', function (e) {
 
 });
 $$(document).on('pageBack', function(e) {
-  firstLoad()
+  version();
   renderMenulist();
   renderMenuSkins();
   renderLists();
@@ -2226,10 +2238,12 @@ $$(document).on('pageBack', function(e) {
 });
 
 $(document).ready(function() {
-  getSettings();
+  get_settings();
   firstLoad();
+  changeplayer();
   version();
   dismissError();
+  renderLeftMenu()
   steamPlayersNow();
   themechange();
   renderMenulist();

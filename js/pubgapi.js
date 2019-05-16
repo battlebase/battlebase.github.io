@@ -247,7 +247,7 @@ var ranks = [
 ]
 //console.log(ranks)
 
-var playerName = "RogerHN";
+var playerName = "";
 //var player_id = 'account.e26d57d7d74a44eab13ed46bb0ef0494';
 
 var BBapiSettings = {
@@ -299,7 +299,7 @@ function get_settings() {
 };
 
 
-get_settings();
+
 
 
 
@@ -463,8 +463,6 @@ function getSeasonStats(player_id) {
                 dateNow = new Date();
                 steamQueryCache = new Date();
                 dateNow = formatDate(dateNow);
-                BBapiSettings.playerName = playerName;
-                localStorage.BBapiSettings = JS(BBapiSettings);
                 var playerSeasonsData = data.data;
                 var found = 0;
 
@@ -489,6 +487,7 @@ function getSeasonStats(player_id) {
 
                 if (found === 0) {
                     BBplayerdata.push({ dateCache: dateNow, player: playerName, data: playerSeasonsData })
+                    console.log("pushing new data");
                     localStorage.BBplayerdata = JS(BBplayerdata);
                 }
                 displayStats();
@@ -590,12 +589,13 @@ function commaNumber(number){
   
   function displayStats(){
     var BBplayerdata = JP(localStorage.BBplayerdata);
+    var BBapiSettings = JP(localStorage.BBapiSettings);
     console.log("player data:")
     console.log(BBplayerdata)
     var dateCache = BBplayerdata[0].dateCache;
     var dateCachesplit = dateCache.split('.');
     var lastupdated = dateCachesplit[0]+'/'+dateCachesplit[1]+'/'+dateCachesplit[2]+' '+dateCachesplit[3]+':'+dateCachesplit[4];
-    var playerName = BBplayerdata[0].player;
+    var playerName = BBapiSettings.playerName;
     var gamemodes = BBplayerdata[0].data.attributes.gameModeStats;
     console.log("player data:")
     console.log(gamemodes);
@@ -783,7 +783,8 @@ function commaNumber(number){
             <span class="lastupdated">${lastupdated}</span>
         </div>
         <div class="updatenowblock">
-            <button class="updatestats"><span class="updatetext">Update Now</span></div>
+            <button class="updatestats"><span class="updatetext">Update Now</span></button>
+            <button class="changeplayer"><span class="changeplayertext">Change Player</span></button>
         </div>
     </div>
   <div class="playerstatgamemodes">

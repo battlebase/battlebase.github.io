@@ -393,7 +393,7 @@ var PUBGITEMS = {
   },
   attachments: {
     ammoloops: {
-      item: "bulletloops",
+      item: "ammoloops",
       name: "Bullet Loops (SG, Win94, Kar98k)",
       icon: "Item_Attach_Weapon_Stock_SniperRifle_BulletLoops_C",
       weight: "8",
@@ -907,6 +907,7 @@ var PUBGITEMS = {
       desc: "Serviceable sniper rifle.",
       i18desc: "M24-desc",
       slots: ["muzzle", "none", "mag", "stock"],
+      skins: [],
       stats: {
         capacity: "5",
         capacityExt: "7",
@@ -942,7 +943,7 @@ var PUBGITEMS = {
       ammoIcon: "Item_Ammo_762mm_C",
       desc: "Vintage sniper rifle.",
       i18desc: "kar98k-desc",
-      skins: ["desertdigital", "ruggedbeige", "ruggedorange", "sharkbite", "turquoisedelight"],
+      skins: ["desertdigital_kar98k", "ruggedbeige_kar98k", "ruggedorange_kar98k", "sharkbite_kar98k", "turquoisedelight_kar98k"],
       slots: ["muzzle", "none", "none", "stock"],
       stats: {
         capacity: "5",
@@ -961,7 +962,7 @@ var PUBGITEMS = {
       muzzle: ["compensatorsniper", "flashhidersniper", "suppressorsniper"],
       grip: [],
       mag: [],
-      stock: ["bulletloops", "cheekpad"],
+      stock: ["ammoloops", "cheekpad"],
       attsights: ["scope15x", "scope6x", "scope8x", "scope2x", "scope3x", "scope4x", "reddot", "holographic"],
       cantedsight: "cantedsight"
     },
@@ -977,6 +978,7 @@ var PUBGITEMS = {
       i18desc: "SKS-desc",
       skins: ["goldplate", "jungledigital"],
       slots: ["muzzle", "grip", "mag", "stock"],
+      skins: [],
       stats: {
         capacity: "10",
         capacityExt: "20",
@@ -1012,6 +1014,7 @@ var PUBGITEMS = {
       i18desc: "SLR-desc",
       skins: [],
       slots: ["muzzle", "none", "mag", "stock"],
+      skins: [],
       stats: {
         capacity: "10",
         capacityExt: "20",
@@ -1046,6 +1049,7 @@ var PUBGITEMS = {
       desc: "The VSS is a supressed sniper rifle that uses a heavy subsonic 9mm cartridge.",
       i18desc: "VSS-desc",
       slots: ["none", "none", "mag", "stock"],
+      skins: [],
       stats: {
         capacity: "20",
         capacityExt: "30",
@@ -1077,8 +1081,9 @@ var PUBGITEMS = {
       ammoIcon: "Item_Ammo_556mm_C",
       desc: "Semi-auto carbine.",
       i18desc: "Mini14-desc",
-      skins: ["desertdigital"],
+      skins: ["desertdigital_mini14"],
       slots: ["muzzle", "none", "mag", "none"],
+      skins: [],
       stats: {
         capacity: "20",
         capacityExt: "30",
@@ -1113,6 +1118,7 @@ var PUBGITEMS = {
       i18desc: "qbu-desc",
       skins: [""],
       slots: ["muzzle", "none", "mag", "none"],
+      skins: [],
       stats: {
         capacity: "20",
         capacityExt: "30",
@@ -1149,6 +1155,7 @@ var PUBGITEMS = {
       i18desc: "mk14-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
       slots: ["muzzle", "none", "mag", "stock"],
+      skins: [],
       stats: {
         capacity: "20",
         capacityExt: "30",
@@ -1183,7 +1190,7 @@ var PUBGITEMS = {
       desc: "Lever-action rifle.",
       i18desc: "win94-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["desertdigital", "goldplate"],
+      skins: ["desertdigital_win94", "goldplate_win94"],
       slots: ["none", "none", "none", "stock"],
       stats: {
         capacity: "8",
@@ -1202,7 +1209,7 @@ var PUBGITEMS = {
       firingMode: ["Single"],
       muzzle: [],
       mag: [],
-      stock: ["bulletloops"],
+      stock: ["ammoloops"],
       attsights: []
     },
     AKM: {
@@ -1216,7 +1223,7 @@ var PUBGITEMS = {
       desc: "For comrades-in-arms.",
       i18desc: "akm-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["goldplate", "glory", "ruggedorange"],
+      skins: ["goldplate_akm", "glory_akm", "ruggedorange_akm"],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1252,7 +1259,7 @@ var PUBGITEMS = {
       desc: "Modern Polish assault rifle.",
       i18desc: "Beryl-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["goldplate", "glory", "ruggedorange"],
+      skins: [],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1288,7 +1295,7 @@ var PUBGITEMS = {
       desc: "Modern assault rifle capable of single and two-round burst fire modes.",
       i18desc: "Mk47Mutant-desc",
       maps: ["Erangel","Miramar", "Sanhok"],
-      skins: ["goldplate", "glory", "ruggedorange"],
+      skins: [],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1324,7 +1331,7 @@ var PUBGITEMS = {
       desc: "Modern assault rifle.",
       i18desc: "scarl-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["ruggedorange", "silverplate", "trifecta"],
+      skins: ["ruggedorange_scarl", "silverplate_scarl", "trifecta_scarl"],
       slots: ["muzzle", "grip", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1360,7 +1367,7 @@ var PUBGITEMS = {
       desc: "Burstfire assault rifle.",
       i18desc: "m16a4-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["ruggedbeige", "sharkbite", "turquoisedelight"],
+      skins: ["ruggedbeige_m16a4", "sharkbite_m16a4", "turquoisedelight_m16a4"],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1396,7 +1403,7 @@ var PUBGITEMS = {
       desc: "German do things properly.",
       i18desc: "m416-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["desertdigital", "ruggedorange"],
+      skins: ["desertdigital_m416", "ruggedorange_m416"],
       slots: ["muzzle", "grip", "mag", "stock"],
       stats: {
         capacity: "30",
@@ -1432,7 +1439,7 @@ var PUBGITEMS = {
       desc: "Compact subcarbine variant of the German G36.",
       i18desc: "m416-desc",
       maps: ["Vikendi"],
-      skins: ["desertdigital", "ruggedorange"],
+      skins: [],
       slots: ["muzzle", "grip", "mag", "stock"],
       stats: {
         capacity: "30",
@@ -1468,6 +1475,7 @@ var PUBGITEMS = {
       desc: "Modern assault rifle.",
       i18desc: "aug-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
+      skins: [],
       slots: ["muzzle", "grip", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1540,7 +1548,7 @@ var PUBGITEMS = {
       desc: "A selective fire Russian bullpup assault rifle chambered for a 7.62mm round.",
       i18desc: "groza-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["goldplate"],
+      skins: ["goldplate_groza"],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1577,6 +1585,7 @@ var PUBGITEMS = {
       i18desc: "m249-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
       slots: ["none", "none", "none", "none"],
+      skins: [],
       stats: {
         capacity: "100",
         capacityExt: "",
@@ -1605,7 +1614,7 @@ var PUBGITEMS = {
       desc: "A Russian made, inter-war era light machine gun chambered for 7.62mm.",
       i18desc: "dp28-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["silverplate"],
+      skins: ["silverplate_dp28"],
       slots: ["none", "none", "none", "none"],
       stats: {
         capacity: "47",
@@ -1636,7 +1645,7 @@ var PUBGITEMS = {
       desc: "Infinite ammo with trech coat on.",
       i18desc: "tommygun-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["silverplate", "turquoisedelight"],
+      skins: ["silverplate_tommygun", "turquoisedelight_tommygun"],
       slots: ["muzzle", "grip", "mag", "none"],
       stats: {
         capacity: "30",
@@ -1671,7 +1680,7 @@ var PUBGITEMS = {
       desc: "Modern submachine gun using 9mm ammonition.",
       i18desc: "ump9-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["glory", "ruggedorange", "silverplate"],
+      skins: ["glory_ump45", "ruggedorange_ump45", "silverplate_ump45"],
       slots: ["muzzle", "grip", "mag", "none"],
       stats: {
         capacity: "25",
@@ -1707,7 +1716,7 @@ var PUBGITEMS = {
       desc: "Spray your ammo but beware to not shoot yourself in the foot.",
       i18desc: "microuzi-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["desertdigital", "trifecta"],
+      skins: ["desertdigital_microuzi", "trifecta_microuzi"],
       slots: ["muzzle", "none", "mag", "stock"],
       stats: {
         capacity: "25",
@@ -1741,7 +1750,7 @@ var PUBGITEMS = {
       desc: "Modern submachine gun using delayed blowback system.",
       i18desc: "vector-desc",
       maps: ["Erangel","Miramar", "Sanhok"],
-      skins: ["silverplate"],
+      skins: ["silverplate_vector"],
       slots: ["muzzle", "grip", "mag", "stock"],
       stats: {
         capacity: "19",
@@ -1777,7 +1786,7 @@ var PUBGITEMS = {
       desc: "Russian submachine gun fitted with a large capacity helical magazine.",
       i18desc: "Bizon-desc",
       maps: ["Erangel","Miramar", "Sanhok"],
-      skins: ["silverplate"],
+      skins: [],
       slots: ["muzzle", "none", "none", "none"],
       stats: {
         capacity: "50",
@@ -1849,7 +1858,7 @@ var PUBGITEMS = {
       desc: "Double barrel shotgun.",
       i18desc: "s686-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["goldplate", "ruggedbeige"],
+      skins: ["goldplate_s686", "ruggedbeige_s686"],
       slots: ["muzzle", "none", "none", "stock"],
       stats: {
         capacity: "2",
@@ -1870,7 +1879,7 @@ var PUBGITEMS = {
       muzzle: ["choke"],
       grip: [],
       mag: [],
-      stock: ["bulletloops"],
+      stock: ["ammoloops"],
       attsights: []
     },
     S1897: {
@@ -1884,7 +1893,7 @@ var PUBGITEMS = {
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
       desc: "Modest shotgun.",
       i18desc: "s1897-desc",
-      skins: ["silverplate"],
+      skins: ["silverplate_s1897"],
       slots: ["muzzle", "none", "none", "stock"],
       stats: {
         capacity: "5",
@@ -1905,7 +1914,7 @@ var PUBGITEMS = {
       muzzle: ["choke", "duckbill"],
       grip: [],
       mag: [],
-      stock: ["bulletloops"],
+      stock: ["ammoloops"],
       attsights: []
     },
     S12K: {
@@ -1919,7 +1928,7 @@ var PUBGITEMS = {
       desc: "Kinda foul in this world.",
       i18desc: "s12k-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["goldplate", "ruggedbeige", "silverplate"],
+      skins: ["goldplate_s12k", "ruggedbeige_s12k", "silverplate_s12k"],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "5",
@@ -1955,7 +1964,7 @@ var PUBGITEMS = {
       desc: "Damageful revolver using 7.62mm ammunition.",
       i18desc: "r1895-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["silverplate"],
+      skins: ["silverplate_r1895"],
       slots: ["muzzle", "none", "none", "none"],
       stats: {
         capacity: "7",
@@ -1986,7 +1995,7 @@ var PUBGITEMS = {
       desc: "Your grandpa loved it.",
       i18desc: "p1911-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["turquoisedelight"],
+      skins: ["turquoisedelight_p1911"],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "7",
@@ -2019,7 +2028,7 @@ var PUBGITEMS = {
       desc: "Modest handgun.",
       i18desc: "p92-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["desertdigital", "trifecta"],
+      skins: ["desertdigital_p92", "trifecta_p92"],
       slots: ["muzzle", "grip", "mag", "none"],
       stats: {
         capacity: "15",
@@ -2052,7 +2061,7 @@ var PUBGITEMS = {
       desc: "An Austrian pistol with a full-auto mode and chambered for a 9mm round.",
       i18desc: "p18c-desc",
       maps: ["Erangel","Miramar", "Sanhok"],
-      skins: ["desertdigital", "jungledigital"],
+      skins: ["desertdigital_p18c", "jungledigital_p18c"],
       slots: ["muzzle", "none", "mag", "none"],
       stats: {
         capacity: "17",
@@ -2085,7 +2094,7 @@ var PUBGITEMS = {
       desc: "An italian-made modern 6-shot revolver chambered for .45 cal.",
       i18desc: "r45-desc",
       maps: ["Miramar", "Sanhok", "Vikendi"],
-      skins: ["desertdigital"],
+      skins: ["desertdigital_r45"],
       slots: ["none", "grip", "none", "none"],
       stats: {
         capacity: "6",
@@ -2101,7 +2110,6 @@ var PUBGITEMS = {
         soundrange: "400",
       },
       firingMode: ["Single"],
-      grip: ["emptygrip"],
       attsights: ["reddot", "holographic"]
     },
     Skorpion: {
@@ -2115,7 +2123,7 @@ var PUBGITEMS = {
       desc: "Modest handgun.",
       i18desc: "p92-desc",
       maps: ["Erangel", "Miramar", "Sanhok", "Vikendi"],
-      skins: ["desertdigital", "trifecta"],
+      skins: [],
       slots: ["muzzle", "grip", "mag", "stock"],
       stats: {
         capacity: "15",
@@ -2149,7 +2157,7 @@ var PUBGITEMS = {
       desc: "A break open shotgun with shortened barrel capable of firing two consecutive shots.",
       i18desc: "Sawedoff-desc",
       maps: ["Miramar", "Sanhok"],
-      skins: [],
+      skins: ["goldplate_sawed_off","desertdigital_sawed_off"],
       slots: ["muzzle", "none", "none", "none"],
       stats: {
         capacity: "2",
@@ -2180,7 +2188,7 @@ var PUBGITEMS = {
       desc: "Hard to use, good to assassinate.",
       i18desc: "crossbow-desc",
       maps: ["Erangel", "Miramar", "Sanhok", "Vikendi"],
-      skins: ["ruggedbeige"],
+      skins: ["ruggedbeige_Crossbow"],
       slots: ["none", "none", "mag", "none"],
       stats: {
         capacity: "5",
@@ -2336,7 +2344,7 @@ var PUBGITEMS = {
       probability: "10",
       ingame: true,
       marketable: true,
-      crateItems: ["pleatedminiskirtblue", "protectiveglasses", "hotpantsblue", "mandarinjacketblue", "schoolshirtopen", "ballisticmask", "slacksblue", "urbanpaddedjacket", "floralshirt", "punkglasses", "punkboots", "hitoptrainersblue", "gasmaskfull", "bloodycombatpants", "cargopantskhaki", "cargopantsbeige", "cargopantsblue", "dirtytanktopwhite", "tanktopcharcoal", "longsleevedtshirtblack", "longsleevedtshirtlightblue", "longsleevedtshirtstriped", "tshirtred", "tshirtstriped", "workingboots"]
+      crateItems: ["pleatedminiskirtblue", "protectiveglasses", "hotpantsblue", "mandarinjacketblue", "schoolshirtopen", "ballisticmask", "slacksblue", "urbanpaddedjacket", "floralshirt", "punkglasses", "punkboots", "hitoptrainersblue", "gasmaskfull", "shirtwhite","bloodycombatpants", "cargopantskhaki", "cargopantsbeige", "cargopantsblue", "dirtytanktopwhite", "tanktopcharcoal", "longsleevedtshirtblack", "longsleevedtshirtlightblue", "longsleevedtshirtstriped", "tshirtred", "tshirtstriped", "workingboots"]
     },
     survivorcrate: {
       item: "survivorcrate",
@@ -2346,7 +2354,7 @@ var PUBGITEMS = {
       probability: "10",
       ingame: true,
       marketable: true,
-      crateItems: ["miniskirtpurple", "coatblack", "coatred", "femaletuxedojacketpurple", "coatgray", "coatcamel", "slackspurple", "camopaddedjacket", "checkedshirtred", "checkedshirtwhite", "paddedjacketkhaki", "shirtwhite", "paddedjacketbeige", "matchedshirtgray", "fingerlessglovestan", "fingerlessglovescamo", "vintagebaseballcapredblack", "beanieblack", "bootsgray", "hitoptrainersbrown", "vintagebaseballcapredwhite", "vintagebaseballcapwhite", "combatpantswhite", "combatpantsblue", "combatpantscamo", "combatpantsblack"]
+      crateItems: ["miniskirtpurple", "coatblack", "coatred", "femaletuxedojacketpurple", "coatgray", "coatcamel", "slackspurple", "camopaddedjacket", "checkedshirtred", "checkedshirtwhite", "paddedjacketkhaki", "paddedjacketbeige", "matchedshirtgray", "fingerlessglovestan", "fingerlessglovescamo", "vintagebaseballcapredblack", "beanieblack", "bootsgray", "hitoptrainersbrown", "vintagebaseballcapredwhite", "vintagebaseballcapwhite", "combatpantswhite", "combatpantsblue", "combatpantscamo", "combatpantsblack"]
     },
     bikercrate: {
       item: "bikercrate",
@@ -2438,7 +2446,7 @@ var PUBGITEMS = {
       probability: "20",
       ingame: true,
       marketable: true,
-      crateItems: ["goldplate_s686", "turquoisedelight_kar98k", "turquoisedelight_m16a4", "silverplate_scarl", "turquoisedelight_tommygun", "jungledigital_awm", "jungledigital_sks", "turquoisedelight_p1911", "silverplate_vector", "silverplate_s1897", "silverplate_dp_28", "jungledigital_p18c", "ruggedbeige_kar98k", "silverplate_r1895", "ruggedbeige_s12k", "ruggedbeige_m16a4", "ruggedbeige_s686", "ruggedbeige_crossbow", "ruggedbeige_sks"]
+      crateItems: ["goldplate_s686", "turquoisedelight_kar98k", "turquoisedelight_m16a4", "silverplate_scarl", "turquoisedelight_tommygun", "jungledigital_awm", "jungledigital_sks", "turquoisedelight_p1911", "silverplate_vector", "silverplate_s1897", "silverplate_dp_28", "jungledigital_p18c", "ruggedbeige_kar98k", "silverplate_r1895", "ruggedbeige_s12k", "ruggedbeige_m16a4", "ruggedbeige_s686", "ruggedbeige_Crossbow", "ruggedbeige_sks"]
     },
     fall2018crate: {
       item: "fall2018crate",
@@ -4265,8 +4273,8 @@ var PUBGITEMS = {
       probability: "20",
       bp: "30"
     },
-    ruggedbeige_crossbow: {
-      item: "ruggedbeige_crossbow",
+    ruggedbeige_Crossbow: {
+      item: "ruggedbeige_Crossbow",
       name: "Rugged (Beige) - Crossbow",
       icon: "Item_Skin_Crossbow_Beige_01_C",
       skintype: "weaponskin",
@@ -4949,6 +4957,7 @@ var PUBGITEMS = {
       name: "Glory - AKM",
       icon: "Item_Skin_AK47_Glory_01_C",
       skintype: "weaponskin",
+      skinfor: "AKM",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Red",
@@ -4961,6 +4970,7 @@ var PUBGITEMS = {
       name: "Glory - UMP45",
       icon: "Item_Skin_UMP_Glory_01_C",
       skintype: "weaponskin",
+      skinfor: "UMP45",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Pink",
@@ -4973,6 +4983,7 @@ var PUBGITEMS = {
       name: "Gold Plate - S12K",
       icon: "Item_Skin_Saiga12_Rosewood_01_C",
       skintype: "weaponskin",
+      skinfor: "S12K",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Pink",
@@ -4985,6 +4996,7 @@ var PUBGITEMS = {
       name: "Desert Digital - M416",
       icon: "Item_Skin_HK416_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "M416",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Purple",
@@ -4997,6 +5009,7 @@ var PUBGITEMS = {
       name: "Trifecta - SCAR_L",
       icon: "Item_Skin_Scar-L_Tri_01_C",
       skintype: "weaponskin",
+      skinfor: "SCARL",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Purple",
@@ -5009,6 +5022,7 @@ var PUBGITEMS = {
       name: "Gold Plate - SKS",
       icon: "Item_Skin_SKS_RoseWood_01_C",
       skintype: "weaponskin",
+      skinfor: "SKS",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Purple",
@@ -5021,6 +5035,7 @@ var PUBGITEMS = {
       name: "Desert Digital - Kar98k",
       icon: "Item_Skin_Kar98k_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "Kar98k",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Blue",
@@ -5033,6 +5048,7 @@ var PUBGITEMS = {
       name: "Trifecta - Micro UZI",
       icon: "Item_Skin_UZI_Tri_01_C",
       skintype: "weaponskin",
+      skinfor: "MicroUZI",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Blue",
@@ -5045,6 +5061,7 @@ var PUBGITEMS = {
       name: "Desert Digital - Mini14",
       icon: "Item_Skin_Mini14_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "Mini14",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Blue",
@@ -5057,6 +5074,7 @@ var PUBGITEMS = {
       name: "Gold Plate - Sawed_Off",
       icon: "Item_Skin_Sawnoff_RoseWood_01_C",
       skintype: "weaponskin",
+      skinfor: "SawedOff",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Blue",
@@ -5069,6 +5087,7 @@ var PUBGITEMS = {
       name: "Rugged (Orange) - M416",
       icon: "Item_Skin_HK416_Orange_01_C",
       skintype: "weaponskin",
+      skinfor: "M416",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5081,6 +5100,7 @@ var PUBGITEMS = {
       name: "Rugged (Orange) - Kar98k",
       icon: "Item_Skin_Kar98k_Orange_01_C",
       skintype: "weaponskin",
+      skinfor: "Kar98k",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5093,6 +5113,7 @@ var PUBGITEMS = {
       name: "Rugged (Orange) - AKM",
       icon: "Item_Skin_AKM_Orange_01_C",
       skintype: "weaponskin",
+      skinfor: "AKM",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5105,6 +5126,7 @@ var PUBGITEMS = {
       name: "Rugged (Orange) - SCAR_L",
       icon: "Item_Skin_Scar-L_Orange_01_C",
       skintype: "weaponskin",
+      skinfor: "SCARL",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5117,6 +5139,7 @@ var PUBGITEMS = {
       name: "Gold Plate - Win94",
       icon: "Item_Skin_Win94_RoseWood_01_C",
       skintype: "weaponskin",
+      skinfor: "Win94",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5129,6 +5152,7 @@ var PUBGITEMS = {
       name: "Rugged (Orange) - UMP45",
       icon: "Item_Skin_UMP_Orange_01_C",
       skintype: "weaponskin",
+      skinfor: "UMP45",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5141,6 +5165,7 @@ var PUBGITEMS = {
       name: "Trifecta - P92",
       icon: "Item_Skin_M9_Tri_01_C",
       skintype: "weaponskin",
+      skinfor: "P92",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5153,6 +5178,7 @@ var PUBGITEMS = {
       name: "Desert Digital - R45",
       icon: "Item_Skin_Rhino_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "R45",
       crate: "triumphcrate",
       cratename: "TRIUMPH CRATE",
       rarity: "Green",
@@ -5180,6 +5206,7 @@ var PUBGITEMS = {
       name: "Shark Bite - Kar98k",
       icon: "Item_Skin_Kar98k_Shark_01_C",
       skintype: "weaponskin",
+      skinfor: "Kar98k",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Red",
@@ -5192,6 +5219,7 @@ var PUBGITEMS = {
       name: "Shark Bite - M16A4",
       icon: "Item_Skin_M16A4_Shark_01_C",
       skintype: "weaponskin",
+      skinfor: "M16A4",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Pink",
@@ -5204,6 +5232,7 @@ var PUBGITEMS = {
       name: "Gold Plate - AKM",
       icon: "Item_Skin_AKM_Rosewood_01_C",
       skintype: "weaponskin",
+      skinfor: "AKM",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Pink",
@@ -5229,6 +5258,7 @@ var PUBGITEMS = {
       name: "Silver Plate - S12K",
       icon: "Item_Skin_Saiga12_Silver_01_C",
       skintype: "weaponskin",
+      skinfor: "S12K",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Purple",
@@ -5241,6 +5271,7 @@ var PUBGITEMS = {
       name: "Gold Plate - Groza",
       icon: "Item_Skin_Groza_RoseWood_01_C",
       skintype: "weaponskin",
+      skinfor: "Groza",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Purple",
@@ -5253,6 +5284,7 @@ var PUBGITEMS = {
       name: "Silver Plate - UMP45",
       icon: "Item_Skin_UMP_Silver_01_C",
       skintype: "weaponskin",
+      skinfor: "UMP45",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Blue",
@@ -5265,6 +5297,7 @@ var PUBGITEMS = {
       name: "Silver Plate - Tommy Gun",
       icon: "Item_Skin_Thompson_Silver_01_C",
       skintype: "weaponskin",
+      skinfor: "TommyGun",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Blue",
@@ -5277,6 +5310,7 @@ var PUBGITEMS = {
       name: "Desert Digital - P92",
       icon: "Item_Skin_M9_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "P92",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Blue",
@@ -5289,6 +5323,7 @@ var PUBGITEMS = {
       name: "Desert Digital - Win94",
       icon: "Item_Skin_Win94_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "Win94",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Green",
@@ -5301,6 +5336,7 @@ var PUBGITEMS = {
       name: "Desert Digital - P18C",
       icon: "Item_Skin_G18_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "P18C",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Green",
@@ -5313,6 +5349,7 @@ var PUBGITEMS = {
       name: "Desert Digital - Sawed_Off",
       icon: "Item_Skin_Sawedoff_DCamo_01_C",
       skintype: "weaponskin",
+      skinfor: "SawedOff",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Green",
@@ -5325,6 +5362,7 @@ var PUBGITEMS = {
       name: "Desert Digital - Micro Uzi",
       icon: "Item_Skin_Uzi_Dcamo_01_C",
       skintype: "weaponskin",
+      skinfor: "MicroUZI",
       crate: "equinoxcrate",
       cratename: "EQUINOX CRATE",
       rarity: "Green",
@@ -7585,7 +7623,12 @@ var PUBGITEMS = {
       head: 250,
       body: 110,
       armsandlegs: 95
-    },	
+    },
+    Crossbow: {
+      head: 230,
+      body: 100,
+      armsandlegs: 100
+    },
   },
   mapName: {
     "Desert_Main": "Miramar",
