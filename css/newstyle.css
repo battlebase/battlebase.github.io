@@ -7,19 +7,7 @@ remove whitespace: /^\s+|\s+$|\s+(?=\s)/g
 
 (?m)^["]*([^\r\n:]+?)\s*:
 
-FIXES:
-Frag Grenade Description
-TommyGun Attachments
 
-
-
-
-*/
-@import url('https://fonts.googleapis.com/css?family=Teko:400,500,600,700');
-/* font-family: 'Teko', sans-serif; */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
-/* font-family: 'Roboto Condensed', sans-serif; */
-/*
 html {
   width: 1200px;
   height: 720px;
@@ -4929,6 +4917,64 @@ div.bb_table div.bb_table_td img.sharedFilePreviewImage {
 video.bb_video {
   width: 100%;
 }
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Teko';
+    src: url('../fonts/Teko-Bold.woff2') format('woff2'),
+        url('../fonts/Teko-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('../fonts/Teko-SemiBold.woff2') format('woff2'),
+        url('../fonts/Teko-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('../fonts/Teko-Medium.woff2') format('woff2'),
+        url('../fonts/Teko-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('../fonts/Teko-Regular.woff2') format('woff2'),
+        url('../fonts/Teko-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('../fonts/Teko-Light.woff2') format('woff2'),
+        url('../fonts/Teko-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
 
 /* MEDIA QUERIES 
 320
