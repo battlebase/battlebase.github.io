@@ -2,6 +2,8 @@ var appversion = '1.0.0';
 var gameversion = '5.5.6';
 $("#splash").delay(1000).fadeOut(500);
 
+var compareWeapons = [];
+
 var BBDB = {
   app: {
     firstTime: true,

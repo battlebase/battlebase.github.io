@@ -69,18 +69,6 @@ function openSubWindow(){
   });
 };
 
-function takeScreenshot(){
-  overwolf.media.takeScreenshot(function(result){
-    if (result.status == "success"){
-      var img = document.getElementById("screenshot");
-      img.src = result.url;
-      img.onload = function() {
-        overwolf.media.shareImage(img, "Screen Shot");
-      };
-    }
-  });
-}
-
 $('header').on('mousedown',function(){
   dragMove();
 });
@@ -1086,7 +1074,7 @@ ${ammoforBlock}
     var skinsblock = '';
     if(skins.length > 0){
       skinsblock +=`
-      <div class=listblock">
+      <div class="listblock">
       <div class="titleblock" data-i18n="Skins">Skins:</div>
       `
       for(var s in skins){
@@ -1098,6 +1086,7 @@ ${ammoforBlock}
       
       $.each( stats, function( key, value ) {
         var width = value;
+        var barcolor;
         var keytext = key;
         var tip = '';
         var valueExt = '';
@@ -1105,6 +1094,7 @@ ${ammoforBlock}
         if(key === "damage"){
           var barWidth = Math.round(value * 100 / 120);
           width = Math.abs(barWidth);
+          barcolor = width;
           if(pellets){
             pelletsval = " ("+pellets + "x" + value + " = "+ pellets * value +")"
           }
@@ -1112,33 +1102,52 @@ ${ammoforBlock}
         if(key === "rateoffire"){
           keytext = 'Rate of Fire';
           valueExt = 's';
-          var barWidth = Math.round(value * 100 / 1.9) - 100;
-        width = Math.abs(barWidth);
+          var barWidth = Math.round(value * 100 / 1.9);
+          width = Math.abs(barWidth);
+          barcolor = 100 - width;
           tip = "Less is better";
         }
         if(key === "reload"){
           valueExt = 's';
           var barWidth = Math.round(value * 100 / 8.2) - 100;
-        width = Math.abs(barWidth);
+          width = Math.abs(barWidth);
+          barcolor = width;
+          tip = "Less is better";
+        }
+        if(key === "reloadExt"){
+          valueExt = 's';
+          var barWidth = Math.round(value * 100 / 8.2) - 100;
+          width = Math.abs(barWidth);
+          barcolor = width;
+          tip = "Less is better";
+        }
+        if(key === "reloadExt"){
+          valueExt = 's';
+          var barWidth = Math.round(value * 100 / 8.2) - 100;
+          width = Math.abs(barWidth);
+          barcolor = width;
           tip = "Less is better";
         }
         if(key === "soundrange"){
           valueExt = 'm';
           keytext = 'Sound Range';
-          var barWidth = Math.round(value * 100 / 1000) - 100;
-        width = Math.abs(barWidth);
+          var barWidth = Math.round(value * 100 / 1000);
+          width = Math.abs(barWidth);
+          barcolor = 100 - width;
           tip = "Less is better";
         }
         if(key === "supressed"){
           valueExt = 'm';
-          var barWidth = Math.round(value * 100 / 1000) - 100;
-        width = Math.abs(barWidth);
+          var barWidth = Math.round(value * 100 / 1000);
+          width = Math.abs(barWidth);
+          barcolor = 100 - width;
         }
         if(key === "range" || key === "bulletspeed"){
           if(key === "bulletspeed"){keytext = 'Bullet Speed';valueExt = 'm/s';}
           if(key === "range"){valueExt = 'm';}
           var barWidth = Math.round(value / 10);
-        width = Math.abs(barWidth);
+          width = Math.abs(barWidth);
+          barcolor = width;
         }
         if(key === "bodyimpact"){
           keytext = 'Body Impact';
@@ -1146,6 +1155,7 @@ ${ammoforBlock}
           value = Number(value);
           var barWidth = Math.round(value * 100 / 40000);
           width = Math.abs(barWidth);
+          barcolor = width;
           value = dotnumber(value);
         }
         if(width === 0){width = 1;}
@@ -1161,7 +1171,7 @@ ${ammoforBlock}
                 <span class="tip">${tip}</span>
                 <span class="value ${value}">${value}${valueExt}${pelletsval}</span>
                 <div class="bonus-bar ${key}"></div>
-                <div class="inner-bar ${key}" style="width: ${width}%;background-color: hsl(${width}, 100%, 50%);"></div>
+                <div class="inner-bar ${key}" style="width: ${width}%;background-color: hsl(${barcolor}, 100%, 50%);"></div>
               </div>
             </div>`
         }
@@ -1184,9 +1194,9 @@ ${ammoforBlock}
     var dmghelmet3 = dmghead - (dmghead * 0.55);
     dmghelmet3 = (Math.round(dmghelmet3*100)/100).toFixed(2).replace(/[.,]00$/, "");
 
-    var dmgvest1 = dmgbody - (dmgbody * 0.3).toFixed(2);
-    var dmgvest2 = dmgbody - (dmgbody * 0.4).toFixed(2);
-    var dmgvest3 = dmgbody - (dmgbody * 0.55);
+    var dmgvest1 = (dmgbody - (dmgbody * 0.3)).toFixed(2);
+    var dmgvest2 = (dmgbody - (dmgbody * 0.4)).toFixed(2);
+    var dmgvest3 = (dmgbody - (dmgbody * 0.55)).toFixed(2);
     dmgvest3 = (Math.round(dmgvest3*100)/100).toFixed(2).replace(/[.,]00$/, "");
 
     var damagestatsblock = `
@@ -1360,6 +1370,7 @@ ${ammoforBlock}
         
         $.each( stats, function( key, value ) {
           var width = value;
+          var barcolor;
           var keytext = key;
           var tip = '';
           var valueExt = '';
@@ -1367,6 +1378,7 @@ ${ammoforBlock}
           if(key === "damage"){
             var barWidth = Math.round(value * 100 / 120);
             width = Math.abs(barWidth);
+            barcolor = width;
             if(pellets){
               pelletsval = " ("+pellets + "x" + value + " = "+ pellets * value +")"
             }
@@ -1374,33 +1386,52 @@ ${ammoforBlock}
           if(key === "rateoffire"){
             keytext = 'Rate of Fire';
             valueExt = 's';
-            var barWidth = Math.round(value * 100 / 1.9) - 100;
-          width = Math.abs(barWidth);
+            var barWidth = Math.round(value * 100 / 1.9);
+            width = Math.abs(barWidth);
+            barcolor = 100 - width;
             tip = "Less is better";
           }
           if(key === "reload"){
             valueExt = 's';
             var barWidth = Math.round(value * 100 / 8.2) - 100;
-          width = Math.abs(barWidth);
+            width = Math.abs(barWidth);
+            barcolor = width;
+            tip = "Less is better";
+          }
+          if(key === "reload"){
+            valueExt = 's';
+            var barWidth = Math.round(value * 100 / 8.2) - 100;
+            width = Math.abs(barWidth);
+            barcolor = width;
+            tip = "Less is better";
+          }
+          if(key === "reloadExt"){
+            valueExt = 's';
+            var barWidth = Math.round(value * 100 / 8.2) - 100;
+            width = Math.abs(barWidth);
+            barcolor = width;
             tip = "Less is better";
           }
           if(key === "soundrange"){
             valueExt = 'm';
             keytext = 'Sound Range';
-            var barWidth = Math.round(value * 100 / 1000) - 100;
-          width = Math.abs(barWidth);
+            var barWidth = Math.round(value * 100 / 1000);
+            width = Math.abs(barWidth);
+            barcolor = 100 - width;
             tip = "Less is better";
           }
           if(key === "supressed"){
             valueExt = 'm';
-            var barWidth = Math.round(value * 100 / 1000) - 100;
-          width = Math.abs(barWidth);
+            var barWidth = Math.round(value * 100 / 1000);
+            width = Math.abs(barWidth);
+            barcolor = 100 - width;
           }
           if(key === "range" || key === "bulletspeed"){
             if(key === "bulletspeed"){keytext = 'Bullet Speed';valueExt = 'm/s';}
             if(key === "range"){valueExt = 'm';}
             var barWidth = Math.round(value / 10);
-          width = Math.abs(barWidth);
+            width = Math.abs(barWidth);
+            barcolor = width;
           }
           if(key === "bodyimpact"){
             keytext = 'Body Impact';
@@ -1408,6 +1439,7 @@ ${ammoforBlock}
             value = Number(value);
             var barWidth = Math.round(value * 100 / 40000);
             width = Math.abs(barWidth);
+            barcolor = width;
             value = dotnumber(value);
           }
           if(width === 0){width = 1;}
@@ -1423,7 +1455,7 @@ ${ammoforBlock}
                   <span class="tip">${tip}</span>
                   <span class="value ${value}">${value}${valueExt}${pelletsval}</span>
                   <div class="bonus-bar ${key}"></div>
-                  <div class="inner-bar ${key}" style="width: ${width}%;background-color: hsl(${width}, 100%, 50%);"></div>
+                  <div class="inner-bar ${key}" style="width: ${width}%;background-color: hsl(${barcolor}, 100%, 50%);"></div>
                 </div>
               </div>`
           }
@@ -1780,19 +1812,28 @@ function filterCarepackage(){
   });
   return menuitems;
 }
+function checkCompareBtn(){
+  if(compareWeapons.length === 1){
+    $('.compare.'+compareWeapons[0]).addClass('hide');
+  }
+}
+
 function compareWpnsInit(){
-  var compareWeapons = [];
+  
   $(document).on('click', '.compare', function() {
     var $this = this;
     var classes = $(this).attr('class').split(' ');
     var wpn = classes[1];
+    
     var wpnIcon = PUBGITEMS.weapons[wpn].icon;
     var wpnName = PUBGITEMS.weapons[wpn].name;
-    console.log(wpnIcon);
+
     compareWeapons.push(wpn);
+    console.log("Added "+wpn+ " for comparison")
+    checkCompareBtn();
     console.log(compareWeapons.length);
     if(compareWeapons.length === 1){
-      $(this).addClass("hide");
+															 
       $('.comparebox').addClass("active");
       var firstwpn = `
   <img src="https://battlebase.github.io/assets/weapons/${wpnIcon}.png"/><span class="selectedwpnName">${wpnName}</span>
@@ -1824,65 +1865,72 @@ function compareWpnsInit(){
     }
   
   });
-  $(document).on('click', '.showbox', function() {
-    $(this).toggleClass("active");
-    $(this).parent().toggleClass("collapsed");
-  });
-  $(document).on('click', '.cancelcompare', function() {
-    compareWeapons = [];
-    $('.selectedwpn').html("");
-    $('.compare').removeClass("hide");
-    $('.comparebox').removeClass("active");
-    $('.comparebox').removeClass("collapsed");
-  });
-  $('.wpns-box').on('click', '.closecomparison', function () {
-    compareWeapons = [];
-    $(".wpns-box").removeClass("active");
-    $(".wpns-bg").removeClass("active");
-    $("body").removeClass("no-scroll");
-    $(".compare").removeClass("hide");
-    $(".comparebox").removeClass("collapsed");
-    $(".comparebox").removeClass("active");
-    $(".showbox").removeClass("active");
-    $('.selectedwpn').html("");
-    $('.wpnsCompare').html("");
-  })
+
 }
 
 
 function compareWpns(first,second){
   var A = PUBGITEMS.weapons[first].stats;
   var B = PUBGITEMS.weapons[second].stats;
+  console.log("Starting comparison for "+A+" and "+B)
   for(var key in A) {
     var prop = key;
     var val = A[key];
+    val = Number(val);
     var val2 = B[prop];
+    val2 = Number(val2);
 
-    if(val > val2){
-      $('.comparedWpn.first .inner-bar.'+prop).addClass("green");
-      $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("green");
-      $('.comparedWpn.second .inner-bar.'+prop).addClass("red");
-      $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("red");
-      console.log("valueA "+val+" is Greater than valueB "+val2+ " valueA is GREEN and VALUEB is RED")
+    if((prop === 'reload') ||  (prop === 'soundrange') ||  (prop === 'supressed') ||  (prop === 'rateoffire')){
+      console.log("Using inverted calc")
+      if(val < val2){
+        $('.comparedWpn.first .inner-bar.'+prop).addClass("green");
+        $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("green");
+        $('.comparedWpn.second .inner-bar.'+prop).addClass("red");
+        $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("red");
+        console.log("valueA "+val+" is Minor than valueB "+val2+ " valueA is GREEN and VALUEB is RED")
+      }
+      if(val > val2){
+        $('.comparedWpn.first .inner-bar.'+prop).addClass("red");
+        $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("red");
+        $('.comparedWpn.second .inner-bar.'+prop).addClass("green");
+        $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("green");
+        console.log("valueA "+val+" is Greater than valueB "+val2+ " valueB is GREEN and VALUEA is RED")
+      }
+      if(val === val2){
+        $('.comparedWpn.first .inner-bar.'+prop).addClass("yellow");
+        $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("yellow");
+        $('.comparedWpn.second .inner-bar.'+prop).addClass("yellow");
+        $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("yellow");
+        console.log("valueA "+val+" is Equal than ValueB "+val2+ " Values are Yellow")
+      }
     }
-    if(val < val2){
-      $('.comparedWpn.first .inner-bar.'+prop).addClass("red");
-      $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("red");
-      $('.comparedWpn.second .inner-bar.'+prop).addClass("green");
-      $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("green");
-      console.log("valueA "+val+" is Minor than valueB "+val2+ " valueB is GREEN and VALUEA is RED")
+    else {
+      if(val > val2){
+        $('.comparedWpn.first .inner-bar.'+prop).addClass("green");
+        $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("green");
+        $('.comparedWpn.second .inner-bar.'+prop).addClass("red");
+        $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("red");
+        console.log("valueA "+val+" is Greater than valueB "+val2+ " valueA is GREEN and VALUEB is RED")
+      }
+      if(val < val2){
+        $('.comparedWpn.first .inner-bar.'+prop).addClass("red");
+        $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("red");
+        $('.comparedWpn.second .inner-bar.'+prop).addClass("green");
+        $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("green");
+        console.log("valueA "+val+" is Minor than valueB "+val2+ " valueB is GREEN and VALUEA is RED")
+      }
+      if(val === val2){
+        $('.comparedWpn.first .inner-bar.'+prop).addClass("yellow");
+        $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("yellow");
+        $('.comparedWpn.second .inner-bar.'+prop).addClass("yellow");
+        $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("yellow");
+        console.log("valueA "+val+" is Equal than ValueB "+val2+ " Values are Yellow")
+      }
     }
-    if(val === val2){
-      $('.comparedWpn.first .inner-bar.'+prop).addClass("yellow");
-      $('.comparedWpn.first .statBlock.'+prop+ ' .value').addClass("yellow");
-      $('.comparedWpn.second .inner-bar.'+prop).addClass("yellow");
-      $('.comparedWpn.second .statBlock.'+prop+ ' .value').addClass("yellow");
-      console.log("valueA "+val+" is Equal than ValueB "+val2+ " Values are Yellow")
-    }
-    
-    
-
-  } 
+  };
+  console.log("Finished comparison");
+  compareWeapons.length = 0;
+  console.log(compareWeapons);
 }
 
 
@@ -2212,12 +2260,35 @@ function hidelogin(){
   $('.welcomeScreenBG').fadeOut();
 }
 
+function comparebuttons(){
+  $(document).on('click', '.showbox', function() {
+    $(this).toggleClass("active");
+    $(this).parent().toggleClass("collapsed");
+  });
+  $(document).on('click', '.cancelcompare', function() {
+    compareWeapons = [];
+    $('.selectedwpn').html("");
+    $('.compare').removeClass("hide");
+    $('.comparebox').removeClass("active");
+    $('.comparebox').removeClass("collapsed");
+  });
+  $('.wpns-box').on('click', '.closecomparison', function () {
+    compareWeapons = [];
+    $(".wpns-box").removeClass("active");
+    $(".wpns-bg").removeClass("active");
+    $("body").removeClass("no-scroll");
+    $(".compare").removeClass("hide");
+    $(".comparebox").removeClass("collapsed");
+    $(".comparebox").removeClass("active");
+    $(".showbox").removeClass("active");
+    $('.selectedwpn').html("");
+    $('.wpnsCompare').html("");
+  })
+}
 $$(document).on('pageInit', function (e) {
   var fromPage = e.detail.page.fromPage.name;
   var targetPage = e.detail.page.name;
-  console.log("%c Going from: "+fromPage+"  to: "+targetPage+ "", 'background: #222; color: #bada55');
-	var url = window.location.href;
-	console.log(url);
+  console.log("%c Going from: "+fromPage+"  to: "+targetPage+ "", 'background: #222; color: #bada55');					
   version();
   renderLeftMenu();
   renderMenulist();
@@ -2226,7 +2297,7 @@ $$(document).on('pageInit', function (e) {
   renderSingleItems();
   renderMenuCards();
   themechange();
-  compareWpnsInit();
+  checkCompareBtn()
 
   if(targetPage === 'carepackage'){
     carepackageammo();
@@ -2240,7 +2311,7 @@ $$(document).on('pageBack', function(e) {
   renderLists();
   renderSingleItems();
   renderMenuCards();
-  compareWpnsInit();
+  checkCompareBtn()
 });
 
 $(document).ready(function() {
@@ -2258,4 +2329,6 @@ $(document).ready(function() {
   renderSingleItems();
   renderMenuCards();
   compareWpnsInit();
+  comparebuttons();
+  checkCompareBtn()
 });
