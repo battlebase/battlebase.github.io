@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Battle Base</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/framework7.material.min.css">
+  <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/newstyle.css">
+</head>
+
+<body id="theme">
+  <div id="splash"></div>
+  <header>
+    <div class="app_header">
+      <i class="battle_base_icon"></i>
+      <span class="app_title">Battle Base</span>
+      <span class="appversiontxt">v.</span>
+      <span class="appversion"></span>
+    </div>
+    <div class="pubgplayers">
+      <span class="totalpubgplayers"></span>
+      <span class="pubgplayerstext" data-i18n="pubgplayerstext"></span>
+    </div>
+    <div class="window-controls-group">
+      <button class="window-control helppage">
+          <a class="headerlink" href="about.html" data-view=".view-main">
+        <svg class="svg-icon-fill">
+          <use xlink:href="assets/svg/sprite.svg#window-control_support" />
+        </svg>
+      </a>
+      </button>
+
+      <button class="window-control settingsPage" onclick="showSupport()">
+          <svg class="svg-icon-fill">
+            <use xlink:href="assets/svg/sprite.svg#window-control_settings" />
+          </svg>
+      </button>
+
+      <button class="window-control minimize">
+        <svg class="svg-icon-fill">
+          <use xlink:href="assets/svg/sprite.svg#window-control_minimize" />
+        </svg>
+      </button>
+      <!--
+          <button class="window-control toggleMaximize">
+            <input type="checkbox" class="maximize-restore-selector toggle-icons" checked />
+            <svg class="svg-icon-fill svg-icon-restore">
+              <use xlink:href="assets/svg/sprite.svg#window-control_restore" />
+            </svg>
+            <svg class="svg-icon-fill svg-icon-maximize">
+              <use xlink:href="assets/svg/sprite.svg#window-control_maximize" />
+            </svg>
+          </button>
+          -->
+      <button class="window-control window-control-close">
+        <svg class="svg-icon-fill">
+          <use xlink:href="assets/svg/sprite.svg#window-control_close" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- Status bar overlay for fullscreen mode-->
+  <div class="statusbar-overlay"></div>
+  <!-- Panels overlay-->
+  <div class="panel-overlay"></div>
+  <!-- Left panel with reveal effect-->
+  <div class="panel panel-left panel-cover">
+    <!-- Left view-->
+    <div class="view view-left navbar-through">
+      <div class="pages">
+        <div data-page="index-left" class="page">
+          <div class="page-content left">
+            <div class="left-menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Right panel with cover effect-->
+  <div class="panel panel-right panel-reveal">
+    <div class="content-block">
+      <p>Right panel content goes here</p>
+    </div>
+  </div>
+  <!-- Views-->
+  <div class="views">
+    <!-- Right view, it is main view-->
+    <div class="view view-main navbar-fixed">
+      <!-- Pages-->
+      <div class="pages">
+        <!-- Page, data-page contains page name-->
+        <div data-page="index" class="page transparent">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="center sliding">
+                <i class="icon7"></i>
+                <span class="apptitle">BattleBase</span>
+              </div>
+              <div class="right"><a href="#" data-panel="left" class="link open-panel icon-only"><i
+                    class="icon icon-bars"></i></a></div>
+            </div>
+          </div>
+          <!-- Scrollable page content-->
+          <div class="page-content hide-bars-on-scroll">
+
+            <!-- TEST CONTENT-->
+
+            <div class="playerStatsMain">
+            </div>
+
+
+
+            <!--
+    <div class="content-block-title">Side panels</div>
+    <div class="content-block">
+    <div class="row">
+    <div class="col-50"><a href="#" data-panel="left" class="button open-panel">Left Panel</a></div>
+    <div class="col-50"><a href="#" data-panel="right" class="button open-panel">Right Panel</a></div>
+    </div>
+    </div>
+    -->
+          </div>
+        </div>
+
+        <!-- About page navbar -->
+        <div class="navbar-inner cached" data-page="menu-melee">
+          <div class="center">Melee</div>
+          <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+        </div>
+        <div class="page cached" data-page="menu-melee">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"><a href="menu-weapons.html" class="back link icon-only"><i
+                    class="icon icon-back"></i></a></div>
+              <div class="center">
+                <span class="pagetitle" data-i18n="Melee">Melee</span>
+              </div>
+              <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="listcard-wpns crowbar"></div>
+            <div class="listcard-wpns machete"></div>
+            <div class="listcard-wpns pan"></div>
+            <div class="listcard-wpns sickle"></div>
+          </div>
+        </div>
+
+        <div class="renderpage gascan"></div>
+
+      </div>
+
+      <div class="comparebox">
+        <span class="comparetext" data-i18n="Selectanotherweapontocompareto">Select another weapon to compare to:</span>
+        <i class="showbox"></i>
+        <span class="cancelcompare" data-i18n="Cancel">Cancel</span>
+        <div class="selectedwpn">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wpns-bg"></div>
+  <div class="wpns-box">
+    <div class="wpnsCompareText" data-i18n="WeaponsComparison">Weapons Comparison</div>
+    <div class="wpnsCompare"></div>
+    <div class="clearbox">
+      <span class="closecomparison" data-i18n="Close">Close</span>
+    </div>
+  </div>
+
+  <div class="welcomeScreenBG">
+    <div class="welcomeScreen">
+      <div class="welcometitle">
+        <span class="welcometitletext" data-i18n="Welcome">Welcome to BattleBase</span>
+        <div class="closeWelcomeScreen"><i class="closeWelcomeScreenX">×</i></div>
+      </div>
+      <div class="content">
+        <div class="text">
+          <p class="inputText" data-i18n="EnteryourPUBGPlayerName">Enter your PUBG Player Name</p>
+        </div>
+        <input type="text" class="player_name_input">
+        <div class="text">
+            <p class="inputTextWarning" data-i18n="Itscasesensitive">* It's case sensitive.</p>
+          </div>
+      </div>
+      <div class="done" data-i18n="Done">Done</div>
+    </div>
+  </div>
+
+  <div class="errorWindowBg">
+      <div class="errorWindow">
+        <div class="errortitle">
+          <span class="errortitletext" data-i18n="Error">Error!</span>
+        </div>
+        <div class="content"></div>
+        <div class="dismiss" data-i18n="Close">Close</div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      window._urq = window._urq || [];
+      _urq.push(['initSite', 'cfcf1570-7ded-469f-8ded-4722c7627001']);
+      (function() {
+      var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;
+      ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
+      })();
+    </script>
+  <script type="text/javascript" src="js/framework7.min.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="js/i18next-1.6.3.min.js"></script>-->
+  <script type="text/javascript" src="js/i18next.min.js"></script>
+  <!-- myapp.js -->
+  <script type="text/javascript" src="js/i18next-function.js"></script>
+  <script type="text/javascript" src="js/my-app.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
+  <script type="text/javascript" src="js/battlebasedb.js"></script>
+  <script type="text/javascript" src="js/pass.js"></script>
+  <script type="text/javascript" src="js/pubgapi.js"></script>
+  <script type="text/javascript" src="js/battlebase.js"></script>
+  
+
+  <!-- i18next function -->
+  <script type="text/javascript" src="js/language.js"></script>
+  <script type="text/javascript" src="js/steamprices.json"></script>
+</body>
+
+</html>

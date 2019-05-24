@@ -1,0 +1,37 @@
+body {
+  background: #333;
+}
+.block {
+  display: flex;
+  border: 1px solid #333;
+  padding: 5px;
+}
+.block img {
+  display:block;
+  width: 100px;
+  height: 100px;
+  background-color: #3f3f3f;
+}
+.block .name {
+  margin: 0 0 0 5px;
+  font-size: 13px;
+  font-family: AgencyFB;
+}
+.block .lk {
+  margin: 0 0 0 5px;
+  font-size: 12px;
+  font-family: consolas;
+}
+.title {
+  font-family: 'Bebas';
+  color:#ffd200;
+  font-size: 46px;
+  text-align: center;
+  
+}
+@font-face {
+	font-family: 'Bebas';
+	src: url('https://rawcdn.githack.com/dharmatype/Bebas-Neue/e62656f25d7251f6c991f0feea228e940bcbf24d/fonts/ttf/BebasNeue-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
