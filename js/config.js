@@ -11,7 +11,8 @@ var BBDB = {
   data: {
     steamPlayers: "",
     steamQueryCache: "",
-  }
+  },
+  counter: "",
 }
 
 function getSettings() {
