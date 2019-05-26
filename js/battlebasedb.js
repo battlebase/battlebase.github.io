@@ -1,5 +1,5 @@
 var PUBGITEMS = {
-  equipments: {
+  equipment: {
     utilitybelt: {
       item: "utilitybelt",
       name: "Utility Belt",
@@ -1607,14 +1607,14 @@ var PUBGITEMS = {
       item: "DP28",
       name: "DP-28",
       icon: "Item_Weapon_DP28_C",
-      type: "Machinegun",
-      typei18n: "Machinegun",
+      type: "Light Machinegun",
+      typei18n: "LightMachinegun",
       ammo: "7.62mm",
       ammoIcon: "Item_Ammo_762mm_C",
       desc: "A Russian made, inter-war era light machine gun chambered for 7.62mm.",
       i18desc: "dp28-desc",
       maps: ["Erangel","Miramar", "Sanhok", "Vikendi"],
-      skins: ["silverplate_dp28"],
+      skins: [],
       slots: ["none", "none", "none", "none"],
       stats: {
         capacity: "47",
@@ -2517,13 +2517,14 @@ var PUBGITEMS = {
       name: "TARGET PRACTICE",
       icon: "Item_Set_Pan_Target_01_C",
       skintype: "weaponskin",
-      crateItems: ["targetpratice_Pan"]
+      crateItems: ["targetpractice_Pan"]
     },
     twitchprimeset: {
       item: "twitchprimeset",
       name: "TWITCH PRIME SET",
       icon: "Item_Set_TW_C",
       skintype: "set",
+      crateItems: ["twitchprimeshirt","twitchprimeboots","twitchprimecombatpants","twitchprimebalaclava"]
     },
     tracksuitset: {
       item: "tracksuitset",
@@ -2562,7 +2563,8 @@ var PUBGITEMS = {
       skintype: "set",
       crate: "gamescominvitationalcrate",
       cratename: "GAMESCOM INVITATIONAL CRATE",
-      probability: "0.00599604246"
+      probability: "0.00599604246",
+      crateItems: ["orangeshirt", "camocap", "camohotpants"],
     },
     tuxedosetfemale: {
       item: "tuxedosetfemale",
@@ -2571,7 +2573,8 @@ var PUBGITEMS = {
       skintype: "set",
       crate: "gamescominvitationalcrate",
       cratename: "GAMESCOM INVITATIONAL CRATE",
-      probability: "0.00599604246"
+      probability: "0.00599604246",
+      crateItems: ["femaletuxedojacketpurple","miniskirtpurple"],
     },
     tuxedosetmale: {
       item: "tuxedosetmale",
@@ -2580,7 +2583,8 @@ var PUBGITEMS = {
       skintype: "set",
       crate: "gamescominvitationalcrate",
       cratename: "GAMESCOM INVITATIONAL CRATE",
-      probability: "0.00599604246"
+      probability: "0.00599604246",
+      crateItems: ["femaletuxedojacketpurple","slackspurple"],
     },
     tracksuitsetyellow: {
       item: "tracksuitsetyellow",
@@ -2589,7 +2593,8 @@ var PUBGITEMS = {
       skintype: "set",
       crate: "gamescominvitationalcrate",
       cratename: "GAMESCOM INVITATIONAL CRATE",
-      probability: "0.00599604246"
+      probability: "0.00599604246",
+      crateItems: ["tracksuittopyellow", "tracksuitpantsyellow"],
     },
     blueschooluniformsetfemale: {
       item: "blueschooluniformsetfemale",
@@ -2669,7 +2674,7 @@ var PUBGITEMS = {
       crate: "fevercrate",
       cratename: "FEVER CRATE",
       probability: "0.00099994",
-      crateItems: ["zestsilkscarf", "zestretro", "zestbootcutpants", "zestturtleneckwhite"]
+      crateItems: ["zestsilkscarf", "zestretrojacket", "zestbootcutpants", "zestturtleneckwhite"]
     },
     brownhatrangersset: {
       item: "brownhatrangersset",

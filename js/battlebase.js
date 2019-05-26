@@ -166,7 +166,7 @@ function renderCarepackageammo(item,quantity){
   var icon = PUBGITEMS['ammo'][item].icon;
   var i18n = PUBGITEMS['ammo'][item].i18n;
   return `
-  <a href=https://battlebase.github.io/pages/ammo-${item}.html class=itemlist> 
+  <a href=ammo-${item}.html class=itemlist> 
     <img class="itemimg" src="${imglink + icon}.png"/>
     <div class=iteminfo>
       <p class=name data-i18n="${i18n}">${name}</p>
@@ -182,20 +182,15 @@ function renderCarepackageammo(item,quantity){
 function renderLeftMenu(){
   var assetslink = 'https://battlebase.github.io/assets/';
   var leftMenuBlock = "";
-  var homelink = "";
   for (i = 0; i < leftMenu.length; i++) {
     var menuItem = leftMenu[i];
     var menuItemName = menuItem.name;
     var menuItemNamei18 = menuItemName.replace(/ /gi,"");
     var menuItemImg = assetslink + menuItem.image +'.png';
-    var menuItemLink = menuItem.link;
-		if(menuItemLink === "index"){
-			homelink = 'back link';
-		}
-		
+    var menuItemlink = menuItem.link;
 
     leftMenuBlock+= `
-    <a href="${menuItemLink}.html" data-view=".view-main" class="${homelink} item-list">
+    <a href="${menuItemlink}.html" data-view=".view-main" class="item-list">
       <img src="${menuItemImg}"/>
       <span class="name" data-i18n="${menuItemNamei18}">${menuItemName}</span>
     </a>
@@ -216,7 +211,7 @@ function render(type, category, item) {
   var icon = PUBGITEMS[category][item].icon;
   var i18n = PUBGITEMS[category][item].item;
   var renderblock;
-  var simpleList = `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
+  var simpleList = `<a href="${category}-${item}.html" class="itemlist">
 <img class="itemimg" src="${imglink + icon}.png"/>
 <div class="iteminfo">
 <p class="name" data-i18n="${i18n}">${name}</p>
@@ -225,7 +220,7 @@ function render(type, category, item) {
     
   
   // RENDER LISTS EQUIPMENT
-  if (type === "list" && category === "equipments") {
+  if (type === "list" && category === "equipment") {
     var i18n = PUBGITEMS[category][item].i18n;
     var icon2 = PUBGITEMS[category][item].icon2;
     var bonus = PUBGITEMS[category][item].bonus;
@@ -249,7 +244,7 @@ function render(type, category, item) {
 <span class="value">${bonus2Value}</span>`
     }
     renderblock =
-      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
+      `<a href="${category}-${item}.html" class="itemlist">
 <img class="itemimg" src="${imglink + icon}.png"/>
 <div class="iteminfo">
 <p class="name" data-i18n="${i18n}">${name}</p>
@@ -265,7 +260,7 @@ ${bonusblock}
     var bonusi18 = bonus.replace(/ /gi, "");
     var bonusValue = PUBGITEMS[category][item].bonusValue;
     renderblock =
-      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
+      `<a href="${category}-${item}.html" class="itemlist">
         <img class="itemimg" src="${imglink + icon}.png"/>
         <div class="iteminfo">
           <p class="name" data-i18n="${i18n}">${name}</p>
@@ -294,7 +289,7 @@ ${bonusblock}
 </p>`
     }
     renderblock =
-      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
+      `<a href="${category}-${item}.html" class="itemlist">
 <img class="itemimg" src="${imglink + icon}.png"/>
 <div class="iteminfo">
 <p class="name" data-i18n="${i18n}">${name}</p>
@@ -338,7 +333,7 @@ ${probabilityBlock}
     </a>`;
     }
     renderblock = `
-<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
+<a href="${category}-${item}.html" class="itemlist">
   <div class="rarity ${rarity}"></div>
   <img class="itemimg" src="${imglink + icon}.png"/>
   <div class="iteminfo">
@@ -353,7 +348,7 @@ ${probabilityBlock}
     var charmIcon = name.replace(/ /gi, '_');
     var level = PUBGITEMS[category][item].level;
     renderblock =
-      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
+      `<a href="${category}-${item}.html" class="itemlist">
   <img class="itemimg" src="${imglink + charmIcon}.png"/>
   <div class="iteminfo">
   <p class="name" data-i18n="${item}">${name}</p>
@@ -388,7 +383,7 @@ ${probabilityBlock}
         var setImage = PUBGITEMS['sets'][setItem].icon;
         var marketLink = encodeURI(setName.replace(/\//g, "-"));
         itemset = `<div class="list">
-  <a href="https://battlebase.github.io/pages/set-${set[j]}.html" class="itemlist">
+  <a href="set-${set[j]}.html" class="itemlist">
   <img class="itemimg" src="${assetslink + 'sets/' + setImage}.png"/>
   <div class="iteminfo">
 <p class="name" data-i18n="${setItem}">${setName}</p>
@@ -454,7 +449,7 @@ ${probabilityBlock}
       foundinBlock = `
       <div class="titleblock" data-i18n="FoundIn">Found In:</div>
   <div class="list">
-  <a href="https://battlebase.github.io/pages/crates-${crate}.html" class="itemlist">
+  <a href="crates-${crate}.html" class="itemlist">
   <img class="itemimg" src="${assetslink + 'crates/' + crateImage}.png"/>
   <div class="iteminfo">
   <p class="name" data-i18n="${crate}">${cratename}</p>
@@ -488,7 +483,7 @@ ${probabilityBlock}
       rewardedbytext = `<div class="titleblock" data-i18n="RewardedBy">Rewarded By:</div>`
       rewardedbyblock = `
       <div class="list">
-        <a href="https://battlebase.github.io/pages/pass-${rewardpass}-${rewardtype}.html" class="itemlist">
+        <a href="pass-${rewardpass}-${rewardtype}.html" class="itemlist">
           <img class="itemimg" src="https://battlebase.github.io/assets/pass/${rewardpass}_${rewardtype}.png">
           <div class="iteminfo">
           <p class="name" data-i18n="${rewardpass}_${rewardtype}">${PUBGITEMS.passName[rewardpass+rewardtype]}</p>
@@ -514,7 +509,7 @@ ${probabilityBlock}
     skintype != "feet"){
       skinforblock = `
       <div class="titleblock" data-i18n="SkinFor">Skin For:</div>
-      <div class="list equipments ${skintype}"></div>
+      <div class="list equipment ${skintype}"></div>
       `
     }
     if(skintype === "weaponskin"){
@@ -554,8 +549,8 @@ ${skininfo}
 
 `
   }
-  // RENDER SINGLE ITEM EQUIPMENTS AND CONSUMABLES
-  if (type === "singleItem" && (category === "equipments" || category === "consumables")) {
+  // RENDER SINGLE ITEM equipment AND CONSUMABLES
+  if (type === "singleItem" && (category === "equipment" || category === "consumables")) {
     var i18n = PUBGITEMS[category][item].i18n;
     var icon2 = PUBGITEMS[category][item].icon2;
     var icontext = PUBGITEMS[category][item].icontext;
@@ -600,7 +595,7 @@ ${skininfo}
     var carepackageblock = ``;
     if(carepackage){
       carepackageblock = `
-      <div class="list"><a href="https://battlebase.github.io/pages/carepackage.html" class="itemlist">
+      <div class="list"><a href="carepackage.html" class="itemlist">
 <img class="itemimg" src="https://battlebase.github.io/assets/icons/carepackage_default240.png">
 <div class="iteminfo">
 <p class="name" data-i18n="Carepackage">Police Vest (Level 1)</p>
@@ -652,8 +647,8 @@ ${skininfo}
     var totalHealBlock = '';
     var totalHeal = PUBGITEMS[category][item].totalHeal;
     if (totalHeal) {
-      totalHealBlock = `<p><span class="bonustext" data-i18n="usetime">Usage time:</span>
-<span class="val">${totalHeal}s</span></p>`
+      totalHealBlock = `<p><span class="bonustext" data-i18n="TotalHeal">Total Heal:</span>
+<span class="val">${totalHeal}</span></p>`
     };
 
     var weightBlock = '';
@@ -741,7 +736,7 @@ ${skinblock}
       crateblock = `
       <div class="titleblock" data-i18n="FoundIn">Found In:</div>
   <div class="list">
-  <a href="https://battlebase.github.io/pages/crates-${crate}.html" class="itemlist">
+  <a href="crates-${crate}.html" class="itemlist">
   <img class="itemimg" src="${assetslink + 'crates/' + crateImage}.png"/>
   <div class="iteminfo">
   <p class="name" data-i18n="${crate}">${cratename}</p>
@@ -1082,6 +1077,7 @@ ${ammoforBlock}
       }
       skinsblock +=`</div>`;
     }
+    var score = 0;
       
       
       $.each( stats, function( key, value ) {
@@ -1095,6 +1091,7 @@ ${ammoforBlock}
           var barWidth = Math.round(value * 100 / 120);
           width = Math.abs(barWidth);
           barcolor = width;
+          score += width;
           if(pellets){
             pelletsval = " ("+pellets + "x" + value + " = "+ pellets * value +")"
           }
@@ -1102,9 +1099,10 @@ ${ammoforBlock}
         if(key === "rateoffire"){
           keytext = 'Rate of Fire';
           valueExt = 's';
-          var barWidth = Math.round(value * 100 / 1.9);
+          var barWidth = Math.round((value-0.048)/(1.852) * 100) -100;
           width = Math.abs(barWidth);
-          barcolor = 100 - width;
+          barcolor = width;
+          score += width;
           tip = "Less is better";
         }
         if(key === "reload"){
@@ -1112,6 +1110,7 @@ ${ammoforBlock}
           var barWidth = Math.round(value * 100 / 8.2) - 100;
           width = Math.abs(barWidth);
           barcolor = width;
+          score += width;
           tip = "Less is better";
         }
         if(key === "reloadExt"){
@@ -1119,6 +1118,7 @@ ${ammoforBlock}
           var barWidth = Math.round(value * 100 / 8.2) - 100;
           width = Math.abs(barWidth);
           barcolor = width;
+          score += width;
           tip = "Less is better";
         }
         if(key === "reloadExt"){
@@ -1126,21 +1126,24 @@ ${ammoforBlock}
           var barWidth = Math.round(value * 100 / 8.2) - 100;
           width = Math.abs(barWidth);
           barcolor = width;
+          score += width;
           tip = "Less is better";
         }
         if(key === "soundrange"){
           valueExt = 'm';
           keytext = 'Sound Range';
-          var barWidth = Math.round(value * 100 / 1000);
+          var barWidth = Math.round(value * 100 / 1000) -100;
           width = Math.abs(barWidth);
-          barcolor = 100 - width;
+          barcolor = width;
+          score += width;
           tip = "Less is better";
         }
         if(key === "supressed"){
           valueExt = 'm';
-          var barWidth = Math.round(value * 100 / 1000);
+          var barWidth = Math.round(value * 100 / 1000) -100;
           width = Math.abs(barWidth);
-          barcolor = 100 - width;
+          barcolor = width;
+          score += width;
         }
         if(key === "range" || key === "bulletspeed"){
           if(key === "bulletspeed"){keytext = 'Bullet Speed';valueExt = 'm/s';}
@@ -1148,6 +1151,7 @@ ${ammoforBlock}
           var barWidth = Math.round(value / 10);
           width = Math.abs(barWidth);
           barcolor = width;
+          score += width;
         }
         if(key === "bodyimpact"){
           keytext = 'Body Impact';
@@ -1156,6 +1160,7 @@ ${ammoforBlock}
           var barWidth = Math.round(value * 100 / 40000);
           width = Math.abs(barWidth);
           barcolor = width;
+          score += width;
           value = dotnumber(value);
         }
         if(width === 0){width = 1;}
@@ -1178,6 +1183,15 @@ ${ammoforBlock}
         statsblock += stat;
         
       });
+
+    score = score / 10;
+    var scoreblock = `
+    <div class="scoreblock">
+    <span class="scoretext">Score:</span>
+    <span class="scorevalue" style="color: hsl(${score}, 100%, 50%);">${score}</span>
+    </div>`;
+    // scoreblock disabled
+    scoreblock = '';
 
     var weaponDamage = pellets = PUBGITEMS[category][item].stats.damage;
     var damageClass = PUBGITEMS.damagestats[typei18n];
@@ -1203,34 +1217,34 @@ ${ammoforBlock}
     <div class="titleblock" data-i18n="HeadDamage">Head Damage</div>
     <div class="damagestatsblock">
       <div class="statsblock">
-        <img src="${assetslink}equipments/NoHelmet.png"/>
+        <img src="${assetslink}equipment/NoHelmet.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="NoHelmet">No Helmet</span>
-        <span class="damagevalue">${dmghead}</span>
+        <span class="damagevalue" style="color: hsl(${dmghead}, 100%, 50%);">${dmghead}</span>
         <span class="shots" data-value="${dmghead}"></span>
         </p>
       </div>
       <div class="statsblock">
-        <img src="${assetslink}equipments/Item_Head_E_01_Lv1_C.png"/>
+        <img src="${assetslink}equipment/Item_Head_E_01_Lv1_C.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="HelmetLv1">Helmet Lv 1</span>
-        <span class="damagevalue">${dmghelmet1}</span>
+        <span class="damagevalue" style="color: hsl(${dmghelmet1}, 100%, 50%);">${dmghelmet1}</span>
         <span class="shots" data-value="${dmghelmet1}"></span>
         </p>
       </div>
       <div class="statsblock">
-        <img src="${assetslink}equipments/Item_Head_F_01_Lv2_C.png"/>
+        <img src="${assetslink}equipment/Item_Head_F_01_Lv2_C.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="HelmetLv2">Helmet Lv 2</span>
-        <span class="damagevalue">${dmghelmet2}</span>
+        <span class="damagevalue" style="color: hsl(${dmghelmet2}, 100%, 50%);">${dmghelmet2}</span>
         <span class="shots" data-value="${dmghelmet2}"></span>
         </p>
       </div>
       <div class="statsblock">
-        <img src="${assetslink}equipments/Item_Head_G_01_Lv3_C.png"/>
+        <img src="${assetslink}equipment/Item_Head_G_01_Lv3_C.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="HelmetLv3">Helmet Lv 3</span>
-        <span class="damagevalue">${dmghelmet3}</span>
+        <span class="damagevalue" style="color: hsl(${dmghelmet3}, 100%, 50%);">${dmghelmet3}</span>
         <span class="shots" data-value="${dmghelmet3}"></span>
         </p>
       </div>
@@ -1238,40 +1252,40 @@ ${ammoforBlock}
     <div class="titleblock" data-i18n="BodyDamage">Body Damage</div>
     <div class="damagestatsblock">
       <div class="statsblock">
-        <img src="${assetslink}equipments/NoVest.png"/>
+        <img src="${assetslink}equipment/NoVest.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="NoVest">No Vest</span>
-        <span class="damagevalue">${dmghead}</span>
+        <span class="damagevalue" style="color: hsl(${dmghead}, 100%, 50%);">${dmghead}</span>
         <span class="shots" data-value="${dmghead}"></span>
         </p>
       </div>
       <div class="statsblock">
-        <img src="${assetslink}equipments/Item_Armor_E_01_Lv1_C.png"/>
+        <img src="${assetslink}equipment/Item_Armor_E_01_Lv1_C.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="VestLv1">Vest Lv 1</span>
-        <span class="damagevalue">${dmgvest1}</span>
+        <span class="damagevalue" style="color: hsl(${dmgvest1}, 100%, 50%);">${dmgvest1}</span>
         <span class="shots" data-value="${dmgvest1}"></span>
         </p>
       </div>
       <div class="statsblock">
-        <img src="${assetslink}equipments/Item_Armor_D_01_Lv2_C.png"/>
+        <img src="${assetslink}equipment/Item_Armor_D_01_Lv2_C.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="VestLv2">Vest Lv 2</span>
-        <span class="damagevalue">${dmgvest2}</span>
+        <span class="damagevalue" style="color: hsl(${dmgvest2}, 100%, 50%);">${dmgvest2}</span>
         <span class="shots" data-value="${dmgvest2}"></span>
         </p>
       </div>
       <div class="statsblock">
-        <img src="${assetslink}equipments/Item_Armor_C_01_Lv3_C.png"/>
+        <img src="${assetslink}equipment/Item_Armor_C_01_Lv3_C.png"/>
         <p class="damagestat">
         <span class="damagetext" data-i18n="VestLv3">Vest Lv 3</span>
-        <span class="damagevalue">${dmgvest3}</span>
+        <span class="damagevalue" style="color: hsl(${dmgvest3}, 100%, 50%);">${dmgvest3}</span>
         <span class="shots" data-value="${dmgvest3}"></span>
         </p>
       </div>
     </div>
     `
-    
+    statsblock += `${scoreblock}`;
     statsblock += `</div>`;
     var stats_tab = '';
     
@@ -1319,7 +1333,7 @@ ${ammoforBlock}
         </p>
         </div>
         <div class="rightInfo">
-        <a href="https://battlebase.github.io/pages/ammo-${ammo}.html" class="ammo">
+        <a href="ammo-${ammo}.html" class="ammo">
           <img class="itemimg" src="${ammoImglink}.png"/>
           <span class="bonustext" data-i18n="${ammoi18n}">${ammoName}</span>
           <span class="capacity" data-capacity="${capacity}">${capacity}</span>
@@ -1481,7 +1495,7 @@ ${ammoforBlock}
         </p>
         </div>
         <div class="rightInfo">
-        <a href="https://battlebase.github.io/pages/ammo-${ammo}.html" class="ammo">
+        <a href="ammo-${ammo}.html" class="ammo">
           <img class="itemimg" src="${ammoImglink}.png"/>
           <span class="bonustext" data-i18n="${ammoi18n}">${ammoName}</span>
           <span class="capacity" data-capacity="${capacity}">${capacity}</span>
@@ -1571,7 +1585,7 @@ ${ammoforBlock}
     var level = PUBGITEMS[category][item].level;
     var charmdesc = charmIcon + '_desc';
       renderblock = `
-      <a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemcard">
+      <a href="${category}-${item}.html" class="itemcard">
         <img class="itemimg" src="${imglink + charmIcon}.png"/>
         <div class="cardtext">
           <p class="name" data-i18n="${item}">${name}</p>
@@ -1667,7 +1681,7 @@ function renderPass(pass, type, level){
   var icon = PUBGITEMS['ammo'][item].icon;
   var i18n = PUBGITEMS['ammo'][item].i18n;
   return `
-  <a href="https://battlebase.github.io/pages/ammo-${item}.html" class=itemlist> 
+  <a href=ammo-${item}.html class=itemlist> 
     <img class="itemimg" src="${imglink + icon}.png"/>
     <div class=iteminfo>
       <p class=name data-i18n="${i18n}">${name}</p>
@@ -1812,6 +1826,7 @@ function filterCarepackage(){
   });
   return menuitems;
 }
+
 function checkCompareBtn(){
   if(compareWeapons.length === 1){
     $('.compare.'+compareWeapons[0]).addClass('hide');
@@ -1833,7 +1848,6 @@ function compareWpnsInit(){
     checkCompareBtn();
     console.log(compareWeapons.length);
     if(compareWeapons.length === 1){
-															 
       $('.comparebox').addClass("active");
       var firstwpn = `
   <img src="https://battlebase.github.io/assets/weapons/${wpnIcon}.png"/><span class="selectedwpnName">${wpnName}</span>
@@ -1865,7 +1879,6 @@ function compareWpnsInit(){
     }
   
   });
-
 }
 
 
@@ -2155,50 +2168,27 @@ function steamPlayersNow(){
 }
 
 function firstLoad() {
+  console.error("Executing First Load")
   var BBDB = JP(localStorage.BBDB);
+  BBapiSettings = JP(localStorage.BBapiSettings);
   var firstTime = BBDB.app.firstTime;
   if (firstTime === true) {
     console.log("First time!")
     $('.welcomeScreenBG').show();
-
-    $(".player_name_input").on('keyup', function (e) {
-      if (e.keyCode == 13) {
-        var player = $(this).val();
-        console.log(player);
-        requestPlayer(player);
-      }
-    });
-    $('.done').on('click', function () {
-      var player = $(this).parent().find('.player_name_input').val();
-      console.log(player);
-      requestPlayer(player);
-    })
   }
   else {
     console.log("Showing Stats")
     displayStats();
   }
-  $(document).on('click', '.updatestats', function() {
-    $(this).html('<span class="updatetext">Updating...</span>');
-    var BBapiSettings = JP(localStorage.BBapiSettings);
-    var player_id = BBapiSettings.player_id;
-    getSeasonStats(player_id);
-  });
 }
 
 function changeplayer(){
-  $(document).on('click', '.changeplayer', function() {
+  $(document).on('click', '.changeplayer', function(e) {
     var BBDB = JP(localStorage.BBDB);
     BBDB.app.firstTime = true;
     localStorage.BBDB = JS(BBDB);
-    BBapiSettings = JP(localStorage.BBapiSettings);
-    BBapiSettings.playerName = "";
-    BBapiSettings.player_id = "";
-    localStorage.BBapiSettings = JS(BBapiSettings);
-    BBplayerdata = JP(localStorage.BBplayerdata);
-    BBplayerdata = [];
-    localStorage.BBplayerdata = JS(BBplayerdata);
     firstLoad();
+    e.stopPropagation();
   });
 }
 
@@ -2211,43 +2201,75 @@ function requestPlayer(player) {
     var url = 'https://api.pubg.com/shards/steam/'
     var request = 'https://6qmvh4u3fh.execute-api.us-east-1.amazonaws.com/pubg'
     // Check if player name is stored in DB
-    if (pubgdb_playerIds[playerName]) {
-        player_id = pubgdb_playerIds.playerName;
-        console.log("player found on database, getting stats...")
-        //getSeasonStats(player_id, platform);
+    BBplayerIds = JP(localStorage.BBplayerIds);
+    if (BBplayerIds[player]) {
+        player_id = BBplayerIds[player];
+        console.log("player found on database, getting stats... for "+player+ "using "+player_id);
+        BBapiSettings.playerName = player;
+        localStorage.BBapiSettings = JS(BBapiSettings);
+        getSeasonStats(player_id);
+        $('.welcomeScreenBG').fadeOut();
     }
     else {
-        console.log("Requesting player data...")
+        console.warn("Requesting player data for "+player +"...")
         $.ajax({
             type: "GET",
             url: request+'/players?filter[playerNames]=' + player,
-            dataType: "json"
+            dataType: "json",
+            statusCode: {
+              404: function(request, status, error) {
+                console.log(status);
+                console.log(error);
+                  // No content found (404)
+                  // This code will be executed if the server returns a 404 response
+              },
+              429: function(request, status, error) {
+                setTimeout(function() { 
+                  requestPlayer(player)
+              }, 10000);
+                  // Service Unavailable (503)
+                  // This code will be executed if the server returns a 503 response
+              }           
+          }
         }).done(
             function (data) {
                 BBDB.app.firstTime = false;
                 localStorage.BBDB = JS(BBDB);
+                console.log("Set first time to FALSE");
                 $('.welcomeScreenBG').fadeOut();
                 console.log("Player Data:")
                 console.log(data);
                 //console.log(JSON.stringify(data,null,2));
+                matches = data.data[0].relationships.matches.data;
+                var lastmatch = matches[0].id;
                 player_id = data.data[0].id;
                 var playeridsplited = player_id.split(".")[1];
                 var player_id_split = playeridsplited.substring(0, 8) + "-" + playeridsplited.substring(8, 12) + "-" + playeridsplited.substring(12, 16) + "-" + playeridsplited.substring(16, 20) + "-" + playeridsplited.substring(20, 12);
                 console.log(player_id_split);
-                console.log("BBapiSettings")
-                console.log(BBapiSettings)
+
                 BBapiSettings.playerName = player;
-                localStorage.BBapiSettings = JS(BBapiSettings);
-                console.log("added player");
                 console.log(BBapiSettings)
                 BBapiSettings.player_id = player_id;
-                matches = data.data[0].relationships.matches.data;
-                var lastmatch = matches[0].id;
+                localStorage.BBapiSettings = JS(BBapiSettings);
+                BBplayermatches = JP(localStorage.BBplayermatches);
+                BBplayermatches[player] = {};
+                var season = current_season.replace(/division\.bro\.official\./gi, '');
+                BBplayermatches[player].id = player_id;
+                BBplayermatches[player].playername = player;
+                BBplayermatches[player][current_season] = season;
+                BBplayermatches[player]['matches'] = matches;
+                //BBplayermatches[player][current_season]['matches'].push(matches);
+                localStorage.BBplayermatches = JS(BBplayermatches);
+                console.warn("Matches saved!")
+
+                BBplayerIds[player] = player_id;
+                localStorage.BBplayerIds = JS(BBplayerIds);
+
+                
                 console.log("lastmatch: " + lastmatch);
                 console.log("player id: " + player_id);
                 console.log("Matches:");
                 console.log(matches);
-                localStorage.BBapiSettings = JS(BBapiSettings);
                 getSeasonStats(player_id);
             })
             .fail(function (data) {
@@ -2284,11 +2306,55 @@ function comparebuttons(){
     $('.selectedwpn').html("");
     $('.wpnsCompare').html("");
   })
+  $(document).on('keyup', '.player_name_input', function(e) {
+    if (e.keyCode == 13) {
+      var player = $(this).val();
+      console.log(player);
+      BBDB.app.firstTime = false;
+      localStorage.BBDB = JS(BBDB);
+      console.log("Set first time to FALSE")
+      requestPlayer(player);
+    }
+  });
+  $(document).on('click', '.done', function() {
+    var player = $(this).parent().find('.player_name_input').val();
+    console.log(player);
+    BBDB.app.firstTime = false;
+    localStorage.BBDB = JS(BBDB);
+    console.log("Set first time to FALSE")
+    requestPlayer(player);
+  })
+  $(document).on('click', '.updatestats', function() {
+    $('.playerStatsMain').html('<div class="updatetext"><span class="updating">Updating...</span></div>');
+    var BBapiSettings = JP(localStorage.BBapiSettings);
+    var playerName = BBapiSettings.playerName;
+    var BBplayerIds = JP(localStorage.BBplayerIds);
+    var player_id = BBplayerIds[playerName];
+      getSeasonStats(player_id);
+  });
+  $(document).on('click', '.closeWelcomeScreen', function(e) {
+    var BBDB = JP(localStorage.BBDB);
+    BBDB.app.firstTime = false;
+    localStorage.BBDB = JS(BBDB);
+    hidelogin()
+    e.stopPropagation();
+  });
+  $(document).on('keyup', 'body', function(e) {
+    if (e.keyCode == 8) {
+      mainView.router.back();
+    }
+  });
+  $(document).on('keyup', 'body', function(e) {
+    if (e.keyCode == 8) {
+      mainView.router.back();
+    }
+  });
 }
+
 $$(document).on('pageInit', function (e) {
   var fromPage = e.detail.page.fromPage.name;
   var targetPage = e.detail.page.name;
-  console.log("%c Going from: "+fromPage+"  to: "+targetPage+ "", 'background: #222; color: #bada55');					
+  console.log("%c Going from: "+fromPage+"  to: "+targetPage+ "", 'background: #222; color: #bada55');		
   version();
   renderLeftMenu();
   renderMenulist();
@@ -2299,8 +2365,11 @@ $$(document).on('pageInit', function (e) {
   themechange();
   checkCompareBtn()
 
-  if(targetPage === 'carepackage'){
+  if(targetPage === 'carepackage' || targetPage === 'carepackage-flare'){
     carepackageammo();
+  }
+  if(targetPage === 'index'){
+    displayStats();
   }
 
 });
@@ -2315,6 +2384,7 @@ $$(document).on('pageBack', function(e) {
 });
 
 $(document).ready(function() {
+  mainView.router.loadPage('index.html');
   get_settings();
   firstLoad();
   changeplayer();

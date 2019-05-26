@@ -7,7 +7,19 @@ remove whitespace: /^\s+|\s+$|\s+(?=\s)/g
 
 (?m)^["]*([^\r\n:]+?)\s*:
 
+FIXES:
+Frag Grenade Description
+TommyGun Attachments
 
+
+
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Teko:400,500,600,700');
+/* font-family: 'Teko', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+/* font-family: 'Roboto Condensed', sans-serif; */
+/*
 html {
   width: 1200px;
   height: 720px;
@@ -21,7 +33,7 @@ position: absolute;
 width: 100%;
 height: 100%;
 z-index: 999999999;
-background-image: url(https://battlebase.github.io/assets/icons/BattleBaseSplash.png);
+background-image: url(../assets/icons/BattleBaseSplash.png);
 background-repeat: no-repeat;
 background-position: center center;
 background-color: #333;
@@ -33,9 +45,10 @@ transition-duration: .3s;
 :root {
   --listbordertopcolor: #3d3d3d;
   --listbgcolor: #292929;
+  --listactive: #1b1b1b;
   --pagebgcolor: #131313;
   --listnamecolor: #f9f9f9;
-  --listinfocolor: #d8d8d8;
+  --listinfocolor: #bbbbbb;
   --listvalcolor: #ffd200;
   --scrollbarcolor: #373737;
   --tabactive: #333;
@@ -73,7 +86,7 @@ header .battle_base_icon {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url(https://battlebase.github.io/img/icons/battle_base.svg);
+  background: url(../img/icons/battle_base.svg);
   background-size: 26px;
   background-repeat: no-repeat;
   background-position: center;
@@ -82,7 +95,7 @@ header .battle_base_icon {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url('https://battlebase.github.io/img/icons/battle_base.svg');
+  background: url('../img/icons/battle_base.svg');
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: center;
@@ -221,7 +234,7 @@ display: none;
 }
 .page.transparent .page-content {
 padding-top: 0px;
-background-image: url(https://battlebase.github.io/assets/icons/battlebasebg.png);
+background-image: url(../assets/icons/battlebasebg.png);
 background-position: center;
 background-repeat: no-repeat;
 }
@@ -326,6 +339,20 @@ opacity: 0.3;
   display: flex;
   flex-direction: column;
   color: #fff;
+  height: 100%;
+}
+.playerStatsMain .updatetext {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.playerStatsMain .updatetext .updating {
+  display: flex;
+  padding: 5px 15px;
+  background-color: var(--pagebgcolor);
+  font-size: 22px;
 }
 .playerStatsMain .playerstatmainblock {
   display: flex;
@@ -333,6 +360,8 @@ opacity: 0.3;
   border-bottom: 1px solid;
   border-bottom-color: var(--pagebgcolor);
   background-color: var(--listbgcolor);
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
 }
 
 .playerStatsMain .playerstatmainblock span {
@@ -342,9 +371,10 @@ opacity: 0.3;
 .playerStatsMain .playerstatmainblock .playername {
   color: #ffc600;
   align-items: center;
-  padding: 5px 15px;
-  font-size: 35px;
-  font-family: 'Teko';
+  padding: 2px 10px;
+  font-size: 32px;
+  font-family: 'AgencyFB';
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
 
 .playerstatmainblock div {
@@ -354,6 +384,10 @@ opacity: 0.3;
 
 .playerstatmainblock .lastupdatedblock {
   align-items: center;
+  font-family: 'AgencyFB';
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
 
@@ -371,14 +405,16 @@ opacity: 0.3;
   flex-direction: column;
   font-family: 'Teko';
   font-size: 25px;
+  line-height: 24px;
   align-items: center;
   border: 1px solid #171717;
   background-color: #e3e3e3;
   color: #171717;
-  padding: 0px 20px;
+  padding: 5px 10px;
   margin-right: 10px;
   transition: 0.3s;
   cursor: pointer;
+  border-radius: 4px;
 }
 .updatenowblock .updatestats:hover,
 .updatenowblock .changeplayer:hover {
@@ -391,24 +427,98 @@ transition: 0.3s;
   flex-direction: column;
   font-family: 'Teko';
   font-size: 25px;
+  line-height: 24px;
   align-items: center;
   border: 1px solid #171717;
   background-color: #e3e3e3;
   color: #171717;
-  padding: 0px 20px;
+  padding: 5px 10px;
   margin-right: 10px;
   transition: 0.3s;
   cursor: pointer;
+  border-radius: 4px;
+}
+.seasontitle {
+  display: flex;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--pagebgcolor);
+  background-color: var(--listbgcolor);
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
+}
+
+.seasontitle .seasonname {
+  display: flex;
+  padding: 5px 15px;
+  font-family: 'AgencyFB';
+  font-size: 22px;
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  
+}
+.playerStatsMain .playerstattotals {
+  display: flex;
+  font-family: 'AgencyFB';
+  font-size: 16px;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--pagebgcolor);
+  background-color: var(--listbgcolor);
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
+}
+.playerStatsMain .playerstattotals .totalblock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 15px;
+}
+.playerStatsMain .playerstattotals .totalstats {
+  display: flex;
+  width: 100%;
+  text-transform: uppercase;
+}
+.playerStatsMain .playerstattotals .totalstats .text {
+  display: flex;
+  align-items: center;
+  color: var(--listinfocolor);
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
+}
+.playerStatsMain .playerstattotals .totalstats .value {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+  color: var(--listnamecolor);
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
 
 .playerStatsMain .playerstatgamemodes {
   display: flex;
   flex-direction: column;
 }
-.playerstatgamemodes .gamemodesblock {
+.playerStatsMain .playerstatgamemodes .playerstattitle {
   display: flex;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--pagebgcolor);
+  background-color: var(--listbgcolor);
   border-top: 1px solid;
   border-top-color: var(--listbordertopcolor);
+  }
+  
+  .playerStatsMain .playerstatgamemodes .playerstattitle .gamemodename {
+  display: flex;
+  padding: 5px 15px;
+  font-family: 'AgencyFB';
+  font-size: 22px;
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  }
+.playerstatgamemodes .gamemodesblock {
+  display: flex;
 }
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock {
@@ -419,17 +529,22 @@ transition: 0.3s;
   border-right-color: var(--pagebgcolor);
   border-left: 1px solid;
   border-left-color: var(--listbordertopcolor);
-  border-bottom: 1px solid;
-  border-bottom-color: var(--pagebgcolor);
 }
-
+.playerstatgamemodes .gamemodesblock .playerStatsblock:first-child {
+  border-left: none;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock:last-child {
+  border-right: none;
+}
 .playerstatgamemodes .gamemodesblock .playerStatsblock .gamemode {
   display: flex;
-  padding: 4px 15px;
+  padding: 4px 15px 2px;
   text-transform: capitalize;
   text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
   border-bottom: 1px solid;
   border-bottom-color: #000;
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
 }
 .playerstatgamemodes .gamemodesblock .playerStatsblock .nostatsyet {
   display: flex;
@@ -439,103 +554,217 @@ transition: 0.3s;
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock .gamemode span {
   display: flex;
-  margin-right: 5px;
+  font-family: 'AgencyFB';
+  letter-spacing: 0.7px;
+  font-size: 16px;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .gamemode .gamemodeName {
+  font-family: 'AgencyFB';
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  line-height: 22px;
   width: 100%;
 }
-
-.playerstatgamemodes .gamemodesblock .playerStatsblock .gamemode span .roundsPlayed {
-  justify-content: inherit;
-}
-
 .playerstatgamemodes .gamemodesblock .playerStatsblock .gamemode .roundsPlayed {
   justify-content: flex-end;
 }
+.playerstatgamemodes .gamemodesblock .playerStatsblock .gamemode .roundsPlayedText {
+  margin-left: 5px;
+}
+
+
 .mainstatsblocks {
   text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
-
+.playerstatgamemodes .gamemodesblock .playerStatsblock .playerstatcol {
+  display: flex;
+  padding: 0px 5px;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--pagebgcolor);
+  background-color: var(--listbgcolor);
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .mainstats.looter .playerstatcol {
+  
+}
 .playerstatgamemodes .gamemodesblock .playerStatsblock .playerstat {
   display: flex;
-  padding: 0px 15px;
+  width: 100%;
 }
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock .rankinfo {
   display: flex;
+  border-top: 1px solid;
+  border-top-color: var(--listbordertopcolor);
 }
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock .rankimage {
   display: flex;
   width: 90px;
-  height: 90px;
+  height: 120px;
   flex-shrink: 0;
+  position: relative;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankimage img.ribbon {
+  display: flex;
+  position: absolute;
+  top: -13px;
 }
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock .rankimage img {
   display: flex;
   object-fit: contain;
   width: 100%;
+  position: absolute;
+  top: 32px;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankimage img.unknownemblem {
+  top: 10px;
+}
+.playerStatsblock .rankblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 .playerStatsblock .rankpointsblock {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  align-items: baseline;
 }
 
 .playerstatgamemodes .gamemodesblock .playerStatsblock .rankPoints {
   display: flex;
-  font-size: 38px;
-  font-family: 'Teko';
+  font-size: 30px;
+  font-family: 'AgencyFB';
   line-height: 32px;
+  margin-right: 4px;
   color: var(--listvalcolor);
   text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
-
-.playerStatsblock .rankpointsblock {
+.playerstatgamemodes .gamemodesblock .playerStatsblock .nextrankPoints {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-}
-
-.winstoptens {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-}
-
-.rankName {
-  display: flex;
-  text-transform: capitalize;
-  font-size: 22px;
-  font-family: 'Teko';
-  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
-}
-
-.winstoptens .playerstat .text {
-  display: flex;
-  margin-right: 5px;
   font-size: 15px;
+  font-family: 'AgencyFB';
+  line-height: 32px;
+  color: var(--listinfocolor);
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankName {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'AgencyFB';
+  letter-spacing: 0.6px;
   text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
 
-.winstoptens .playerstat .value {
+.playerstatgamemodes .gamemodesblock .playerStatsblock .winstoptens {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  justify-content: center;
+  font-family: 'AgencyFB';
+  font-size: 15px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding-right: 15px;
+  flex-shrink: 0;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .winstoptens .playerstat {
+  line-height: 18px;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .winstoptens .playerstat .text {
+  display: flex;
+  width: 100%;
+  margin-right: 5px;
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
+}
+
+.playerstatgamemodes .gamemodesblock .playerStatsblock .winstoptens .playerstat .value {
   display: flex;
   align-items: center;
   color: #ffc600;
-  font-size: 15px;
   text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
-.mainstats .playerstat .text {
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock {
   display: flex;
-  align-items: center;
-  margin-right: 5px;
-  padding: 0;
+  flex-direction: column;
+  padding: 0 15px;
+  margin: 0;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--pagebgcolor);
 }
-.mainstats .playerstat .value {
+
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock .xpbar {
+  display: flex;
+  width: 100%;
+  height: 6px;
+  margin: 5px 0 10px;
+  position: relative;
+  background-color: #000;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock .nextsubrankname {
+  display: flex;
+  position: absolute;
+  right: 4px;
+  top: -16px;
+  text-transform: capitalize;
+  font-family: 'AgencyFB';
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
+}
+
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock .xptonextlevel {
+  display: flex;
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
+  background-color: var(--pagebgcolor);
+  margin: 0 0 5px;
+  padding: 2px 5px 0;
+  font-family: 'AgencyFB';
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock .xptonextlevel .xptonextleveltext {
+  margin-right: 5px;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock .xptonextlevel .xptonextleveltext.yellow {
+  color: #ffd200;
+}
+
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock .xpbarinner {
+  display: flex;
+  position: relative;
+  height: 6px;
+  background-color: #ffd200;
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .rankxpbarblock .xpbarglow {
+  display: flex;
+  width: 4px;
+  height: 6px;
+  top: 0px;
+  right: 0%;
+  position: absolute;
+  border-radius: 15px 15px 15px 15px;
+}
+
+
+.playerstatgamemodes .gamemodesblock .playerStatsblock .mainstats .playerstat .text {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  padding: 0;
+  color: var(--listinfocolor);
+}
+.playerstatgamemodes .gamemodesblock .playerStatsblock .mainstats .playerstat .value {
   display: flex;
   align-items: center;
   padding: 0;
+  color: var(--listnamecolor);
 }
 
 /* Error Window */
@@ -583,7 +812,7 @@ transition: 0.3s;
 
 .errorWindow .errortitle:before {
   content: "";
-  background-image: url(https://battlebase.github.io/assets/icons/error.png);
+  background-image: url(../assets/icons/error.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 25px;
@@ -675,6 +904,36 @@ transition: 0.3s;
   font-size: 32px;
   font-family: 'Teko';
   line-height: 30px;
+  position: relative;
+}
+.welcomeScreen .closeWelcomeScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pagebgcolor);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  font-size: 38px;
+  margin: 0px;
+  color: var(--listinfocolor);
+  cursor: pointer;
+  height: 30px;
+}
+.welcomeScreen .closeWelcomeScreen:hover {
+  background-color: #c21913;
+}
+.welcomeScreen .closeWelcomeScreen .closeWelcomeScreenX {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  position: absolute;
+  top: 10px;
+  color: #fff;
 }
 
 .welcomeScreen .welcometitle .welcometitletext {
@@ -816,7 +1075,7 @@ height: 48px;
 float: left;
 margin: 4px 10px 4px 4px;
 background-size: contain;
-background-image: url(https://battlebase.github.io/img/icon.png);
+background-image: url(../img/icon.png);
 }
 /* Left Menu */
 .langswitch {
@@ -957,10 +1216,10 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 
 /* ICONS */
 .carepackage {
-  background-image: url(https://battlebase.github.io/img/items/carepackage_default240.png);
+  background-image: url(../img/items/carepackage_default240.png);
 }
 .carepackageflare {
-  background-image: url(https://battlebase.github.io/img/items/carepackage_flare_default240.png);
+  background-image: url(../img/items/carepackage_flare_default240.png);
 }
 .left-menu {
   background-color: var(--pagebgcolor);
@@ -1004,11 +1263,12 @@ background-image: url(https://battlebase.github.io/img/icon.png);
   border-top-color: var(--listbordertopcolor);
   margin-bottom: 1px;
   flex-shrink: 0;
+  transition: 0.3s;
 }
 .left-menu .item-list .name {
   display: flex;
   align-items: center;
-  color: #f9f9f9;
+  color: var(--listinfocolor);
   font-size: 15px;
   letter-spacing: 0.5px;
   padding: 0 10px;
@@ -1021,10 +1281,23 @@ background-image: url(https://battlebase.github.io/img/icon.png);
   border-top-color: var(--listbordertopcolor);
   margin-right: 0;
   margin-bottom: 1px;
+  transition: 0.3s;
+}
+.left-menu a:hover img,
+.left-menu a:hover .name {
+  box-shadow: inset 0px 0px 40px 2px var(--listactive);
+  color: #fff;
+  transition: 0.3s;
+}
+.left-menu a:active img,
+.left-menu a:active .name {
+  box-shadow: inset 0px 0px 40px 2px var(--listactive);
+  color: #fff;
+  transition: 0.3s;
 }
 
 .menucharms {
-  background-image: url(https://battlebase.github.io/assets/charms/MINIUNKNOWN.png);
+  background-image: url(../assets/charms/MINIUNKNOWN.png);
 }
 
 
@@ -1193,6 +1466,26 @@ background-image: url(https://battlebase.github.io/img/icon.png);
   display: flex;
   width: 100%;
 }
+.list .itemlist:hover img,
+.list .itemlist:hover .iteminfo,
+.list:hover a.steamlink,
+.carepackageammo .itemlist:hover img,
+.carepackageammo .itemlist:hover .iteminfo {
+  box-shadow: inset 0px 0px 40px 2px var(--listactive);
+}
+.list.skins .itemlist:hover img {
+  box-shadow: none;
+}
+.list .itemlist:hover .iteminfo .name,
+.carepackageammo .itemlist:hover .iteminfo .name{
+color: var(--listnamecolor);
+}
+.list .itemlist:active img,
+.list .itemlist:active .iteminfo,
+.carepackageammo .itemlist:active img,
+.carepackageammo .itemlist:active .iteminfo {
+    box-shadow: inset 0px 0px 40px 2px var(--listactive);
+}
 .list .itemlist img,
 .carepackageammo .itemlist img {
   display: flex;
@@ -1224,7 +1517,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 .carepackageammo .itemlist .name {
   display: flex;
   align-items: center;
-  color: var(--listnamecolor);
+  color: var(--listinfocolor);
   font-size: 17px;
   letter-spacing: 0.5px;
   padding: 0 10px;
@@ -1298,7 +1591,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
   color: #41c300;
 }
 .steamicon {
-  background-image: url(https://battlebase.github.io/assets/icons/steamicon.svg);
+  background-image: url(../assets/icons/steamicon.svg);
 }
 /* SINGLE ITEM */
 .singleItem {
@@ -1362,7 +1655,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .singleItem .rightInfo .ammo .capacity::after {
   content: "";
-  background-image: url(https://battlebase.github.io/img/icons/mag-48px.png);
+  background-image: url(../img/icons/mag-48px.png);
   background-size: cover;
   background-repeat: no-repeat;
   width: 12px;
@@ -1393,7 +1686,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .singleItem .leftInfo .val.Single::before {
   content: "";
-  background-image: url(https://battlebase.github.io/assets/icons/bullets_single.png);
+  background-image: url(../assets/icons/bullets_single.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 4px;
@@ -1406,7 +1699,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .singleItem .leftInfo .val.Burst::before {
   content: "";
-  background-image: url(https://battlebase.github.io/assets/icons/bullets_burst.png);
+  background-image: url(../assets/icons/bullets_burst.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 10px;
@@ -1419,7 +1712,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .singleItem .leftInfo .val.Auto::before {
   content: "";
-  background-image: url(https://battlebase.github.io/assets/icons/bullets_auto.png);
+  background-image: url(../assets/icons/bullets_auto.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 17px;
@@ -1451,16 +1744,16 @@ background-image: url(https://battlebase.github.io/img/icon.png);
   color: #fff;
 }
 .singleItem .leftInfo .val.Erangel::before {
-  background-image: url(https://battlebase.github.io/assets/icons/Erangel_Main.png);
+  background-image: url(../assets/icons/Erangel_Main.png);
 }
 .singleItem .leftInfo .val.Miramar::before {
-  background-image: url(https://battlebase.github.io/assets/icons/Desert_Main.png);
+  background-image: url(../assets/icons/Desert_Main.png);
 }
 .singleItem .leftInfo .val.Sanhok::before {
-  background-image: url(https://battlebase.github.io/assets/icons/Savage_Main.png);
+  background-image: url(../assets/icons/Savage_Main.png);
 }
 .singleItem .leftInfo .val.Vikendi::before {
-  background-image: url(https://battlebase.github.io/assets/icons/DihorOtok_Main.png);
+  background-image: url(../assets/icons/DihorOtok_Main.png);
 }
 .singleItem .leftInfo .bptext {
   font-size: 24px;
@@ -1645,7 +1938,6 @@ background-image: url(https://battlebase.github.io/img/icon.png);
   background-image: none;
   font-family: 'Roboto Condensed';
   font-size: 14px;
-  margin-bottom: 1px;
   border-top: 1px solid;
   border-top-color: var(--listbordertopcolor);
 }
@@ -1704,7 +1996,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .comparedWpn .rightInfo .ammo .capacity::after {
   content: "";
-  background-image: url(https://battlebase.github.io/img/icons/mag-48px.png);
+  background-image: url(../img/icons/mag-48px.png);
   background-size: cover;
   background-repeat: no-repeat;
   width: 12px;
@@ -1735,7 +2027,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .comparedWpn .leftInfo .val.Single::before {
   content: "";
-  background-image: url(https://battlebase.github.io/assets/icons/bullets_single.png);
+  background-image: url(../assets/icons/bullets_single.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 4px;
@@ -1748,7 +2040,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .comparedWpn .leftInfo .val.Burst::before {
   content: "";
-  background-image: url(https://battlebase.github.io/assets/icons/bullets_burst.png);
+  background-image: url(../assets/icons/bullets_burst.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 10px;
@@ -1761,7 +2053,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .comparedWpn .leftInfo .val.Auto::before {
   content: "";
-  background-image: url(https://battlebase.github.io/assets/icons/bullets_auto.png);
+  background-image: url(../assets/icons/bullets_auto.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 17px;
@@ -1815,6 +2107,7 @@ background-image: url(https://battlebase.github.io/img/icon.png);
 }
 .comparedWpn .itemDesc {
   margin: 0 15px 10px;
+  min-height: 40px;
 }
 .comparedWpn .itemDesc .desc {
   font-size: 15px;
@@ -1889,13 +2182,13 @@ background: #0f2442;
   border-bottom: 1px solid #000;
 }
 .bg1 {
-  background-image: url(https://battlebase.github.io/img/bg/panorama.jpg);
+  background-image: url(../img/bg/panorama.jpg);
 }
 .bg2 {
-  background-image: url(https://battlebase.github.io/img/bg/planebg.jpg);
+  background-image: url(../img/bg/planebg.jpg);
 }
 .appimg {
-background-image: url(https://battlebase.github.io/img/pubgdatabase.png);
+background-image: url(../img/pubgdatabase.png);
 background-position: center;
 background-size: contain;
 background-repeat: no-repeat;
@@ -1999,6 +2292,13 @@ height: auto;
 flex-direction: column;
 width: 100%;
 max-width: calc(100% * (1/5));
+}
+.main-menu.large a {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  width: 100%;
+  max-width: calc(100% * (1/2));
 }
 .main-menu i {
 display: flex;
@@ -2470,7 +2770,7 @@ position: relative;
   position: relative;
   cursor: pointer;
   transition: all .2s ease;
-  background-image: url(https://battlebase.github.io/img/items/Backpack3a.png);
+  background-image: url(../img/items/Backpack3a.png);
 }
 .removefrombackpack:before {
   content: "✚";
@@ -2552,7 +2852,7 @@ position: relative;
   position: relative;
   cursor: pointer;
   transition: all .2s ease;
-  background-image: url(https://battlebase.github.io/img/items/Backpack3a.png);
+  background-image: url(../img/items/Backpack3a.png);
 }
 .additemstoinv:active {
   background-size: 70px 70px;
@@ -2589,7 +2889,7 @@ position: relative;
   position: relative;
   cursor: pointer;
   transition: all .2s ease;
-  background-image: url(https://battlebase.github.io/img/items/Backpack3a.png);
+  background-image: url(../img/items/Backpack3a.png);
 }
 .emptyinv:before {
   content: "✚";
@@ -2636,7 +2936,7 @@ i.addtobackpack, i.addtobackpacksingle {
   position: relative;
   cursor: pointer;
   transition: all .2s ease;
-  background-image: url(https://battlebase.github.io/img/items/Backpack3a.png);
+  background-image: url(../img/items/Backpack3a.png);
 }
 .sights .item-list i.addtobackpack,
 .sights .item-list i.addtobackpacksingle {
@@ -3071,7 +3371,7 @@ z-index: 1;
 }
 
 .Gold{
-  background-image: url(https://battlebase.github.io/assets/icons/ultimate.png);
+  background-image: url(../assets/icons/ultimate.png);
   color: #ddaf11;
 	/*color: #535353;*/
 }
@@ -3082,7 +3382,7 @@ z-index: 1;
   background-color: #ddaf11;
 }
 .Red {
-  background-image: url(https://battlebase.github.io/assets/icons/legendary.png);
+  background-image: url(../assets/icons/legendary.png);
   color: #b13225;
   /*color: #ef2a15;*/
 }
@@ -3092,7 +3392,7 @@ z-index: 1;
   background-color: #b13225;
 }
 .Pink {
-  background-image: url(https://battlebase.github.io/assets/icons/epic.png);
+  background-image: url(../assets/icons/epic.png);
   	color: #995395;
   /*color: #c55ac0;*/
 }
@@ -3102,7 +3402,7 @@ z-index: 1;
   background-color: #995395;
 }
 .Purple {
-  background-image: url(https://battlebase.github.io/assets/icons/elite.png);
+  background-image: url(../assets/icons/elite.png);
   color: #5b50b6;
 	/*color: #6b5bf3;*/
 }
@@ -3112,7 +3412,7 @@ z-index: 1;
   background-color: #5b50b6;
 }
 .Blue {
-  background-image: url(https://battlebase.github.io/assets/icons/rare.png);
+  background-image: url(../assets/icons/rare.png);
   color: #436993;
 	/*color: #4280c1;*/
 }
@@ -3122,7 +3422,7 @@ z-index: 1;
   background-color: #436993;
 }
 .Green {
-  background-image: url(https://battlebase.github.io/assets/icons/special.png);
+  background-image: url(../assets/icons/special.png);
   color: #146360;
 	/*color: #027874;*/
 }
@@ -3132,7 +3432,7 @@ z-index: 1;
   background-color: #146360;
 }
 .Light.Gray {
-  background-image: url(https://battlebase.github.io/assets/icons/classic.png);
+  background-image: url(../assets/icons/classic.png);
   color: #626262;
 	/*color: #767676;*/
 }
@@ -3142,7 +3442,7 @@ z-index: 1;
   background-color: #626262;
 }
 .Dark.Gray {
-  background-image: url(https://battlebase.github.io/assets/icons/common.png);
+  background-image: url(../assets/icons/common.png);
   color: #464646;
 	/*color: #535353;*/
 }
@@ -3152,7 +3452,7 @@ color: #fff;
 background-color: #464646;
 }
 .Event{
-  background-image: url(https://battlebase.github.io/assets/icons/event.png);
+  background-image: url(../assets/icons/event.png);
   color: #464646;
 	/*color: #535353;*/
 }
@@ -3411,7 +3711,7 @@ right: 32px;
 }
 .r-details .capacity::after {
 content: "";
-background-image: url(https://battlebase.github.io/img/icons/military-magazin-icon.png);
+background-image: url(../img/icons/military-magazin-icon.png);
 background-size: cover;
 background-repeat: no-repeat;
 width: 12px;
@@ -3434,7 +3734,7 @@ margin-left: 15px;
 }
 .l-details .bp::before {
 content: "";
-background-image: url(https://battlebase.github.io/img/icons/bp.png);
+background-image: url(../img/icons/bp.png);
 background-size: cover;
 background-repeat: no-repeat;
 width: 26px;
@@ -3633,7 +3933,7 @@ margin: 0 8px;
   display: inline-block;
 }
 .c-icon {
-background-image: url(https://battlebase.github.io/assets/icons/compare.png);
+background-image: url(../assets/icons/compare.png);
 }
 .wpn-desc {
 line-height: 17px;
@@ -3876,7 +4176,7 @@ color: #ffd200;
   cursor: pointer;
 }
 .accordion-item-toggle .show {
-  background-image: url(https://battlebase.github.io/img/icons/arrowleft.png);
+  background-image: url(../img/icons/arrowleft.png);
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -4223,6 +4523,7 @@ display: block;
   border-top-color: var(--listbordertopcolor);
   border-bottom: 1px solid;
   border-bottom-color: var(--pagebgcolor);
+  text-shadow: 0 2px 1px #0c0c0c, 0px -2px 1px #0c0c0c, 2px 0px 1px #0c0c0c, -2px 0px 1px #0c0c0c;
 }
 .item-one {
 position: relative;
@@ -4513,7 +4814,7 @@ border-top: 1px solid #000;
 .showbox {
 display: block;
 float: right;
-background-image: url(https://battlebase.github.io/img/icons/arrowleft.png);
+background-image: url(../img/icons/arrowleft.png);
 width: 32px;
 height: 30px;
 background-color: #ffd200;
@@ -4552,35 +4853,35 @@ line-height: 38px;
 font-family: 'Bebas Neue Bold';
 font-style: normal;
 font-weight: normal;
-src: local('Bebas Neue Bold'), url('https://battlebase.github.io/fonts/BebasNeueBold.woff') format('woff');
+src: local('Bebas Neue Bold'), url('../fonts/BebasNeueBold.woff') format('woff');
 }
 @font-face {
 font-family: 'Roboto';
-src: url('https://battlebase.github.io/fonts/Roboto-Light.ttf') format('truetype');
+src: url('../fonts/Roboto-Light.ttf') format('truetype');
 font-weight: 300;
 font-style: normal;
 }
 @font-face {
 font-family: 'Roboto';
-src: url('https://battlebase.github.io/fonts/Roboto-Regular.ttf') format('truetype');
+src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 font-weight: 400;
 font-style: normal;
 }
 @font-face {
 font-family: 'Roboto';
-src: url('https://battlebase.github.io/fonts/Roboto-Medium.ttf') format('truetype');
+src: url('../fonts/Roboto-Medium.ttf') format('truetype');
 font-weight: 500;
 font-style: normal;
 }
 @font-face {
 font-family: 'TTLakes';
-src: url('https://battlebase.github.io/fonts/TTLakesCondensed-Bold.ttf') format('truetype');
+src: url('../fonts/TTLakesCondensed-Bold.ttf') format('truetype');
 font-weight: 500;
 font-style: normal;
 }
 @font-face {
 font-family: 'AgencyFB';
-src: url('https://battlebase.github.io/fonts/AgencyFB-Bold.woff') format('truetype');
+src: url('../fonts/AgencyFB-Bold.woff') format('truetype');
 font-weight: 500;
 font-style: normal;
 }
@@ -4597,7 +4898,7 @@ text-align: center;
 .heal.boost {
 width: 60px;
 height: 28px;
-background-image: url(https://battlebase.github.io/img/icons/heal.png),url(https://battlebase.github.io/img/icons/boost.png);
+background-image: url(../img/icons/heal.png),url(../img/icons/boost.png);
 background-size: 28px;
 background-position: 32px 0px, 0px 0px;
 background-repeat: no-repeat;
@@ -4608,7 +4909,7 @@ margin: 0 auto;
 .heal {
 width: 28px;
 height: 28px;
-background-image: url(https://battlebase.github.io/img/icons/heal.png);
+background-image: url(../img/icons/heal.png);
 background-size: cover;
 background-repeat: no-repeat;
 position: relative;
@@ -4917,63 +5218,60 @@ div.bb_table div.bb_table_td img.sharedFilePreviewImage {
 video.bb_video {
   width: 100%;
 }
-
 @font-face {
-    font-family: 'Roboto Condensed';
-    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoCondensed-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Roboto Condensed';
+  src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+      url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto Condensed';
-    src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
-        url('../fonts/RobotoCondensed-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Roboto Condensed';
+  src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+      url('../fonts/RobotoCondensed-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Teko';
-    src: url('../fonts/Teko-Bold.woff2') format('woff2'),
-        url('../fonts/Teko-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Teko';
-    src: url('../fonts/Teko-SemiBold.woff2') format('woff2'),
-        url('../fonts/Teko-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Teko';
+  src: url('../fonts/Teko-Bold.woff2') format('woff2'),
+      url('../fonts/Teko-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Teko';
-    src: url('../fonts/Teko-Medium.woff2') format('woff2'),
-        url('../fonts/Teko-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Teko';
+  src: url('../fonts/Teko-SemiBold.woff2') format('woff2'),
+      url('../fonts/Teko-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Teko';
-    src: url('../fonts/Teko-Regular.woff2') format('woff2'),
-        url('../fonts/Teko-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Teko';
+  src: url('../fonts/Teko-Medium.woff2') format('woff2'),
+      url('../fonts/Teko-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Teko';
-    src: url('../fonts/Teko-Light.woff2') format('woff2'),
-        url('../fonts/Teko-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Teko';
+  src: url('../fonts/Teko-Regular.woff2') format('woff2'),
+      url('../fonts/Teko-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-
+@font-face {
+  font-family: 'Teko';
+  src: url('../fonts/Teko-Light.woff2') format('woff2'),
+      url('../fonts/Teko-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
 
 
 /* MEDIA QUERIES 
@@ -5354,7 +5652,7 @@ max-width: calc(100% * (1/3));
 }
 @media screen and (min-width: 700px) {
 .companion {
-background-image: url(https://battlebase.github.io/img/databasewide.png);
+background-image: url(../img/databasewide.png);
 background-position: center;
 background-size: contain;
 background-repeat: no-repeat;
