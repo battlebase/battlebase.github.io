@@ -342,6 +342,7 @@ opacity: 0.3;
   background-color: var(--listbgcolor);
   border-top: 1px solid;
   border-top-color: var(--listbordertopcolor);
+  flex-shrink: 0;
 }
 
 .playerStatsMain .playerstatmainblock span {
@@ -425,6 +426,7 @@ transition: 0.3s;
   background-color: var(--listbgcolor);
   border-top: 1px solid;
   border-top-color: var(--listbordertopcolor);
+  flex-shrink: 0;
 }
 
 .seasontitle .seasonname {
@@ -448,6 +450,7 @@ transition: 0.3s;
   background-color: var(--listbgcolor);
   border-top: 1px solid;
   border-top-color: var(--listbordertopcolor);
+  flex-shrink: 0;
 }
 .playerStatsMain .playerstattotals .totalblock {
   display: flex;
@@ -477,6 +480,7 @@ transition: 0.3s;
 .playerStatsMain .playerstatgamemodes {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 .playerStatsMain .playerstatgamemodes .playerstattitle {
   display: flex;
