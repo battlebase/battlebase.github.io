@@ -28,9 +28,9 @@ getSettings();
 
 var leftMenu = [
   {
-    name: "Equipments",
+    name: "Equipment",
     image: "equipments/Item_equipment_Back_C_01",
-    link: "https://battlebase.github.io/pages/menu-equipments"
+    link: "https://battlebase.github.io/pages/menu-equipment"
   },
   {
     name: "Customization",
@@ -63,7 +63,7 @@ var leftMenu = [
     link: "https://battlebase.github.io/pages/menu-weapons"
   },
   {
-    name: "Ammos",
+    name: "Ammo",
     image: "ammo/Item_Ammo_556mm_C",
     link: "https://battlebase.github.io/pages/menu-ammunition"
   },
