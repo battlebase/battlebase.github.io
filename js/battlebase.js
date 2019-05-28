@@ -166,7 +166,7 @@ function renderCarepackageammo(item,quantity){
   var icon = PUBGITEMS['ammo'][item].icon;
   var i18n = PUBGITEMS['ammo'][item].i18n;
   return `
-  <a href=ammo-${item}.html class=itemlist> 
+  <a href="https://battlebase.github.io/pages/ammo-${item}.html" class=itemlist"> 
     <img class="itemimg" src="${imglink + icon}.png"/>
     <div class=iteminfo>
       <p class=name data-i18n="${i18n}">${name}</p>
@@ -190,7 +190,7 @@ function renderLeftMenu(){
     var menuItemlink = menuItem.link;
 
     leftMenuBlock+= `
-    <a href="${menuItemlink}.html" data-view=".view-main" class="item-list">
+    <a href="https://battlebase.github.io/pages/${menuItemlink}.html" data-view=".view-main" class="item-list">
       <img src="${menuItemImg}"/>
       <span class="name" data-i18n="${menuItemNamei18}">${menuItemName}</span>
     </a>
@@ -211,7 +211,7 @@ function render(type, category, item) {
   var icon = PUBGITEMS[category][item].icon;
   var i18n = PUBGITEMS[category][item].item;
   var renderblock;
-  var simpleList = `<a href="${category}-${item}.html" class="itemlist">
+  var simpleList = `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
 <img class="itemimg" src="${imglink + icon}.png"/>
 <div class="iteminfo">
 <p class="name" data-i18n="${i18n}">${name}</p>
@@ -244,7 +244,7 @@ function render(type, category, item) {
 <span class="value">${bonus2Value}</span>`
     }
     renderblock =
-      `<a href="${category}-${item}.html" class="itemlist">
+      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
 <img class="itemimg" src="${imglink + icon}.png"/>
 <div class="iteminfo">
 <p class="name" data-i18n="${i18n}">${name}</p>
@@ -260,7 +260,7 @@ ${bonusblock}
     var bonusi18 = bonus.replace(/ /gi, "");
     var bonusValue = PUBGITEMS[category][item].bonusValue;
     renderblock =
-      `<a href="${category}-${item}.html" class="itemlist">
+      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
         <img class="itemimg" src="${imglink + icon}.png"/>
         <div class="iteminfo">
           <p class="name" data-i18n="${i18n}">${name}</p>
@@ -289,7 +289,7 @@ ${bonusblock}
 </p>`
     }
     renderblock =
-      `<a href="${category}-${item}.html" class="itemlist">
+      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
 <img class="itemimg" src="${imglink + icon}.png"/>
 <div class="iteminfo">
 <p class="name" data-i18n="${i18n}">${name}</p>
@@ -333,7 +333,7 @@ ${probabilityBlock}
     </a>`;
     }
     renderblock = `
-<a href="${category}-${item}.html" class="itemlist">
+<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
   <div class="rarity ${rarity}"></div>
   <img class="itemimg" src="${imglink + icon}.png"/>
   <div class="iteminfo">
@@ -348,7 +348,7 @@ ${probabilityBlock}
     var charmIcon = name.replace(/ /gi, '_');
     var level = PUBGITEMS[category][item].level;
     renderblock =
-      `<a href="${category}-${item}.html" class="itemlist">
+      `<a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemlist">
   <img class="itemimg" src="${imglink + charmIcon}.png"/>
   <div class="iteminfo">
   <p class="name" data-i18n="${item}">${name}</p>
@@ -383,7 +383,7 @@ ${probabilityBlock}
         var setImage = PUBGITEMS['sets'][setItem].icon;
         var marketLink = encodeURI(setName.replace(/\//g, "-"));
         itemset = `<div class="list">
-  <a href="set-${set[j]}.html" class="itemlist">
+  <a href="https://battlebase.github.io/pages/set-${set[j]}.html" class="itemlist">
   <img class="itemimg" src="${assetslink + 'sets/' + setImage}.png"/>
   <div class="iteminfo">
 <p class="name" data-i18n="${setItem}">${setName}</p>
@@ -449,7 +449,7 @@ ${probabilityBlock}
       foundinBlock = `
       <div class="titleblock" data-i18n="FoundIn">Found In:</div>
   <div class="list">
-  <a href="crates-${crate}.html" class="itemlist">
+  <a href="https://battlebase.github.io/pages/crates-${crate}.html" class="itemlist">
   <img class="itemimg" src="${assetslink + 'crates/' + crateImage}.png"/>
   <div class="iteminfo">
   <p class="name" data-i18n="${crate}">${cratename}</p>
@@ -483,7 +483,7 @@ ${probabilityBlock}
       rewardedbytext = `<div class="titleblock" data-i18n="RewardedBy">Rewarded By:</div>`
       rewardedbyblock = `
       <div class="list">
-        <a href="pass-${rewardpass}-${rewardtype}.html" class="itemlist">
+        <a href="https://battlebase.github.io/pages/pass-${rewardpass}-${rewardtype}.html" class="itemlist">
           <img class="itemimg" src="https://battlebase.github.io/assets/pass/${rewardpass}_${rewardtype}.png">
           <div class="iteminfo">
           <p class="name" data-i18n="${rewardpass}_${rewardtype}">${PUBGITEMS.passName[rewardpass+rewardtype]}</p>
@@ -595,7 +595,7 @@ ${skininfo}
     var carepackageblock = ``;
     if(carepackage){
       carepackageblock = `
-      <div class="list"><a href="carepackage.html" class="itemlist">
+      <div class="list"><a href="https://battlebase.github.io/pages/carepackage.html" class="itemlist">
 <img class="itemimg" src="https://battlebase.github.io/assets/icons/carepackage_default240.png">
 <div class="iteminfo">
 <p class="name" data-i18n="Carepackage">Police Vest (Level 1)</p>
@@ -736,7 +736,7 @@ ${skinblock}
       crateblock = `
       <div class="titleblock" data-i18n="FoundIn">Found In:</div>
   <div class="list">
-  <a href="crates-${crate}.html" class="itemlist">
+  <a href="https://battlebase.github.io/pages/crates-${crate}.html" class="itemlist">
   <img class="itemimg" src="${assetslink + 'crates/' + crateImage}.png"/>
   <div class="iteminfo">
   <p class="name" data-i18n="${crate}">${cratename}</p>
@@ -1333,7 +1333,7 @@ ${ammoforBlock}
         </p>
         </div>
         <div class="rightInfo">
-        <a href="ammo-${ammo}.html" class="ammo">
+        <a href="https://battlebase.github.io/pages/ammo-${ammo}.html" class="ammo">
           <img class="itemimg" src="${ammoImglink}.png"/>
           <span class="bonustext" data-i18n="${ammoi18n}">${ammoName}</span>
           <span class="capacity" data-capacity="${capacity}">${capacity}</span>
@@ -1495,7 +1495,7 @@ ${ammoforBlock}
         </p>
         </div>
         <div class="rightInfo">
-        <a href="ammo-${ammo}.html" class="ammo">
+        <a href="https://battlebase.github.io/pages/ammo-${ammo}.html" class="ammo">
           <img class="itemimg" src="${ammoImglink}.png"/>
           <span class="bonustext" data-i18n="${ammoi18n}">${ammoName}</span>
           <span class="capacity" data-capacity="${capacity}">${capacity}</span>
@@ -1585,7 +1585,7 @@ ${ammoforBlock}
     var level = PUBGITEMS[category][item].level;
     var charmdesc = charmIcon + '_desc';
       renderblock = `
-      <a href="${category}-${item}.html" class="itemcard">
+      <a href="https://battlebase.github.io/pages/${category}-${item}.html" class="itemcard">
         <img class="itemimg" src="${imglink + charmIcon}.png"/>
         <div class="cardtext">
           <p class="name" data-i18n="${item}">${name}</p>
