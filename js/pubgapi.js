@@ -254,7 +254,7 @@ var BBapiSettings = {
 	playerName: "",
 	platform: "steam",
 	player_id: "",
-	current_season: "division.bro.official.pc-2018-03",
+	current_season: "division.bro.official.pc-2018-04",
 	pubg_seasons: []
 }
 
@@ -262,6 +262,7 @@ var seasons = {
 	"division.bro.official.pc-2018-01": "Season 01",
   "division.bro.official.pc-2018-02": "Season 02",
   "division.bro.official.pc-2018-03": "Season 03",
+	"division.bro.official.pc-2018-04": "Season 04",
 }
 
 var BBplayerIds = {
@@ -282,6 +283,11 @@ function JP(val) {
 function get_settings() {
 
 	if (localStorage.BBapiSettings) {
+		// Update Season Stats
+		if(BBapiSettings.current_season === "division.bro.official.pc-2018-04"){
+			BBapiSettings.current_season = "division.bro.official.pc-2018-04";
+			localStorage.BBapiSettings = JS(BBapiSettings);
+		}
 		BBapiSettings = JP(localStorage.BBapiSettings);
 		console.log("loaded settings");
 	} else {
